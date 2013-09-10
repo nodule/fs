@@ -13,13 +13,13 @@
         "type": "object"
       },
       "offset": {
-        "type": "numeric"
+        "type": "integer"
       },
       "length": {
-        "type": "numeric"
+        "type": "integer"
       },
       "position": {
-        "type": "numeric"
+        "type": "integer"
       }
     },
     "output": {

@@ -10,7 +10,7 @@
         "type": "object"
       },
       "len": {
-        "type": "numeric"
+        "type": "integer"
       }
     },
     "output": {

@@ -10,10 +10,10 @@
         "type": "string"
       },
       "uid": {
-        "type": "numeric"
+        "type": "integer"
       },
       "gid": {
-        "type": "numeric"
+        "type": "integer"
       }
     },
     "output": {

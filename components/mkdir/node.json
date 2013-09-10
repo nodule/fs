@@ -10,7 +10,7 @@
         "type": "string"
       },
       "mode": {
-        "type": "numeric"
+        "type": "integer"
       }
     },
     "output": {
