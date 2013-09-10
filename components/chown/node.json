@@ -1,0 +1,25 @@
+{
+  "name": "fs.chown",
+  "description": "fs chown",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      },
+      "uid": {
+        "type": "numeric"
+      },
+      "gid": {
+        "type": "numeric"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "fs.ftruncate",
+  "description": "fs ftruncate",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "fd": {
+        "type": "object"
+      },
+      "len": {
+        "type": "numeric"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

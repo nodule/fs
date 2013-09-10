@@ -1,0 +1,22 @@
+{
+  "name": "fs.link",
+  "description": "fs link",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "srcpath": {
+        "type": "string"
+      },
+      "dstpath": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

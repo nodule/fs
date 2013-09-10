@@ -1,0 +1,22 @@
+{
+  "name": "fs.realpath",
+  "description": "fs realpath",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      },
+      "cache": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

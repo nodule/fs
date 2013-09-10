@@ -1,0 +1,19 @@
+{
+  "name": "fs.fsync",
+  "description": "fs fsync",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "fd": {
+        "type": "object"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

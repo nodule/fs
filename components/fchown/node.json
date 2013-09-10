@@ -1,0 +1,25 @@
+{
+  "name": "fs.fchown",
+  "description": "fs fchown",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "fd": {
+        "type": "object"
+      },
+      "uid": {
+        "type": "numeric"
+      },
+      "gid": {
+        "type": "numeric"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

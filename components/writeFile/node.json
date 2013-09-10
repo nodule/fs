@@ -1,0 +1,25 @@
+{
+  "name": "fs.writeFile",
+  "description": "fs writeFile",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "filename": {
+        "type": "string"
+      },
+      "data": {
+        "type": "string"
+      },
+      "options": {
+        "type": "object"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

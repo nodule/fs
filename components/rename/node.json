@@ -1,0 +1,22 @@
+{
+  "name": "fs.rename",
+  "description": "fs rename",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "oldPath": {
+        "type": "string"
+      },
+      "newPath": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

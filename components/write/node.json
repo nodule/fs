@@ -1,0 +1,31 @@
+{
+  "name": "fs.write",
+  "description": "fs write",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "fd": {
+        "type": "object"
+      },
+      "buffer": {
+        "type": "object"
+      },
+      "offset": {
+        "type": "numeric"
+      },
+      "length": {
+        "type": "numeric"
+      },
+      "position": {
+        "type": "numeric"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

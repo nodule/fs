@@ -1,0 +1,25 @@
+{
+  "name": "fs.futimes",
+  "description": "fs futimes",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "fd": {
+        "type": "object"
+      },
+      "atime": {
+        "type": "string"
+      },
+      "mtime": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

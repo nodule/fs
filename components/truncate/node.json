@@ -1,0 +1,22 @@
+{
+  "name": "fs.truncate",
+  "description": "fs truncate",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      },
+      "len": {
+        "type": "numeric"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

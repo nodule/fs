@@ -1,0 +1,25 @@
+{
+  "name": "fs.symlink",
+  "description": "fs symlink",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "srcpath": {
+        "type": "string"
+      },
+      "dstpath": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

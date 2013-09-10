@@ -1,0 +1,19 @@
+{
+  "name": "fs.readlink",
+  "description": "fs readlink",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

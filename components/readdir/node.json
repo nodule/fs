@@ -1,0 +1,19 @@
+{
+  "name": "fs.readdir",
+  "description": "fs readdir",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "fs.readFile",
+  "description": "fs readFile",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "filename": {
+        "type": "string"
+      },
+      "options": {
+        "type": "object"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

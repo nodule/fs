@@ -1,0 +1,22 @@
+{
+  "name": "fs.lchmod",
+  "description": "fs lchmod",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      },
+      "mode": {
+        "type": "numeric"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

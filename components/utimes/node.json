@@ -1,0 +1,25 @@
+{
+  "name": "fs.utimes",
+  "description": "fs utimes",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      },
+      "atime": {
+        "type": "string"
+      },
+      "mtime": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

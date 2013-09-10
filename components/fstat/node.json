@@ -1,0 +1,19 @@
+{
+  "name": "fs.fstat",
+  "description": "fs fstat",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "fd": {
+        "type": "object"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}

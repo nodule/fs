@@ -1,0 +1,19 @@
+{
+  "name": "fs.unlink",
+  "description": "fs unlink",
+  "dependencies": {
+    "fs": "latest"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "results": {
+        "type": "object"
+      }
+    }
+  }
+}
