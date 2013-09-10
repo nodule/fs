@@ -1,0 +1,730 @@
+{
+  "fs.appendFile": {
+    "fn": "output([fs.appendFile, input.filename, input.data, input.options])\n",
+    "ports": {
+      "input": {
+        "filename": {
+          "type": "string"
+        },
+        "data": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs appendFile",
+    "name": "fs.appendFile"
+  },
+  "fs.chmod": {
+    "fn": "output([fs.chmod, input.path, input.mode])\n",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs chmod",
+    "name": "fs.chmod"
+  },
+  "fs.chown": {
+    "fn": "output([fs.chown, input.path, input.uid, input.gid])\n",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "integer"
+        },
+        "gid": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs chown",
+    "name": "fs.chown"
+  },
+  "fs.close": {
+    "fn": "output([fs.close, input.fd])\n",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs close",
+    "name": "fs.close"
+  },
+  "fs.exists": {
+    "fn": "output([fs.exists, input.path])\n",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs exists",
+    "name": "fs.exists"
+  },
+  "fs.fchmod": {
+    "fn": "output([fs.fchmod, input.fd, input.mode])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        },
+        "mode": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs fchmod",
+    "name": "fs.fchmod"
+  },
+  "fs.fchown": {
+    "fn": "output([fs.fchown, input.fd, input.uid, input.gid])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        },
+        "uid": {
+          "type": "integer"
+        },
+        "gid": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs fchown",
+    "name": "fs.fchown"
+  },
+  "fs.fstat": {
+    "fn": "output([fs.fstat, input.fd])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs fstat",
+    "name": "fs.fstat"
+  },
+  "fs.fsync": {
+    "fn": "output([fs.fsync, input.fd])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs fsync",
+    "name": "fs.fsync"
+  },
+  "fs.ftruncate": {
+    "fn": "output([fs.ftruncate, input.fd, input.len])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        },
+        "len": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs ftruncate",
+    "name": "fs.ftruncate"
+  },
+  "fs.futimes": {
+    "fn": "output([fs.futimes, input.fd, input.atime, input.mtime])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        },
+        "atime": {
+          "type": "string"
+        },
+        "mtime": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs futimes",
+    "name": "fs.futimes"
+  },
+  "fs.lchmod": {
+    "fn": "output([fs.lchmod, input.path, input.mode])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs lchmod",
+    "name": "fs.lchmod"
+  },
+  "fs.lchown": {
+    "fn": "output([fs.lchown, input.path, input.uid, input.gid])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "integer"
+        },
+        "gid": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs lchown",
+    "name": "fs.lchown"
+  },
+  "fs.link": {
+    "fn": "output([fs.link, input.srcpath, input.dstpath])",
+    "ports": {
+      "input": {
+        "srcpath": {
+          "type": "string"
+        },
+        "dstpath": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs link",
+    "name": "fs.link"
+  },
+  "fs.lstat": {
+    "fn": "output([fs.lstat, input.path])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs lstat",
+    "name": "fs.lstat"
+  },
+  "fs.mkdir": {
+    "fn": "output([fs.mkdir, input.path, input.mode])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs mkdir",
+    "name": "fs.mkdir"
+  },
+  "fs.open": {
+    "fn": "output([fs.open, input.path, input.flags, input.mode])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "flags": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs open",
+    "name": "fs.open"
+  },
+  "fs.read": {
+    "fn": "output([fs.read, input.fd, input.buffer, input.offset, input.length, input.position])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        },
+        "buffer": {
+          "type": "object"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "length": {
+          "type": "integer"
+        },
+        "position": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs read",
+    "name": "fs.read"
+  },
+  "fs.readFile": {
+    "fn": "output([fs.readFile, input.filename, input.options])",
+    "ports": {
+      "input": {
+        "filename": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs readFile",
+    "name": "fs.readFile"
+  },
+  "fs.readdir": {
+    "fn": "output([fs.readdir, input.path])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs readdir",
+    "name": "fs.readdir"
+  },
+  "fs.readlink": {
+    "fn": "output([fs.readlink, input.path])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs readlink",
+    "name": "fs.readlink"
+  },
+  "fs.realpath": {
+    "fn": "output([fs.realpath, input.path, input.cache])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "cache": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs realpath",
+    "name": "fs.realpath"
+  },
+  "fs.rename": {
+    "fn": "output([fs.rename, input.oldPath, input.newPath])",
+    "ports": {
+      "input": {
+        "oldPath": {
+          "type": "string"
+        },
+        "newPath": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs rename",
+    "name": "fs.rename"
+  },
+  "fs.rmdir": {
+    "fn": "output([fs.rmdir, input.path])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs rmdir",
+    "name": "fs.rmdir"
+  },
+  "fs.stat": {
+    "fn": "output([fs.stat, input.path])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs stat",
+    "name": "fs.stat"
+  },
+  "fs.symlink": {
+    "fn": "output([fs.symlink, input.srcpath, input.dstpath, input.type])",
+    "ports": {
+      "input": {
+        "srcpath": {
+          "type": "string"
+        },
+        "dstpath": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs symlink",
+    "name": "fs.symlink"
+  },
+  "fs.truncate": {
+    "fn": "output([fs.truncate, input.path, input.len])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "len": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs truncate",
+    "name": "fs.truncate"
+  },
+  "fs.unlink": {
+    "fn": "output([fs.unlink, input.path])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs unlink",
+    "name": "fs.unlink"
+  },
+  "fs.utimes": {
+    "fn": "output([fs.utimes, input.path, input.atime, input.mtime])",
+    "ports": {
+      "input": {
+        "path": {
+          "type": "string"
+        },
+        "atime": {
+          "type": "string"
+        },
+        "mtime": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs utimes",
+    "name": "fs.utimes"
+  },
+  "fs.write": {
+    "fn": "output([fs.write, input.fd, input.buffer, input.offset, input.length, input.position])",
+    "ports": {
+      "input": {
+        "fd": {
+          "type": "object"
+        },
+        "buffer": {
+          "type": "object"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "length": {
+          "type": "integer"
+        },
+        "position": {
+          "type": "integer"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs write",
+    "name": "fs.write"
+  },
+  "fs.writeFile": {
+    "fn": "output([fs.writeFile, input.filename, input.data, input.options])",
+    "ports": {
+      "input": {
+        "filename": {
+          "type": "string"
+        },
+        "data": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object"
+        }
+      },
+      "output": {
+        "results": {
+          "type": "object"
+        }
+      }
+    },
+    "dependencies": {
+      "fs": "latest"
+    },
+    "description": "fs writeFile",
+    "name": "fs.writeFile"
+  }
+}
