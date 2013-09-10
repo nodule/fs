@@ -17,9 +17,43 @@
     "node": ">=0.6.0"
   },
   "chix": {
-    "components": {
-    }
+    "dependencies": [
+      "fs"
+    ],
+    "components": [
+      "appendFile",
+      "chmod",
+      "chown",
+      "close",
+      "exists",
+      "fchmod",
+      "fchown",
+      "fstat",
+      "fsync",
+      "ftruncate",
+      "futimes",
+      "lchmod",
+      "lchown",
+      "link",
+      "lstat",
+      "mkdir",
+      "open",
+      "read",
+      "readdir",
+      "readFile",
+      "readlink",
+      "realpath",
+      "rename",
+      "rmdir",
+      "stat",
+      "symlink",
+      "truncate",
+      "unlink",
+      "utimes",
+      "write",
+      "writeFile"
+    ]
   },
   "scripts": {
   }
-}
+  }
