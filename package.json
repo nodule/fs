@@ -1,0 +1,32 @@
+{
+  "name": "chix-fs",
+  "description": "Filesystem components for Chiχ",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "version": "0.0.1",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/noflo/noflo/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chix/chix-fs.git"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "coffeelint": "latest",
+    "coffee-script": "latest"
+  },
+  "chix": {
+    "components": {
+    }
+  },
+  "scripts": {
+  }
+}
