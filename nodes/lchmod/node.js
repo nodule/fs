@@ -1,1 +1,1 @@
-output([fs.lchmod, input.path, input.mode])
+output = [fs.lchmod, input.path, input.mode]

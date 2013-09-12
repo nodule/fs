@@ -1,1 +1,1 @@
-output([fs.rmdir, input.path])
+output = [fs.rmdir, input.path]

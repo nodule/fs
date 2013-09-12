@@ -1,1 +1,1 @@
-output([fs.ftruncate, input.fd, input.len])
+output [fs.ftruncate, input.fd, input.len]

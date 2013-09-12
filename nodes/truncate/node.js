@@ -1,1 +1,1 @@
-output([fs.truncate, input.path, input.len])
+output = [fs.truncate, input.path, input.len]

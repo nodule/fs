@@ -1,1 +1,1 @@
-output([fs.realpath, input.path, input.cache])
+output = [fs.realpath, input.path, input.cache]

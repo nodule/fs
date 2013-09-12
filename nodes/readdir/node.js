@@ -1,1 +1,1 @@
-output([fs.readdir, input.path])
+output = [fs.readdir, input.path]

@@ -1,1 +1,1 @@
-output([fs.lstat, input.path])
+output [fs.lstat, input.path]

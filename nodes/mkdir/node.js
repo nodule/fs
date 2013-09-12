@@ -1,1 +1,1 @@
-output([fs.mkdir, input.path, input.mode])
+output = [fs.mkdir, input.path, input.mode]

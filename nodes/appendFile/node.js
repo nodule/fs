@@ -1,1 +1,1 @@
-output([fs.appendFile, input.filename, input.data, input.options])
+output = [fs.appendFile, input.filename, input.data, input.options]

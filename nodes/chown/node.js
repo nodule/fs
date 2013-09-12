@@ -1,1 +1,1 @@
-output([fs.chown, input.path, input.uid, input.gid])
+output = [fs.chown, input.path, input.uid, input.gid]

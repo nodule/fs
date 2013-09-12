@@ -1,1 +1,1 @@
-output([fs.stat, input.path])
+output = [fs.stat, input.path]

@@ -1,1 +1,1 @@
-output([fs.unlink, input.path])
+output = [fs.unlink, input.path]
