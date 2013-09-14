@@ -1,1 +1,1 @@
-output = [fs.fchmod, input.fd, input.mode]
+output = [fs, 'fchmod', input.fd, input.mode]

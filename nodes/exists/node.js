@@ -1,1 +1,1 @@
-output [fs.exists, input.path]
+output [fs, 'exists', input.path]

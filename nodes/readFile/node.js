@@ -1,1 +1,1 @@
-output = [fs.readFile, input.filename, input.options]
+output = [fs, 'readFile', input.filename, input.options]

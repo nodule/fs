@@ -1,6 +1,6 @@
 {
   "fs.appendFile": {
-    "fn": "output = [fs.appendFile, input.filename, input.data, input.options]\n",
+    "fn": "output = [fs, 'appendFile', input.filename, input.data, input.options]\n",
     "ports": {
       "input": {
         "filename": {
@@ -26,7 +26,7 @@
     "name": "fs.appendFile"
   },
   "fs.chmod": {
-    "fn": "output = [fs.chmod, input.path, input.mode]\n",
+    "fn": "output = [fs, 'chmod', input.path, input.mode]\n",
     "ports": {
       "input": {
         "path": {
@@ -49,7 +49,7 @@
     "name": "fs.chmod"
   },
   "fs.chown": {
-    "fn": "output = [fs.chown, input.path, input.uid, input.gid]\n",
+    "fn": "output = [fs, 'chown', input.path, input.uid, input.gid]\n",
     "ports": {
       "input": {
         "path": {
@@ -75,7 +75,7 @@
     "name": "fs.chown"
   },
   "fs.close": {
-    "fn": "output = [fs.close, input.fd]\n",
+    "fn": "output = [fs, 'close', input.fd]\n",
     "ports": {
       "input": {
         "fd": {
@@ -95,7 +95,7 @@
     "name": "fs.close"
   },
   "fs.exists": {
-    "fn": "output [fs.exists, input.path]\n",
+    "fn": "output [fs, 'exists', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -115,7 +115,7 @@
     "name": "fs.exists"
   },
   "fs.fchmod": {
-    "fn": "output = [fs.fchmod, input.fd, input.mode]\n",
+    "fn": "output = [fs, 'fchmod', input.fd, input.mode]\n",
     "ports": {
       "input": {
         "fd": {
@@ -138,7 +138,7 @@
     "name": "fs.fchmod"
   },
   "fs.fchown": {
-    "fn": "output = [fs.fchown, input.fd, input.uid, input.gid]\n",
+    "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n",
     "ports": {
       "input": {
         "fd": {
@@ -164,7 +164,7 @@
     "name": "fs.fchown"
   },
   "fs.fstat": {
-    "fn": "output [fs.fstat, input.fd]\n",
+    "fn": "output [fs, 'fstat', input.fd]\n",
     "ports": {
       "input": {
         "fd": {
@@ -184,7 +184,7 @@
     "name": "fs.fstat"
   },
   "fs.fsync": {
-    "fn": "output = [fs.fsync, input.fd]\n",
+    "fn": "output = [fs, 'fsync', input.fd]\n",
     "ports": {
       "input": {
         "fd": {
@@ -204,7 +204,7 @@
     "name": "fs.fsync"
   },
   "fs.ftruncate": {
-    "fn": "output [fs.ftruncate, input.fd, input.len]\n",
+    "fn": "output [fs, 'ftruncate', input.fd, input.len]\n",
     "ports": {
       "input": {
         "fd": {
@@ -227,7 +227,7 @@
     "name": "fs.ftruncate"
   },
   "fs.futimes": {
-    "fn": "output = [fs.futimes, input.fd, input.atime, input.mtime]\n",
+    "fn": "output = [fs, 'futimes', input.fd, input.atime, input.mtime]\n",
     "ports": {
       "input": {
         "fd": {
@@ -253,7 +253,7 @@
     "name": "fs.futimes"
   },
   "fs.lchmod": {
-    "fn": "output = [fs.lchmod, input.path, input.mode]\n",
+    "fn": "output = [fs, 'lchmod', input.path, input.mode]\n",
     "ports": {
       "input": {
         "path": {
@@ -276,7 +276,7 @@
     "name": "fs.lchmod"
   },
   "fs.lchown": {
-    "fn": "output = [fs.lchown, input.path, input.uid, input.gid]\n",
+    "fn": "output = [fs, 'lchown', input.path, input.uid, input.gid]\n",
     "ports": {
       "input": {
         "path": {
@@ -302,7 +302,7 @@
     "name": "fs.lchown"
   },
   "fs.link": {
-    "fn": "output [fs.link, input.srcpath, input.dstpath]\n",
+    "fn": "output [fs, 'link', input.srcpath, input.dstpath]\n",
     "ports": {
       "input": {
         "srcpath": {
@@ -325,7 +325,7 @@
     "name": "fs.link"
   },
   "fs.lstat": {
-    "fn": "output [fs.lstat, input.path]\n",
+    "fn": "output [fs, 'lstat', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -345,7 +345,7 @@
     "name": "fs.lstat"
   },
   "fs.mkdir": {
-    "fn": "output = [fs.mkdir, input.path, input.mode]\n",
+    "fn": "output = [fs, 'mkdir', input.path, input.mode]\n",
     "ports": {
       "input": {
         "path": {
@@ -368,7 +368,7 @@
     "name": "fs.mkdir"
   },
   "fs.open": {
-    "fn": "output= [fs.open, input.path, input.flags, input.mode]\n",
+    "fn": "output= [fs, 'open', input.path, input.flags, input.mode]\n",
     "ports": {
       "input": {
         "path": {
@@ -394,7 +394,7 @@
     "name": "fs.open"
   },
   "fs.read": {
-    "fn": "output = [fs.read, input.fd, input.buffer, input.offset, input.length, input.position]\n",
+    "fn": "output = [fs, 'read', input.fd, input.buffer, input.offset, input.length, input.position]\n",
     "ports": {
       "input": {
         "fd": {
@@ -426,7 +426,7 @@
     "name": "fs.read"
   },
   "fs.readFile": {
-    "fn": "output = [fs.readFile, input.filename, input.options]\n",
+    "fn": "output = [fs, 'readFile', input.filename, input.options]\n",
     "ports": {
       "input": {
         "filename": {
@@ -449,7 +449,7 @@
     "name": "fs.readFile"
   },
   "fs.readdir": {
-    "fn": "output = [fs.readdir, input.path]\n",
+    "fn": "output = [fs, 'readdir', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -469,7 +469,7 @@
     "name": "fs.readdir"
   },
   "fs.readlink": {
-    "fn": "output = [fs.readlink, input.path]\n",
+    "fn": "output = [fs, 'readlink', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -489,7 +489,7 @@
     "name": "fs.readlink"
   },
   "fs.realpath": {
-    "fn": "output = [fs.realpath, input.path, input.cache]\n",
+    "fn": "output = [fs, 'realpath', input.path, input.cache]\n",
     "ports": {
       "input": {
         "path": {
@@ -512,7 +512,7 @@
     "name": "fs.realpath"
   },
   "fs.rename": {
-    "fn": "output = [fs.rename, input.oldPath, input.newPath]\n",
+    "fn": "output = [fs, 'rename', input.oldPath, input.newPath]\n",
     "ports": {
       "input": {
         "oldPath": {
@@ -535,7 +535,7 @@
     "name": "fs.rename"
   },
   "fs.rmdir": {
-    "fn": "output = [fs.rmdir, input.path]\n",
+    "fn": "output = [fs, 'rmdir', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -555,7 +555,7 @@
     "name": "fs.rmdir"
   },
   "fs.stat": {
-    "fn": "output = [fs.stat, input.path]\n",
+    "fn": "output = [fs, 'stat', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -575,7 +575,7 @@
     "name": "fs.stat"
   },
   "fs.symlink": {
-    "fn": "output = [fs.symlink, input.srcpath, input.dstpath, input.type]\n",
+    "fn": "output = [fs, 'symlink', input.srcpath, input.dstpath, input.type]\n",
     "ports": {
       "input": {
         "srcpath": {
@@ -601,7 +601,7 @@
     "name": "fs.symlink"
   },
   "fs.truncate": {
-    "fn": "output = [fs.truncate, input.path, input.len]\n",
+    "fn": "output = [fs, 'truncate', input.path, input.len]\n",
     "ports": {
       "input": {
         "path": {
@@ -624,7 +624,7 @@
     "name": "fs.truncate"
   },
   "fs.unlink": {
-    "fn": "output = [fs.unlink, input.path]\n",
+    "fn": "output = [fs, 'unlink', input.path]\n",
     "ports": {
       "input": {
         "path": {
@@ -644,7 +644,7 @@
     "name": "fs.unlink"
   },
   "fs.utimes": {
-    "fn": "output = [fs.utimes, input.path, input.atime, input.mtime]\n",
+    "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n",
     "ports": {
       "input": {
         "path": {
@@ -670,7 +670,7 @@
     "name": "fs.utimes"
   },
   "fs.write": {
-    "fn": "output = [fs.write, input.fd, input.buffer, input.offset, input.length, input.position]\n",
+    "fn": "output = [fs, 'write', input.fd, input.buffer, input.offset, input.length, input.position]\n",
     "ports": {
       "input": {
         "fd": {
@@ -702,7 +702,7 @@
     "name": "fs.write"
   },
   "fs.writeFile": {
-    "fn": "output = [fs.writeFile, input.filename, input.data, input.options]\n",
+    "fn": "output = [fs, 'writeFile', input.filename, input.data, input.options]\n",
     "ports": {
       "input": {
         "filename": {

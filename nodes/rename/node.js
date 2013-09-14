@@ -1,1 +1,1 @@
-output = [fs.rename, input.oldPath, input.newPath]
+output = [fs, 'rename', input.oldPath, input.newPath]
