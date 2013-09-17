@@ -1,5 +1,5 @@
 {
-  "name": "fs.utimes",
+  "name": "utimes",
   "description": "fs utimes",
   "dependencies": {
     "fs": "latest"

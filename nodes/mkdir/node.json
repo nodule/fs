@@ -1,5 +1,5 @@
 {
-  "name": "fs.mkdir",
+  "name": "mkdir",
   "description": "fs mkdir",
   "dependencies": {
     "fs": "latest"

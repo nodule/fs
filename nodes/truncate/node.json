@@ -1,5 +1,5 @@
 {
-  "name": "fs.truncate",
+  "name": "truncate",
   "description": "fs truncate",
   "dependencies": {
     "fs": "latest"

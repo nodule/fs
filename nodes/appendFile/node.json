@@ -1,5 +1,5 @@
 {
-  "name": "fs.appendFile",
+  "name": "appendFile",
   "description": "fs appendFile",
   "dependencies": {
     "fs": "latest"

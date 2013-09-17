@@ -1,5 +1,5 @@
 {
-  "name": "fs.rmdir",
+  "name": "rmdir",
   "description": "fs rmdir",
   "dependencies": {
     "fs": "latest"

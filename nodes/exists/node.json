@@ -1,5 +1,5 @@
 {
-  "name": "fs.exists",
+  "name": "exists",
   "description": "fs exists",
   "dependencies": {
     "fs": "latest"

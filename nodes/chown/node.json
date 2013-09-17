@@ -1,5 +1,5 @@
 {
-  "name": "fs.chown",
+  "name": "chown",
   "description": "fs chown",
   "dependencies": {
     "fs": "latest"

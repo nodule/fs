@@ -1,5 +1,5 @@
 {
-  "name": "fs.ftruncate",
+  "name": "ftruncate",
   "description": "fs ftruncate",
   "dependencies": {
     "fs": "latest"

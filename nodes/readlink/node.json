@@ -1,5 +1,5 @@
 {
-  "name": "fs.readlink",
+  "name": "readlink",
   "description": "fs readlink",
   "dependencies": {
     "fs": "latest"

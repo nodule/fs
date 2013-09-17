@@ -1,5 +1,5 @@
 {
-  "name": "fs.fstat",
+  "name": "fstat",
   "description": "fs fstat",
   "dependencies": {
     "fs": "latest"

@@ -1,5 +1,5 @@
 {
-  "name": "fs.realpath",
+  "name": "realpath",
   "description": "fs realpath",
   "dependencies": {
     "fs": "latest"

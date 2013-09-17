@@ -1,5 +1,5 @@
 {
-  "name": "fs.fchmod",
+  "name": "fchmod",
   "description": "fs fchmod",
   "dependencies": {
     "fs": "latest"

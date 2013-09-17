@@ -1,5 +1,5 @@
 {
-  "name": "fs.rename",
+  "name": "rename",
   "description": "fs rename",
   "dependencies": {
     "fs": "latest"

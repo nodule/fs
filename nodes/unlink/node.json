@@ -1,5 +1,5 @@
 {
-  "name": "fs.unlink",
+  "name": "unlink",
   "description": "fs unlink",
   "dependencies": {
     "fs": "latest"

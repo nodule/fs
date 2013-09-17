@@ -1,5 +1,5 @@
 {
-  "name": "fs.read",
+  "name": "read",
   "description": "fs read",
   "dependencies": {
     "fs": "latest"

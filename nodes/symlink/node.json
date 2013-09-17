@@ -1,5 +1,5 @@
 {
-  "name": "fs.symlink",
+  "name": "symlink",
   "description": "fs symlink",
   "dependencies": {
     "fs": "latest"

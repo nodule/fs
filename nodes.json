@@ -1,5 +1,5 @@
 {
-  "fs.appendFile": {
+  "appendFile": {
     "fn": "output = [fs, 'appendFile', input.filename, input.data, input.options]\n",
     "ports": {
       "input": {
@@ -23,9 +23,9 @@
       "fs": "latest"
     },
     "description": "fs appendFile",
-    "name": "fs.appendFile"
+    "name": "appendFile"
   },
-  "fs.chmod": {
+  "chmod": {
     "fn": "output = [fs, 'chmod', input.path, input.mode]\n",
     "ports": {
       "input": {
@@ -46,9 +46,9 @@
       "fs": "latest"
     },
     "description": "fs chmod",
-    "name": "fs.chmod"
+    "name": "chmod"
   },
-  "fs.chown": {
+  "chown": {
     "fn": "output = [fs, 'chown', input.path, input.uid, input.gid]\n",
     "ports": {
       "input": {
@@ -72,9 +72,9 @@
       "fs": "latest"
     },
     "description": "fs chown",
-    "name": "fs.chown"
+    "name": "chown"
   },
-  "fs.close": {
+  "close": {
     "fn": "output = [fs, 'close', input.fd]\n",
     "ports": {
       "input": {
@@ -92,9 +92,9 @@
       "fs": "latest"
     },
     "description": "fs close",
-    "name": "fs.close"
+    "name": "close"
   },
-  "fs.exists": {
+  "exists": {
     "fn": "output [fs, 'exists', input.path]\n",
     "ports": {
       "input": {
@@ -112,9 +112,9 @@
       "fs": "latest"
     },
     "description": "fs exists",
-    "name": "fs.exists"
+    "name": "exists"
   },
-  "fs.fchmod": {
+  "fchmod": {
     "fn": "output = [fs, 'fchmod', input.fd, input.mode]\n",
     "ports": {
       "input": {
@@ -135,9 +135,9 @@
       "fs": "latest"
     },
     "description": "fs fchmod",
-    "name": "fs.fchmod"
+    "name": "fchmod"
   },
-  "fs.fchown": {
+  "fchown": {
     "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n",
     "ports": {
       "input": {
@@ -161,9 +161,9 @@
       "fs": "latest"
     },
     "description": "fs fchown",
-    "name": "fs.fchown"
+    "name": "fchown"
   },
-  "fs.fstat": {
+  "fstat": {
     "fn": "output [fs, 'fstat', input.fd]\n",
     "ports": {
       "input": {
@@ -181,9 +181,9 @@
       "fs": "latest"
     },
     "description": "fs fstat",
-    "name": "fs.fstat"
+    "name": "fstat"
   },
-  "fs.fsync": {
+  "fsync": {
     "fn": "output = [fs, 'fsync', input.fd]\n",
     "ports": {
       "input": {
@@ -201,9 +201,9 @@
       "fs": "latest"
     },
     "description": "fs fsync",
-    "name": "fs.fsync"
+    "name": "fsync"
   },
-  "fs.ftruncate": {
+  "ftruncate": {
     "fn": "output [fs, 'ftruncate', input.fd, input.len]\n",
     "ports": {
       "input": {
@@ -224,9 +224,9 @@
       "fs": "latest"
     },
     "description": "fs ftruncate",
-    "name": "fs.ftruncate"
+    "name": "ftruncate"
   },
-  "fs.futimes": {
+  "futimes": {
     "fn": "output = [fs, 'futimes', input.fd, input.atime, input.mtime]\n",
     "ports": {
       "input": {
@@ -250,9 +250,9 @@
       "fs": "latest"
     },
     "description": "fs futimes",
-    "name": "fs.futimes"
+    "name": "futimes"
   },
-  "fs.lchmod": {
+  "lchmod": {
     "fn": "output = [fs, 'lchmod', input.path, input.mode]\n",
     "ports": {
       "input": {
@@ -273,9 +273,9 @@
       "fs": "latest"
     },
     "description": "fs lchmod",
-    "name": "fs.lchmod"
+    "name": "lchmod"
   },
-  "fs.lchown": {
+  "lchown": {
     "fn": "output = [fs, 'lchown', input.path, input.uid, input.gid]\n",
     "ports": {
       "input": {
@@ -299,9 +299,9 @@
       "fs": "latest"
     },
     "description": "fs lchown",
-    "name": "fs.lchown"
+    "name": "lchown"
   },
-  "fs.link": {
+  "link": {
     "fn": "output [fs, 'link', input.srcpath, input.dstpath]\n",
     "ports": {
       "input": {
@@ -322,9 +322,9 @@
       "fs": "latest"
     },
     "description": "fs link",
-    "name": "fs.link"
+    "name": "link"
   },
-  "fs.lstat": {
+  "lstat": {
     "fn": "output [fs, 'lstat', input.path]\n",
     "ports": {
       "input": {
@@ -342,9 +342,9 @@
       "fs": "latest"
     },
     "description": "fs lstat",
-    "name": "fs.lstat"
+    "name": "lstat"
   },
-  "fs.mkdir": {
+  "mkdir": {
     "fn": "output = [fs, 'mkdir', input.path, input.mode]\n",
     "ports": {
       "input": {
@@ -365,9 +365,9 @@
       "fs": "latest"
     },
     "description": "fs mkdir",
-    "name": "fs.mkdir"
+    "name": "mkdir"
   },
-  "fs.open": {
+  "open": {
     "fn": "output= [fs, 'open', input.path, input.flags, input.mode]\n",
     "ports": {
       "input": {
@@ -391,9 +391,9 @@
       "fs": "latest"
     },
     "description": "fs open",
-    "name": "fs.open"
+    "name": "open"
   },
-  "fs.read": {
+  "read": {
     "fn": "output = [fs, 'read', input.fd, input.buffer, input.offset, input.length, input.position]\n",
     "ports": {
       "input": {
@@ -423,9 +423,9 @@
       "fs": "latest"
     },
     "description": "fs read",
-    "name": "fs.read"
+    "name": "read"
   },
-  "fs.readFile": {
+  "readFile": {
     "fn": "output = [fs, 'readFile', input.filename, input.options]\n",
     "ports": {
       "input": {
@@ -446,9 +446,9 @@
       "fs": "latest"
     },
     "description": "fs readFile",
-    "name": "fs.readFile"
+    "name": "readFile"
   },
-  "fs.readdir": {
+  "readdir": {
     "fn": "output = [fs, 'readdir', input.path]\n",
     "ports": {
       "input": {
@@ -466,9 +466,9 @@
       "fs": "latest"
     },
     "description": "fs readdir",
-    "name": "fs.readdir"
+    "name": "readdir"
   },
-  "fs.readlink": {
+  "readlink": {
     "fn": "output = [fs, 'readlink', input.path]\n",
     "ports": {
       "input": {
@@ -486,9 +486,9 @@
       "fs": "latest"
     },
     "description": "fs readlink",
-    "name": "fs.readlink"
+    "name": "readlink"
   },
-  "fs.realpath": {
+  "realpath": {
     "fn": "output = [fs, 'realpath', input.path, input.cache]\n",
     "ports": {
       "input": {
@@ -509,9 +509,9 @@
       "fs": "latest"
     },
     "description": "fs realpath",
-    "name": "fs.realpath"
+    "name": "realpath"
   },
-  "fs.rename": {
+  "rename": {
     "fn": "output = [fs, 'rename', input.oldPath, input.newPath]\n",
     "ports": {
       "input": {
@@ -532,9 +532,9 @@
       "fs": "latest"
     },
     "description": "fs rename",
-    "name": "fs.rename"
+    "name": "rename"
   },
-  "fs.rmdir": {
+  "rmdir": {
     "fn": "output = [fs, 'rmdir', input.path]\n",
     "ports": {
       "input": {
@@ -552,9 +552,9 @@
       "fs": "latest"
     },
     "description": "fs rmdir",
-    "name": "fs.rmdir"
+    "name": "rmdir"
   },
-  "fs.stat": {
+  "stat": {
     "fn": "output = [fs, 'stat', input.path]\n",
     "ports": {
       "input": {
@@ -572,9 +572,9 @@
       "fs": "latest"
     },
     "description": "fs stat",
-    "name": "fs.stat"
+    "name": "stat"
   },
-  "fs.symlink": {
+  "symlink": {
     "fn": "output = [fs, 'symlink', input.srcpath, input.dstpath, input.type]\n",
     "ports": {
       "input": {
@@ -598,9 +598,9 @@
       "fs": "latest"
     },
     "description": "fs symlink",
-    "name": "fs.symlink"
+    "name": "symlink"
   },
-  "fs.truncate": {
+  "truncate": {
     "fn": "output = [fs, 'truncate', input.path, input.len]\n",
     "ports": {
       "input": {
@@ -621,9 +621,9 @@
       "fs": "latest"
     },
     "description": "fs truncate",
-    "name": "fs.truncate"
+    "name": "truncate"
   },
-  "fs.unlink": {
+  "unlink": {
     "fn": "output = [fs, 'unlink', input.path]\n",
     "ports": {
       "input": {
@@ -641,9 +641,9 @@
       "fs": "latest"
     },
     "description": "fs unlink",
-    "name": "fs.unlink"
+    "name": "unlink"
   },
-  "fs.utimes": {
+  "utimes": {
     "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n",
     "ports": {
       "input": {
@@ -667,9 +667,9 @@
       "fs": "latest"
     },
     "description": "fs utimes",
-    "name": "fs.utimes"
+    "name": "utimes"
   },
-  "fs.write": {
+  "write": {
     "fn": "output = [fs, 'write', input.fd, input.buffer, input.offset, input.length, input.position]\n",
     "ports": {
       "input": {
@@ -699,9 +699,9 @@
       "fs": "latest"
     },
     "description": "fs write",
-    "name": "fs.write"
+    "name": "write"
   },
-  "fs.writeFile": {
+  "writeFile": {
     "fn": "output = [fs, 'writeFile', input.filename, input.data, input.options]\n",
     "ports": {
       "input": {
@@ -725,6 +725,6 @@
       "fs": "latest"
     },
     "description": "fs writeFile",
-    "name": "fs.writeFile"
+    "name": "writeFile"
   }
 }

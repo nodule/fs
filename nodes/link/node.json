@@ -1,5 +1,5 @@
 {
-  "name": "fs.link",
+  "name": "link",
   "description": "fs link",
   "dependencies": {
     "fs": "latest"

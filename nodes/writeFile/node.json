@@ -1,5 +1,5 @@
 {
-  "name": "fs.writeFile",
+  "name": "writeFile",
   "description": "fs writeFile",
   "dependencies": {
     "fs": "latest"

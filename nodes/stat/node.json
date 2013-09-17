@@ -1,5 +1,5 @@
 {
-  "name": "fs.stat",
+  "name": "stat",
   "description": "fs stat",
   "dependencies": {
     "fs": "latest"
