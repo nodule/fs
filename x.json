@@ -742,5 +742,7 @@
       "name": "writeFile"
     }
   },
-  "twigs": {}
+  "twigs": {
+    "name": "fs"
+  }
 }
