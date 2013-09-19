@@ -32,7 +32,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs appendFile",
@@ -56,7 +56,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs chmod",
@@ -83,7 +83,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs chown",
@@ -104,7 +104,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs close",
@@ -125,7 +125,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs exists",
@@ -149,7 +149,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs fchmod",
@@ -176,7 +176,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs fchown",
@@ -197,7 +197,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs fstat",
@@ -218,7 +218,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs fsync",
@@ -242,7 +242,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs ftruncate",
@@ -269,7 +269,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs futimes",
@@ -293,7 +293,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs lchmod",
@@ -320,7 +320,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs lchown",
@@ -344,7 +344,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs link",
@@ -365,7 +365,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs lstat",
@@ -389,7 +389,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs mkdir",
@@ -416,7 +416,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs open",
@@ -449,7 +449,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs read",
@@ -473,7 +473,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs readFile",
@@ -494,7 +494,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs readdir",
@@ -515,7 +515,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs readlink",
@@ -539,7 +539,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs realpath",
@@ -563,7 +563,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs rename",
@@ -584,7 +584,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs rmdir",
@@ -605,7 +605,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs stat",
@@ -632,7 +632,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs symlink",
@@ -656,7 +656,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs truncate",
@@ -677,7 +677,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs unlink",
@@ -704,7 +704,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs utimes",
@@ -737,7 +737,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs write",
@@ -764,7 +764,7 @@
           }
         }
       },
-      "dependencies": {
+      "require": {
         "fs": "latest"
       },
       "description": "fs writeFile",
