@@ -23,6 +23,9 @@
       }
     },
     "output": {
+      "error": {
+        "type": "object"
+      },
       "results": {
         "type": "object"
       }
