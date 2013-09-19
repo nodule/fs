@@ -1,7 +1,7 @@
 {
   "name": "symlink",
   "description": "fs symlink",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

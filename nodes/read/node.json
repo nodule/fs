@@ -1,7 +1,7 @@
 {
   "name": "read",
   "description": "fs read",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

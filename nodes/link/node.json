@@ -1,7 +1,7 @@
 {
   "name": "link",
   "description": "fs link",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

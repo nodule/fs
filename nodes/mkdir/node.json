@@ -1,7 +1,7 @@
 {
   "name": "mkdir",
   "description": "fs mkdir",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

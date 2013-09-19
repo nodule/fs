@@ -1,7 +1,7 @@
 {
   "name": "exists",
   "description": "fs exists",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

@@ -1,7 +1,7 @@
 {
   "name": "realpath",
   "description": "fs realpath",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

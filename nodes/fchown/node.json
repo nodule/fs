@@ -1,7 +1,7 @@
 {
   "name": "fchown",
   "description": "fs fchown",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

@@ -1,7 +1,7 @@
 {
   "name": "fsync",
   "description": "fs fsync",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

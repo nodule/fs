@@ -1,7 +1,7 @@
 {
   "name": "fstat",
   "description": "fs fstat",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

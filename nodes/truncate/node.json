@@ -1,7 +1,7 @@
 {
   "name": "truncate",
   "description": "fs truncate",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

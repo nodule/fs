@@ -1,7 +1,7 @@
 {
   "name": "appendFile",
   "description": "fs appendFile",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

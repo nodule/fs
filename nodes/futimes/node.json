@@ -1,7 +1,7 @@
 {
   "name": "futimes",
   "description": "fs futimes",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

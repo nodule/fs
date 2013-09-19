@@ -1,7 +1,7 @@
 {
   "name": "lstat",
   "description": "fs lstat",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

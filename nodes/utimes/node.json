@@ -1,7 +1,7 @@
 {
   "name": "utimes",
   "description": "fs utimes",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

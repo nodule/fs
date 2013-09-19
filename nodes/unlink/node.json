@@ -1,7 +1,7 @@
 {
   "name": "unlink",
   "description": "fs unlink",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

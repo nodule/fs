@@ -1,7 +1,7 @@
 {
   "name": "close",
   "description": "fs close",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

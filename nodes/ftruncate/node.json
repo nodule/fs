@@ -1,7 +1,7 @@
 {
   "name": "ftruncate",
   "description": "fs ftruncate",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

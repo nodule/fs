@@ -1,7 +1,7 @@
 {
   "name": "chmod",
   "description": "fs chmod",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

@@ -1,7 +1,7 @@
 {
   "name": "lchown",
   "description": "fs lchown",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {

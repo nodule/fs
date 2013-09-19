@@ -1,7 +1,7 @@
 {
   "name": "fchmod",
   "description": "fs fchmod",
-  "dependencies": {
+  "require": {
     "fs": "latest"
   },
   "ports": {
