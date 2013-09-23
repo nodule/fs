@@ -7,6 +7,6 @@
     { "ns": "console", "name": "log" }
   ],
   "links": [
-    { "source": 0, "target": 1, "out": "results", "in": "message" }
+    { "source": 0, "target": 1, "out": "results", "in": "msg" }
   ]
 }
