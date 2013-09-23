@@ -1,7 +1,7 @@
 {
   "name": "fs",
   "description": "Filesystem components for Chiχ",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "licences": [
     {
       "type": "MIT",
@@ -869,6 +869,7 @@
   "twigs": [
     {
       "name": "readFile",
+      "ns": "fs",
       "description": "fs readFile",
       "nodes": [
         {
@@ -891,8 +892,7 @@
           "out": "results",
           "in": "message"
         }
-      ],
-      "ns": "fs"
+      ]
     }
   ]
 }
