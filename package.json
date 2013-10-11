@@ -17,7 +17,12 @@
     "node": ">=0.6.0"
   },
   "main": "x",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chix-flow": "latest"
+  },
   "chix": {
     "name": "fs"
   }
