@@ -2,15 +2,9 @@
   "name": "fs",
   "description": "Filesystem components for Chiχ",
   "version": "0.0.2",
-  "licences": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/psichi/chix/raw/master/LICENSE"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/psichi/chix-fs.git"
+    "url": "https://github.com/nodule/fs.git"
   },
   "nodes": [
     {
