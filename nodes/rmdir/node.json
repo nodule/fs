@@ -1,5 +1,6 @@
 {
   "name": "rmdir",
+  "ns": "fs",
   "description": "fs rmdir",
   "require": {
     "fs": "latest"

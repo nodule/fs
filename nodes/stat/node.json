@@ -1,5 +1,6 @@
 {
   "name": "stat",
+  "ns": "fs",
   "description": "fs stat",
   "require": {
     "fs": "latest"

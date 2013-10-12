@@ -1,5 +1,6 @@
 {
   "name": "write",
+  "ns": "fs",
   "description": "fs write",
   "require": {
     "fs": "latest"

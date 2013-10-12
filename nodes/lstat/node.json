@@ -1,5 +1,6 @@
 {
   "name": "lstat",
+  "ns": "fs",
   "description": "fs lstat",
   "require": {
     "fs": "latest"

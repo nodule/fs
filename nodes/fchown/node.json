@@ -1,5 +1,6 @@
 {
   "name": "fchown",
+  "ns": "fs",
   "description": "fs fchown",
   "require": {
     "fs": "latest"

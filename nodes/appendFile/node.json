@@ -1,5 +1,6 @@
 {
   "name": "appendFile",
+  "ns": "fs",
   "description": "fs appendFile",
   "require": {
     "fs": "latest"

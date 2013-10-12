@@ -1,5 +1,6 @@
 {
   "name": "fsync",
+  "ns": "fs",
   "description": "fs fsync",
   "require": {
     "fs": "latest"

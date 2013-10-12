@@ -1,5 +1,6 @@
 {
   "name": "exists",
+  "ns": "fs",
   "description": "fs exists",
   "require": {
     "fs": "latest"

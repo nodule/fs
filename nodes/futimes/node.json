@@ -1,5 +1,6 @@
 {
   "name": "futimes",
+  "ns": "fs",
   "description": "fs futimes",
   "require": {
     "fs": "latest"

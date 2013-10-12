@@ -1,5 +1,6 @@
 {
   "name": "close",
+  "ns": "fs",
   "description": "fs close",
   "require": {
     "fs": "latest"

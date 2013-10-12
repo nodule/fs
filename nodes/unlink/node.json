@@ -1,5 +1,6 @@
 {
   "name": "unlink",
+  "ns": "fs",
   "description": "fs unlink",
   "require": {
     "fs": "latest"

@@ -1,5 +1,6 @@
 {
   "name": "readlink",
+  "ns": "fs",
   "description": "fs readlink",
   "require": {
     "fs": "latest"

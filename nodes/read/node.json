@@ -1,5 +1,6 @@
 {
   "name": "read",
+  "ns": "fs",
   "description": "fs read",
   "require": {
     "fs": "latest"

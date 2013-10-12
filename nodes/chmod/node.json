@@ -1,5 +1,6 @@
 {
   "name": "chmod",
+  "ns": "fs",
   "description": "fs chmod",
   "require": {
     "fs": "latest"

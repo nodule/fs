@@ -1,5 +1,6 @@
 {
   "name": "symlink",
+  "ns": "fs",
   "description": "fs symlink",
   "require": {
     "fs": "latest"

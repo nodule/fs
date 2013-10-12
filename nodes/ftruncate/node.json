@@ -1,5 +1,6 @@
 {
   "name": "ftruncate",
+  "ns": "fs",
   "description": "fs ftruncate",
   "require": {
     "fs": "latest"

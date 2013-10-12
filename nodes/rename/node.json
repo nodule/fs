@@ -1,5 +1,6 @@
 {
   "name": "rename",
+  "ns": "fs",
   "description": "fs rename",
   "require": {
     "fs": "latest"

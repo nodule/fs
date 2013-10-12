@@ -1,5 +1,6 @@
 {
   "name": "truncate",
+  "ns": "fs",
   "description": "fs truncate",
   "require": {
     "fs": "latest"

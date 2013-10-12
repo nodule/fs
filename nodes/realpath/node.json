@@ -1,5 +1,6 @@
 {
   "name": "realpath",
+  "ns": "fs",
   "description": "fs realpath",
   "require": {
     "fs": "latest"

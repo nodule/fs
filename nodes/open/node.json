@@ -1,5 +1,6 @@
 {
   "name": "open",
+  "ns": "fs",
   "description": "fs open",
   "require": {
     "fs": "latest"

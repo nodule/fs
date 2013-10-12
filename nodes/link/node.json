@@ -1,5 +1,6 @@
 {
   "name": "link",
+  "ns": "fs",
   "description": "fs link",
   "require": {
     "fs": "latest"

@@ -1,5 +1,6 @@
 {
   "name": "readFile",
+  "ns": "fs",
   "description": "fs readFile",
   "require": {
     "fs": "latest"
