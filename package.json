@@ -13,7 +13,7 @@
   },
   "main": "x",
   "scripts": {
-    "test": "chit"
+    "test": "chit -r"
   },
   "devDependencies": {
     "chit": "0.x.x"
