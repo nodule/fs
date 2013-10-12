@@ -867,6 +867,7 @@
       "description": "fs readFile",
       "nodes": [
         {
+          "id": "0",
           "ns": "fs",
           "name": "readFile",
           "context": {
@@ -875,14 +876,15 @@
           }
         },
         {
+          "id": "1",
           "ns": "console",
           "name": "log"
         }
       ],
       "links": [
         {
-          "source": 0,
-          "target": 1,
+          "source": "0",
+          "target": "1",
           "out": "results",
           "in": "msg"
         }
