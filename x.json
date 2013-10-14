@@ -509,10 +509,24 @@
       "ports": {
         "input": {
           "filename": {
-            "type": "string"
+            "title": "Filename",
+            "type": "string",
+            "required": true
           },
           "options": {
-            "type": "object"
+            "type": "object",
+            "title": "Options",
+            "properties": {
+              "encoding": {
+                "title": "Encoding",
+                "type": "string"
+              },
+              "flag": {
+                "title": "Flag",
+                "type": "string",
+                "default": "r"
+              }
+            }
           }
         },
         "output": {
@@ -528,6 +542,7 @@
         "fs": "latest"
       },
       "description": "fs readFile",
+      "title": "fs readFile",
       "ns": "fs",
       "name": "readFile",
       "fn": "output = [fs, 'readFile', input.filename, input.options]\n"
@@ -864,6 +879,7 @@
     {
       "name": "readFile",
       "ns": "fs",
+      "title": "fs readFile",
       "description": "fs readFile",
       "nodes": [
         {

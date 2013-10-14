@@ -1,6 +1,7 @@
 {
   "name": "readFile",
   "ns": "fs",
+  "title": "fs readFile",
   "description": "fs readFile",
   "require": {
     "fs": "latest"
@@ -9,14 +10,16 @@
     "input": {
       "filename": {
         "title": "Filename",
-        "type": "string"
+        "type": "string",
+        "required": true
       },
       "options": {
         "type": "object",
+        "title": "Options",
         "properties":  {
           "encoding": {
-            "type": "string",
-            "title": "Encoding"
+            "title": "Encoding",
+            "type": "string"
           },
           "flag": {
             "title": "Flag",
