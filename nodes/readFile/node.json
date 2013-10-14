@@ -8,10 +8,22 @@
   "ports": {
     "input": {
       "filename": {
+        "title": "Filename"
         "type": "string"
       },
       "options": {
-        "type": "object"
+        "type": "object",
+        "properties":  {
+          "encoding": {
+            "type": "string",
+            "title": "Encoding"
+          },
+          "flag": {
+            "title": "Flag",
+            "type": "string",
+            "default": "r"
+          }
+        }
       }
     },
     "output": {
