@@ -1,6 +1,7 @@
 {
   "name": "readFile",
   "ns": "fs",
+  "title": "fs readFile",
   "description": "fs readFile",
   "nodes": [
     { "id": "0", "ns": "fs", "name": "readFile", "context": { "filename": "/etc/passwd", "options": {} } },
