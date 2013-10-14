@@ -8,7 +8,7 @@
   "ports": {
     "input": {
       "filename": {
-        "title": "Filename"
+        "title": "Filename",
         "type": "string"
       },
       "options": {
