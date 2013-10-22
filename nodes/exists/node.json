@@ -12,11 +12,9 @@
       }
     },
     "output": {
-      "error": {
-        "type": "object"
-      },
-      "results": {
-        "type": "object"
+      "exists": {
+        "title": "Exists",
+        "type": "boolean"
       }
     }
   }

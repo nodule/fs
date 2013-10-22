@@ -25,9 +25,15 @@
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
-      "results": {
+      "bytesRead": {
+        "title": "Bytes read",
+        "type": "object"
+      },
+      "buffer": {
+        "title": "Buffer",
         "type": "object"
       }
     }

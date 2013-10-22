@@ -29,8 +29,8 @@
             "title": "Error",
             "type": "object"
           },
-          "results": {
-            "Title": "Results",
+          "event:complete": {
+            "Title": "Complete",
             "type": "object"
           }
         }
@@ -58,6 +58,10 @@
         "output": {
           "exception": {
             "title": "Exception",
+            "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -90,6 +94,10 @@
           "exception": {
             "title": "Exception",
             "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
+            "type": "object"
           }
         }
       },
@@ -109,10 +117,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -133,11 +143,9 @@
           }
         },
         "output": {
-          "error": {
-            "type": "object"
-          },
-          "results": {
-            "type": "object"
+          "exists": {
+            "title": "Exists",
+            "type": "boolean"
           }
         }
       },
@@ -164,6 +172,10 @@
         "output": {
           "exception": {
             "title": "Exception",
+            "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -196,6 +208,10 @@
           "exception": {
             "title": "Exception",
             "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
+            "type": "object"
           }
         }
       },
@@ -216,9 +232,11 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
+          "stats": {
+            "title": "stats",
             "type": "object"
           }
         }
@@ -239,10 +257,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -266,10 +286,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -296,10 +318,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -327,6 +351,10 @@
         "output": {
           "exception": {
             "title": "Exception",
+            "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -359,6 +387,10 @@
           "exception": {
             "title": "Exception",
             "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
+            "type": "object"
           }
         }
       },
@@ -381,10 +413,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -406,9 +440,11 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
+          "stats": {
+            "title": "Stats",
             "type": "object"
           }
         }
@@ -436,6 +472,10 @@
         "output": {
           "exception": {
             "title": "Exception",
+            "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -469,8 +509,12 @@
             "title": "Error",
             "type": "object"
           },
-          "results": {
-            "title": "Results",
+          "fd": {
+            "title": "Fd",
+            "type": "object"
+          },
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -504,9 +548,15 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
+          "bytesRead": {
+            "title": "Bytes read",
+            "type": "object"
+          },
+          "buffer": {
+            "title": "Buffer",
             "type": "object"
           }
         }
@@ -547,7 +597,7 @@
           "error": {
             "type": "object"
           },
-          "results": {
+          "data": {
             "type": "object"
           }
         }
@@ -570,10 +620,12 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
-            "type": "object"
+          "files": {
+            "title": "Files",
+            "type": "array"
           }
         }
       },
@@ -596,8 +648,9 @@
           "error": {
             "type": "object"
           },
-          "results": {
-            "type": "object"
+          "linkString": {
+            "title": "Link String",
+            "type": "string"
           }
         }
       },
@@ -614,16 +667,13 @@
         "input": {
           "path": {
             "type": "string"
-          },
-          "cache": {
-            "type": "string"
           }
         },
         "output": {
           "error": {
             "type": "object"
           },
-          "results": {
+          "resolvedPath": {
             "type": "object"
           }
         }
@@ -634,7 +684,7 @@
       "description": "fs realpath",
       "ns": "fs",
       "name": "realpath",
-      "fn": "output = [fs, 'realpath', input.path, input.cache]\n"
+      "fn": "output = [fs, 'realpath', input.path]\n"
     },
     {
       "ports": {
@@ -647,10 +697,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -667,14 +719,17 @@
       "ports": {
         "input": {
           "path": {
+            "title": "Path",
             "type": "string"
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -691,14 +746,17 @@
       "ports": {
         "input": {
           "path": {
+            "title": "Path",
             "type": "string"
           }
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
+          "stats": {
+            "title": "Stats",
             "type": "object"
           }
         }
@@ -715,20 +773,29 @@
       "ports": {
         "input": {
           "srcpath": {
+            "title": "Source path",
             "type": "string"
           },
           "dstpath": {
+            "title": "Destination path",
             "type": "string"
           },
           "type": {
-            "type": "string"
+            "enum": [
+              "file",
+              "dir",
+              "junction"
+            ],
+            "default": "file"
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -752,10 +819,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -772,14 +841,17 @@
       "ports": {
         "input": {
           "path": {
+            "title": "Path",
             "type": "string"
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -806,10 +878,12 @@
           }
         },
         "output": {
-          "error": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }
@@ -826,26 +900,38 @@
       "ports": {
         "input": {
           "fd": {
+            "title": "Fd",
             "type": "object"
           },
           "buffer": {
+            "title": "Buffer",
             "type": "object"
           },
           "offset": {
+            "title": "Offset",
             "type": "integer"
           },
           "length": {
+            "title": "Length",
             "type": "integer"
           },
           "position": {
+            "title": "Position",
             "type": "integer"
           }
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
+          "written": {
+            "title": "Written",
+            "description": "How many *bytes* were written from *buffer*",
+            "type": "object"
+          },
+          "buffer": {
+            "title": "Buffer",
             "type": "object"
           }
         }
@@ -868,14 +954,34 @@
             "type": "string"
           },
           "options": {
-            "type": "object"
+            "title": "Options",
+            "type": "object",
+            "properties": {
+              "encoding": {
+                "title": "Encoding",
+                "type": "string",
+                "default": "utf-8"
+              },
+              "mode": {
+                "title": "Mode",
+                "type": "number",
+                "default": 438
+              },
+              "flag": {
+                "title": "Flag",
+                "type": "string",
+                "default": "w"
+              }
+            }
           }
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
-          "results": {
+          "event:complete": {
+            "title": "Complete",
             "type": "object"
           }
         }

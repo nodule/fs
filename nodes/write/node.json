@@ -8,26 +8,38 @@
   "ports": {
     "input": {
       "fd": {
+        "title": "Fd",
         "type": "object"
       },
       "buffer": {
+        "title": "Buffer",
         "type": "object"
       },
       "offset": {
+        "title": "Offset",
         "type": "integer"
       },
       "length": {
+        "title": "Length",
         "type": "integer"
       },
       "position": {
+        "title": "Position",
         "type": "integer"
       }
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
-      "results": {
+      "written": {
+        "title": "Written",
+        "description": "How many *bytes* were written from *buffer*",
+        "type": "object"
+      },
+      "buffer": {
+        "title": "Buffer",
         "type": "object"
       }
     }

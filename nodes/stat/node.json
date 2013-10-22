@@ -8,14 +8,17 @@
   "ports": {
     "input": {
       "path": {
+        "title": "Path",
         "type": "string"
       }
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
-      "results": {
+      "stats": {
+        "title": "Stats",
         "type": "object"
       }
     }

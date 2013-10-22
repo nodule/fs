@@ -13,10 +13,12 @@
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
-      "results": {
-        "type": "object"
+      "files": {
+        "title": "Files",
+        "type": "array"
       }
     }
   }

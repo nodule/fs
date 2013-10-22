@@ -9,16 +9,13 @@
     "input": {
       "path": {
         "type": "string"
-      },
-      "cache": {
-        "type": "string"
       }
     },
     "output": {
       "error": {
         "type": "object"
       },
-      "results": {
+      "resolvedPath": {
         "type": "object"
       }
     }

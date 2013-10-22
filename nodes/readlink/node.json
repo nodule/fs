@@ -15,8 +15,9 @@
       "error": {
         "type": "object"
       },
-      "results": {
-        "type": "object"
+      "linkString": {
+        "title": "Link String",
+        "type": "string"
       }
     }
   }

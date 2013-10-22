@@ -12,10 +12,12 @@
       }
     },
     "output": {
-      "error": {
+      "exception": {
+        "title": "Exception",
         "type": "object"
       },
-      "results": {
+      "event:complete": {
+        "title": "Complete",
         "type": "object"
       }
     }

@@ -8,20 +8,25 @@
   "ports": {
     "input": {
       "srcpath": {
+        "title": "Source path",
         "type": "string"
       },
       "dstpath": {
+        "title": "Destination path",
         "type": "string"
       },
       "type": {
-        "type": "string"
+        "enum": ["file","dir","junction"],
+        "default": "file"
       }
     },
     "output": {
-      "error": {
+      "exception": {
+        "title": "Exception",
         "type": "object"
       },
-      "results": {
+      "event:complete": {
+        "title": "Complete",
         "type": "object"
       }
     }

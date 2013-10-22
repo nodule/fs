@@ -26,8 +26,8 @@
         "title": "Error",
         "type": "object"
       },
-      "results": {
-        "Title": "Results",
+      "event:complete": {
+        "Title": "Complete",
         "type": "object"
       }
     }

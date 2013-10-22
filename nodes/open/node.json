@@ -25,8 +25,12 @@
         "title": "Error",
         "type": "object"
       },
-      "results": {
-        "title": "Results",
+      "fd": {
+        "title": "Fd",
+        "type": "object"
+      },
+      "event:complete": {
+        "title": "Complete",
         "type": "object"
       }
     }

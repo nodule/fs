@@ -14,14 +14,34 @@
         "type": "string"
       },
       "options": {
-        "type": "object"
+        "title": "Options",
+        "type": "object",
+        "properties": {
+          "encoding": {
+            "title": "Encoding",
+            "type": "string",
+            "default": "utf-8"
+          },
+          "mode": {
+            "title": "Mode",
+            "type": "number",
+            "default": 438
+          },
+          "flag": {
+            "title": "Flag",
+            "type": "string",
+            "default": "w" 
+          }
+        }
       }
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
-      "results": {
+      "event:complete": {
+        "title": "Complete",
         "type": "object"
       }
     }
