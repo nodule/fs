@@ -21,12 +21,8 @@
       }
     },
     "output": {
-      "error": {
-        "title": "Error",
-        "type": "object"
-      },
-      "results": {
-        "title": "Results",
+      "exception": {
+        "title": "Exception",
         "type": "object"
       }
     }

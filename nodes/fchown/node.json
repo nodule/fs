@@ -8,20 +8,21 @@
   "ports": {
     "input": {
       "fd": {
+        "title": "Fd",
         "type": "object"
       },
       "uid": {
+        "title": "Uid",
         "type": "integer"
       },
       "gid": {
+        "title": "Gid",
         "type": "integer"
       }
     },
     "output": {
-      "error": {
-        "type": "object"
-      },
-      "results": {
+      "exception": {
+        "title": "Exception",
         "type": "object"
       }
     }

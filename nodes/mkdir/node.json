@@ -13,16 +13,12 @@
       },
       "mode": {
         "title": "Mode",
-        "type": "integer"
+        "type": "string"
       }
     },
     "output": {
-      "error": {
-        "title": "Error",
-        "type": "object"
-      },
-      "results": {
-        "title": "Results",
+      "exception": {
+        "title": "Exception",
         "type": "object"
       }
     }

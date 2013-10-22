@@ -8,17 +8,17 @@
   "ports": {
     "input": {
       "fd": {
+        "title": "Fd",
         "type": "object"
       },
       "mode": {
-        "type": "integer"
+        "title": "Mode",
+        "type": "string"
       }
     },
     "output": {
-      "error": {
-        "type": "object"
-      },
-      "results": {
+      "exception": {
+        "title": "Exception",
         "type": "object"
       }
     }

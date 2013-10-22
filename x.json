@@ -52,16 +52,12 @@
           },
           "mode": {
             "title": "Mode",
-            "type": "integer"
+            "type": "string"
           }
         },
         "output": {
-          "error": {
-            "title": "Error",
-            "type": "object"
-          },
-          "results": {
-            "title": "Results",
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -91,12 +87,8 @@
           }
         },
         "output": {
-          "error": {
-            "title": "Error",
-            "type": "object"
-          },
-          "results": {
-            "title": "Results",
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -161,17 +153,17 @@
       "ports": {
         "input": {
           "fd": {
+            "title": "Fd",
             "type": "object"
           },
           "mode": {
-            "type": "integer"
+            "title": "Mode",
+            "type": "string"
           }
         },
         "output": {
-          "error": {
-            "type": "object"
-          },
-          "results": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -188,20 +180,21 @@
       "ports": {
         "input": {
           "fd": {
+            "title": "Fd",
             "type": "object"
           },
           "uid": {
+            "title": "Uid",
             "type": "integer"
           },
           "gid": {
+            "title": "Gid",
             "type": "integer"
           }
         },
         "output": {
-          "error": {
-            "type": "object"
-          },
-          "results": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -323,17 +316,17 @@
       "ports": {
         "input": {
           "path": {
+            "title": "Path",
             "type": "string"
           },
           "mode": {
-            "type": "integer"
+            "title": "Mode",
+            "type": "string"
           }
         },
         "output": {
-          "error": {
-            "type": "object"
-          },
-          "results": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -350,20 +343,21 @@
       "ports": {
         "input": {
           "path": {
+            "title": "Path",
             "type": "string"
           },
           "uid": {
+            "title": "Uid",
             "type": "integer"
           },
           "gid": {
+            "title": "Gid",
             "type": "integer"
           }
         },
         "output": {
-          "error": {
-            "type": "object"
-          },
-          "results": {
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -436,16 +430,12 @@
           },
           "mode": {
             "title": "Mode",
-            "type": "integer"
+            "type": "string"
           }
         },
         "output": {
-          "error": {
-            "title": "Error",
-            "type": "object"
-          },
-          "results": {
-            "title": "Results",
+          "exception": {
+            "title": "Exception",
             "type": "object"
           }
         }
@@ -462,20 +452,25 @@
       "ports": {
         "input": {
           "path": {
+            "title": "Path",
             "type": "string"
           },
           "flags": {
+            "title": "Flags",
             "type": "string"
           },
           "mode": {
-            "type": "integer"
+            "title": "Mode",
+            "type": "string"
           }
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
           "results": {
+            "title": "Results",
             "type": "object"
           }
         }

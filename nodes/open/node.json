@@ -8,20 +8,25 @@
   "ports": {
     "input": {
       "path": {
+        "title": "Path",
         "type": "string"
       },
       "flags": {
+        "title": "Flags",
         "type": "string"
       },
       "mode": {
-        "type": "integer"
+        "title": "Mode",
+        "type": "string"
       }
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
       "results": {
+        "title": "Results",
         "type": "object"
       }
     }
