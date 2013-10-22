@@ -8,20 +8,25 @@
   "ports": {
     "input": {
       "path": {
+        "title": "Path",
         "type": "string"
       },
       "uid": {
+        "title": "uid",
         "type": "integer"
       },
       "gid": {
+        "title": "gid",
         "type": "integer"
       }
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
       "results": {
+        "title": "Results",
         "type": "object"
       }
     }

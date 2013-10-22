@@ -8,20 +8,26 @@
   "ports": {
     "input": {
       "filename": {
-        "type": "string"
+        "title": "Filename",
+        "type": "string",
+        "required": true
       },
       "data": {
+        "title": "Data",
         "type": "string"
       },
       "options": {
+        "title": "Options (TODO)",
         "type": "object"
       }
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
       "results": {
+        "Title": "Results",
         "type": "object"
       }
     }
