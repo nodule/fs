@@ -19,6 +19,7 @@
     "chit": "0.x.x"
   },
   "chix": {
-    "name": "fs"
+    "name": "fs",
+    "color": "rgb(136,96,35)"
   }
 }
