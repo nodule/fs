@@ -2,6 +2,9 @@
   "name": "link",
   "ns": "fs",
   "description": "fs link",
+  "phrases": {
+    "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
+  },
   "require": {
     "fs": "latest"
   },

@@ -2,6 +2,9 @@
   "name": "unlink",
   "ns": "fs",
   "description": "fs unlink",
+  "phrases": {
+    "active": "Unlinking file {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

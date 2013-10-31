@@ -2,6 +2,9 @@
   "name": "futimes",
   "ns": "fs",
   "description": "fs futimes",
+  "phrases": {
+    "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
+  },
   "require": {
     "fs": "latest"
   },

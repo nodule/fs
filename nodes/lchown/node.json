@@ -2,6 +2,9 @@
   "name": "lchown",
   "ns": "fs",
   "description": "fs lchown",
+  "phrases": {
+    "active": "Changing file owner/group for {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

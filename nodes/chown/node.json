@@ -2,6 +2,9 @@
   "name": "chown",
   "ns": "fs",
   "description": "fs chown",
+  "phrases": {
+    "active": "Changing owner/group for {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

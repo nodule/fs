@@ -3,6 +3,9 @@
   "ns": "fs",
   "title": "fs readFile",
   "description": "fs readFile",
+  "phrases": {
+    "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
+  },
   "require": {
     "fs": "latest"
   },

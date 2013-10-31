@@ -2,6 +2,9 @@
   "name": "readlink",
   "ns": "fs",
   "description": "fs readlink",
+  "phrases": {
+    "active": "Reading link {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

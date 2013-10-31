@@ -2,6 +2,9 @@
   "name": "symlink",
   "ns": "fs",
   "description": "fs symlink",
+  "phrases": {
+    "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
+  },
   "require": {
     "fs": "latest"
   },

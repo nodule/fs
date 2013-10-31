@@ -2,6 +2,9 @@
   "name": "chmod",
   "ns": "fs",
   "description": "fs chmod",
+  "phrases": {
+    "active": "Changing file mode on {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

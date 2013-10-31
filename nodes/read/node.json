@@ -2,6 +2,9 @@
   "name": "read",
   "ns": "fs",
   "description": "fs read",
+  "phrases": {
+    "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
+  },
   "require": {
     "fs": "latest"
   },

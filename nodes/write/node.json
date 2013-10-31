@@ -2,6 +2,9 @@
   "name": "write",
   "ns": "fs",
   "description": "fs write",
+  "phrases": {
+    "active": "Writing to file descriptor"
+  },
   "require": {
     "fs": "latest"
   },

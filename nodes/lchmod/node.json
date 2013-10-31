@@ -2,6 +2,9 @@
   "name": "lchmod",
   "ns": "fs",
   "description": "fs lchmod",
+  "phrases": {
+    "active": "Changing file mode for {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

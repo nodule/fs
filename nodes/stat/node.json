@@ -2,6 +2,9 @@
   "name": "stat",
   "ns": "fs",
   "description": "fs stat",
+  "phrases": {
+    "active": "Reading stats for {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

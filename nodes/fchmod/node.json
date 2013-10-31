@@ -2,6 +2,9 @@
   "name": "fchmod",
   "ns": "fs",
   "description": "fs fchmod",
+  "phrases": {
+    "active": "Changing file mode for fd"
+  },
   "require": {
     "fs": "latest"
   },

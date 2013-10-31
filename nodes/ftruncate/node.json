@@ -2,6 +2,9 @@
   "name": "ftruncate",
   "ns": "fs",
   "description": "fs ftruncate",
+  "phrases": {
+    "active": "Truncating fd with a length of {{input.len}}"
+  },
   "require": {
     "fs": "latest"
   },

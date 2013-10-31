@@ -2,6 +2,9 @@
   "name": "open",
   "ns": "fs",
   "description": "fs open",
+  "phrases": {
+    "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
+  },
   "require": {
     "fs": "latest"
   },

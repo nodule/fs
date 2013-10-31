@@ -2,6 +2,9 @@
   "name": "mkdir",
   "ns": "fs",
   "description": "fs mkdir",
+  "phrases": {
+    "active": "Creating directory {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

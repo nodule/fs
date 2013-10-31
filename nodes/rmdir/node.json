@@ -2,6 +2,9 @@
   "name": "rmdir",
   "ns": "fs",
   "description": "fs rmdir",
+  "phrases": {
+    "active": "Removing directory {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

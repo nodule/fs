@@ -2,6 +2,9 @@
   "name": "close",
   "ns": "fs",
   "description": "fs close",
+  "phrases": {
+    "active": "Closing file handle"
+  },
   "require": {
     "fs": "latest"
   },

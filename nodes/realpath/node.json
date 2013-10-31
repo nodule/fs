@@ -2,6 +2,9 @@
   "name": "realpath",
   "ns": "fs",
   "description": "fs realpath",
+  "phrases": {
+    "active": "Performing realpath for {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

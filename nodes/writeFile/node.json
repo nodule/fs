@@ -2,6 +2,9 @@
   "name": "writeFile",
   "ns": "fs",
   "description": "fs writeFile",
+  "phrases": {
+    "active": "Writing file {{input.filename}}"
+  },
   "require": {
     "fs": "latest"
   },

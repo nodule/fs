@@ -2,6 +2,9 @@
   "name": "rename",
   "ns": "fs",
   "description": "fs rename",
+  "phrases": {
+    "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
+  },
   "require": {
     "fs": "latest"
   },

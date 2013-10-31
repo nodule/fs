@@ -2,6 +2,9 @@
   "name": "appendFile",
   "ns": "fs",
   "description": "fs appendFile",
+  "phrases": {
+    "active": "Appending data to {{input.filename}}"
+  },
   "require": {
     "fs": "latest"
   },

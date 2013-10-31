@@ -2,6 +2,9 @@
   "name": "lstat",
   "ns": "fs",
   "description": "fs lstat",
+  "phrases": {
+    "active": "Getting stats for {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

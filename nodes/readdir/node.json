@@ -2,6 +2,9 @@
   "name": "readdir",
   "ns": "fs",
   "description": "fs readdir",
+  "phrases": {
+    "active": "Listing files from directory {{input.path}}"
+  },
   "require": {
     "fs": "latest"
   },

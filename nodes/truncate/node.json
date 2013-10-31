@@ -2,6 +2,9 @@
   "name": "truncate",
   "ns": "fs",
   "description": "fs truncate",
+  "phrases": {
+    "active": "Truncating file {{input.path}} to {{input.len}}"
+  },
   "require": {
     "fs": "latest"
   },

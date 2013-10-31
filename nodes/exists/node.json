@@ -2,6 +2,9 @@
   "name": "exists",
   "ns": "fs",
   "description": "fs exists",
+  "phrases": {
+    "active": "Checking whether file {{input.path}} exists"
+  },
   "require": {
     "fs": "latest"
   },
