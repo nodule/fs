@@ -20,6 +20,7 @@
   },
   "chix": {
     "name": "fs",
+    "env": "server",
     "color": "rgb(136,96,35)"
   }
 }

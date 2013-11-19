@@ -44,6 +44,7 @@
       "description": "fs appendFile",
       "ns": "fs",
       "name": "appendFile",
+      "env": "server",
       "fn": "output = [fs, 'appendFile', input.filename, input.data, input.options]\n"
     },
     {
@@ -78,6 +79,7 @@
       "description": "fs chmod",
       "ns": "fs",
       "name": "chmod",
+      "env": "server",
       "fn": "output = [fs, 'chmod', input.path, input.mode]\n"
     },
     {
@@ -116,6 +118,7 @@
       "description": "fs chown",
       "ns": "fs",
       "name": "chown",
+      "env": "server",
       "fn": "output = [fs, 'chown', input.path, input.uid, input.gid]\n"
     },
     {
@@ -145,6 +148,7 @@
       "description": "fs close",
       "ns": "fs",
       "name": "close",
+      "env": "server",
       "fn": "output = [fs, 'close', input.fd]\n"
     },
     {
@@ -170,6 +174,7 @@
       "description": "fs exists",
       "ns": "fs",
       "name": "exists",
+      "env": "server",
       "fn": "output [fs, 'exists', input.path]\n"
     },
     {
@@ -204,6 +209,7 @@
       "description": "fs fchmod",
       "ns": "fs",
       "name": "fchmod",
+      "env": "server",
       "fn": "output = [fs, 'fchmod', input.fd, input.mode]\n"
     },
     {
@@ -242,6 +248,7 @@
       "description": "fs fchown",
       "ns": "fs",
       "name": "fchown",
+      "env": "server",
       "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n"
     },
     {
@@ -271,6 +278,7 @@
       "description": "fs fstat",
       "ns": "fs",
       "name": "fstat",
+      "env": "server",
       "fn": "output [fs, 'fstat', input.fd]\n"
     },
     {
@@ -300,6 +308,7 @@
       "description": "fs fsync",
       "ns": "fs",
       "name": "fsync",
+      "env": "server",
       "fn": "output = [fs, 'fsync', input.fd]\n"
     },
     {
@@ -332,6 +341,7 @@
       "description": "fs ftruncate",
       "ns": "fs",
       "name": "ftruncate",
+      "env": "server",
       "fn": "output [fs, 'ftruncate', input.fd, input.len]\n"
     },
     {
@@ -367,6 +377,7 @@
       "description": "fs futimes",
       "ns": "fs",
       "name": "futimes",
+      "env": "server",
       "fn": "output = [fs, 'futimes', input.fd, input.atime, input.mtime]\n"
     },
     {
@@ -401,6 +412,7 @@
       "description": "fs lchmod",
       "ns": "fs",
       "name": "lchmod",
+      "env": "server",
       "fn": "output = [fs, 'lchmod', input.path, input.mode]\n"
     },
     {
@@ -439,6 +451,7 @@
       "description": "fs lchown",
       "ns": "fs",
       "name": "lchown",
+      "env": "server",
       "fn": "output = [fs, 'lchown', input.path, input.uid, input.gid]\n"
     },
     {
@@ -471,6 +484,7 @@
       "description": "fs link",
       "ns": "fs",
       "name": "link",
+      "env": "server",
       "fn": "output [fs, 'link', input.srcpath, input.dstpath]\n"
     },
     {
@@ -500,6 +514,7 @@
       "description": "fs lstat",
       "ns": "fs",
       "name": "lstat",
+      "env": "server",
       "fn": "output [fs, 'lstat', input.path]\n"
     },
     {
@@ -534,6 +549,7 @@
       "description": "fs mkdir",
       "ns": "fs",
       "name": "mkdir",
+      "env": "server",
       "fn": "output = [fs, 'mkdir', input.path, input.mode]\n"
     },
     {
@@ -576,6 +592,7 @@
       "description": "fs open",
       "ns": "fs",
       "name": "open",
+      "env": "server",
       "fn": "output= [fs, 'open', input.path, input.flags, input.mode]\n"
     },
     {
@@ -621,6 +638,7 @@
       "description": "fs read",
       "ns": "fs",
       "name": "read",
+      "env": "server",
       "fn": "output = [fs, 'read', input.fd, input.buffer, input.offset, input.length, input.position]\n"
     },
     {
@@ -666,6 +684,7 @@
       "title": "fs readFile",
       "ns": "fs",
       "name": "readFile",
+      "env": "server",
       "fn": "output = [fs, 'readFile', input.filename, input.options]\n"
     },
     {
@@ -695,6 +714,7 @@
       "description": "fs readdir",
       "ns": "fs",
       "name": "readdir",
+      "env": "server",
       "fn": "output = [fs, 'readdir', input.path]\n"
     },
     {
@@ -723,6 +743,7 @@
       "description": "fs readlink",
       "ns": "fs",
       "name": "readlink",
+      "env": "server",
       "fn": "output = [fs, 'readlink', input.path]\n"
     },
     {
@@ -750,6 +771,7 @@
       "description": "fs realpath",
       "ns": "fs",
       "name": "realpath",
+      "env": "server",
       "fn": "output = [fs, 'realpath', input.path]\n"
     },
     {
@@ -782,6 +804,7 @@
       "description": "fs rename",
       "ns": "fs",
       "name": "rename",
+      "env": "server",
       "fn": "output = [fs, 'rename', input.oldPath, input.newPath]\n"
     },
     {
@@ -812,6 +835,7 @@
       "description": "fs rmdir",
       "ns": "fs",
       "name": "rmdir",
+      "env": "server",
       "fn": "output = [fs, 'rmdir', input.path]\n"
     },
     {
@@ -842,6 +866,7 @@
       "description": "fs stat",
       "ns": "fs",
       "name": "stat",
+      "env": "server",
       "fn": "output = [fs, 'stat', input.path]\n"
     },
     {
@@ -884,6 +909,7 @@
       "description": "fs symlink",
       "ns": "fs",
       "name": "symlink",
+      "env": "server",
       "fn": "output = [fs, 'symlink', input.srcpath, input.dstpath, input.type]\n"
     },
     {
@@ -916,6 +942,7 @@
       "description": "fs truncate",
       "ns": "fs",
       "name": "truncate",
+      "env": "server",
       "fn": "output = [fs, 'truncate', input.path, input.len]\n"
     },
     {
@@ -946,6 +973,7 @@
       "description": "fs unlink",
       "ns": "fs",
       "name": "unlink",
+      "env": "server",
       "fn": "output = [fs, 'unlink', input.path]\n"
     },
     {
@@ -981,6 +1009,7 @@
       "description": "fs utimes",
       "ns": "fs",
       "name": "utimes",
+      "env": "server",
       "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n"
     },
     {
@@ -1032,6 +1061,7 @@
       "description": "fs write",
       "ns": "fs",
       "name": "write",
+      "env": "server",
       "fn": "output = [fs, 'write', input.fd, input.buffer, input.offset, input.length, input.position]\n"
     },
     {
@@ -1085,6 +1115,7 @@
       "description": "fs writeFile",
       "ns": "fs",
       "name": "writeFile",
+      "env": "server",
       "fn": "output = [fs, 'writeFile', input.filename, input.data, input.options]\n"
     }
   ],
@@ -1170,5 +1201,6 @@
         }
       }
     }
-  ]
+  ],
+  "env": "server"
 }
