@@ -685,7 +685,7 @@
         }
       },
       "env": "server",
-      "fn": "output = function(cb) {\n\n  fs.readFile(input.filename, input.options, function(err, data) {\n    cb({\n      err: err,\n      data: data.toString()\n    });\n  });\n\n};\n"
+      "fn": "output = function(cb) {\n\n  fs.readFile(input.filename, input.options, function(err, data) {\n    cb({\n      error: err,\n      data: data.toString()\n    });\n  });\n\n};\n"
     },
     {
       "name": "readdir",

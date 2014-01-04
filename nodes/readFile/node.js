@@ -2,7 +2,7 @@ output = function(cb) {
 
   fs.readFile(input.filename, input.options, function(err, data) {
     cb({
-      err: err,
+      error: err,
       data: data.toString()
     });
   });
