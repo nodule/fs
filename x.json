@@ -8,6 +8,15 @@
   },
   "nodes": [
     {
+      "name": "appendFile",
+      "ns": "fs",
+      "description": "fs appendFile",
+      "phrases": {
+        "active": "Appending data to {{input.filename}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "filename": {
@@ -35,19 +44,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Appending data to {{input.filename}}"
-      },
-      "description": "fs appendFile",
-      "ns": "fs",
-      "name": "appendFile",
       "env": "server",
       "fn": "output = [fs, 'appendFile', input.filename, input.data, input.options]\n"
     },
     {
+      "name": "chmod",
+      "ns": "fs",
+      "description": "fs chmod",
+      "phrases": {
+        "active": "Changing file mode on {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -70,19 +79,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Changing file mode on {{input.path}}"
-      },
-      "description": "fs chmod",
-      "ns": "fs",
-      "name": "chmod",
       "env": "server",
       "fn": "output = [fs, 'chmod', input.path, input.mode]\n"
     },
     {
+      "name": "chown",
+      "ns": "fs",
+      "description": "fs chown",
+      "phrases": {
+        "active": "Changing owner/group for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -109,19 +118,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Changing owner/group for {{input.path}}"
-      },
-      "description": "fs chown",
-      "ns": "fs",
-      "name": "chown",
       "env": "server",
       "fn": "output = [fs, 'chown', input.path, input.uid, input.gid]\n"
     },
     {
+      "name": "close",
+      "ns": "fs",
+      "description": "fs close",
+      "phrases": {
+        "active": "Closing file handle"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -139,19 +148,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Closing file handle"
-      },
-      "description": "fs close",
-      "ns": "fs",
-      "name": "close",
       "env": "server",
       "fn": "output = [fs, 'close', input.fd]\n"
     },
     {
+      "name": "exists",
+      "ns": "fs",
+      "description": "fs exists",
+      "phrases": {
+        "active": "Checking whether file {{input.path}} exists"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -165,19 +174,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Checking whether file {{input.path}} exists"
-      },
-      "description": "fs exists",
-      "ns": "fs",
-      "name": "exists",
       "env": "server",
       "fn": "output [fs, 'exists', input.path]\n"
     },
     {
+      "name": "fchmod",
+      "ns": "fs",
+      "description": "fs fchmod",
+      "phrases": {
+        "active": "Changing file mode for fd"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -200,19 +209,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Changing file mode for fd"
-      },
-      "description": "fs fchmod",
-      "ns": "fs",
-      "name": "fchmod",
       "env": "server",
       "fn": "output = [fs, 'fchmod', input.fd, input.mode]\n"
     },
     {
+      "name": "fchown",
+      "ns": "fs",
+      "description": "fs fchown",
+      "phrases": {
+        "active": "Changing file owner/group for fd"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -239,19 +248,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Changing file owner/group for fd"
-      },
-      "description": "fs fchown",
-      "ns": "fs",
-      "name": "fchown",
       "env": "server",
       "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n"
     },
     {
+      "name": "fstat",
+      "ns": "fs",
+      "description": "fs fstat",
+      "phrases": {
+        "active": "Reading file statistics for fd"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -269,19 +278,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Reading file statistics for fd"
-      },
-      "description": "fs fstat",
-      "ns": "fs",
-      "name": "fstat",
       "env": "server",
       "fn": "output [fs, 'fstat', input.fd]\n"
     },
     {
+      "name": "fsync",
+      "ns": "fs",
+      "description": "fs fsync",
+      "phrases": {
+        "active": "Calling sync for fd"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -299,19 +308,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Calling sync for fd"
-      },
-      "description": "fs fsync",
-      "ns": "fs",
-      "name": "fsync",
       "env": "server",
       "fn": "output = [fs, 'fsync', input.fd]\n"
     },
     {
+      "name": "ftruncate",
+      "ns": "fs",
+      "description": "fs ftruncate",
+      "phrases": {
+        "active": "Truncating fd with a length of {{input.len}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -332,19 +341,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Truncating fd with a length of {{input.len}}"
-      },
-      "description": "fs ftruncate",
-      "ns": "fs",
-      "name": "ftruncate",
       "env": "server",
       "fn": "output [fs, 'ftruncate', input.fd, input.len]\n"
     },
     {
+      "name": "futimes",
+      "ns": "fs",
+      "description": "fs futimes",
+      "phrases": {
+        "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -368,19 +377,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
-      },
-      "description": "fs futimes",
-      "ns": "fs",
-      "name": "futimes",
       "env": "server",
       "fn": "output = [fs, 'futimes', input.fd, input.atime, input.mtime]\n"
     },
     {
+      "name": "lchmod",
+      "ns": "fs",
+      "description": "fs lchmod",
+      "phrases": {
+        "active": "Changing file mode for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -403,19 +412,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Changing file mode for {{input.path}}"
-      },
-      "description": "fs lchmod",
-      "ns": "fs",
-      "name": "lchmod",
       "env": "server",
       "fn": "output = [fs, 'lchmod', input.path, input.mode]\n"
     },
     {
+      "name": "lchown",
+      "ns": "fs",
+      "description": "fs lchown",
+      "phrases": {
+        "active": "Changing file owner/group for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -442,19 +451,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Changing file owner/group for {{input.path}}"
-      },
-      "description": "fs lchown",
-      "ns": "fs",
-      "name": "lchown",
       "env": "server",
       "fn": "output = [fs, 'lchown', input.path, input.uid, input.gid]\n"
     },
     {
+      "name": "link",
+      "ns": "fs",
+      "description": "fs link",
+      "phrases": {
+        "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "srcpath": {
@@ -475,19 +484,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
-      },
-      "description": "fs link",
-      "ns": "fs",
-      "name": "link",
       "env": "server",
       "fn": "output [fs, 'link', input.srcpath, input.dstpath]\n"
     },
     {
+      "name": "lstat",
+      "ns": "fs",
+      "description": "fs lstat",
+      "phrases": {
+        "active": "Getting stats for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -505,19 +514,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Getting stats for {{input.path}}"
-      },
-      "description": "fs lstat",
-      "ns": "fs",
-      "name": "lstat",
       "env": "server",
       "fn": "output [fs, 'lstat', input.path]\n"
     },
     {
+      "name": "mkdir",
+      "ns": "fs",
+      "description": "fs mkdir",
+      "phrases": {
+        "active": "Creating directory {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -540,19 +549,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Creating directory {{input.path}}"
-      },
-      "description": "fs mkdir",
-      "ns": "fs",
-      "name": "mkdir",
       "env": "server",
       "fn": "output = [fs, 'mkdir', input.path, input.mode]\n"
     },
     {
+      "name": "open",
+      "ns": "fs",
+      "description": "fs open",
+      "phrases": {
+        "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -583,19 +592,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
-      },
-      "description": "fs open",
-      "ns": "fs",
-      "name": "open",
       "env": "server",
       "fn": "output= [fs, 'open', input.path, input.flags, input.mode]\n"
     },
     {
+      "name": "read",
+      "ns": "fs",
+      "description": "fs read",
+      "phrases": {
+        "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -629,19 +638,20 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
-      },
-      "description": "fs read",
-      "ns": "fs",
-      "name": "read",
       "env": "server",
       "fn": "output = [fs, 'read', input.fd, input.buffer, input.offset, input.length, input.position]\n"
     },
     {
+      "name": "readFile",
+      "ns": "fs",
+      "title": "fs readFile",
+      "description": "fs readFile",
+      "phrases": {
+        "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "filename": {
@@ -674,20 +684,19 @@
           }
         }
       },
+      "env": "server",
+      "fn": "output = function(cb) {\n\n  fs.readFile(input.filename, input.options, function(err, data) {\n    cb({\n      err: err,\n      data: data.toString()\n    });\n  });\n\n};\n"
+    },
+    {
+      "name": "readdir",
+      "ns": "fs",
+      "description": "fs readdir",
+      "phrases": {
+        "active": "Listing files from directory {{input.path}}"
+      },
       "require": {
         "fs": "latest"
       },
-      "phrases": {
-        "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
-      },
-      "description": "fs readFile",
-      "title": "fs readFile",
-      "ns": "fs",
-      "name": "readFile",
-      "env": "server",
-      "fn": "output = [fs, 'readFile', input.filename, input.options]\n"
-    },
-    {
       "ports": {
         "input": {
           "path": {
@@ -705,19 +714,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Listing files from directory {{input.path}}"
-      },
-      "description": "fs readdir",
-      "ns": "fs",
-      "name": "readdir",
       "env": "server",
       "fn": "output = [fs, 'readdir', input.path]\n"
     },
     {
+      "name": "readlink",
+      "ns": "fs",
+      "description": "fs readlink",
+      "phrases": {
+        "active": "Reading link {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -734,19 +743,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Reading link {{input.path}}"
-      },
-      "description": "fs readlink",
-      "ns": "fs",
-      "name": "readlink",
       "env": "server",
       "fn": "output = [fs, 'readlink', input.path]\n"
     },
     {
+      "name": "realpath",
+      "ns": "fs",
+      "description": "fs realpath",
+      "phrases": {
+        "active": "Performing realpath for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -762,19 +771,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Performing realpath for {{input.path}}"
-      },
-      "description": "fs realpath",
-      "ns": "fs",
-      "name": "realpath",
       "env": "server",
       "fn": "output = [fs, 'realpath', input.path]\n"
     },
     {
+      "name": "rename",
+      "ns": "fs",
+      "description": "fs rename",
+      "phrases": {
+        "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "oldPath": {
@@ -795,19 +804,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
-      },
-      "description": "fs rename",
-      "ns": "fs",
-      "name": "rename",
       "env": "server",
       "fn": "output = [fs, 'rename', input.oldPath, input.newPath]\n"
     },
     {
+      "name": "rmdir",
+      "ns": "fs",
+      "description": "fs rmdir",
+      "phrases": {
+        "active": "Removing directory {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -826,19 +835,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Removing directory {{input.path}}"
-      },
-      "description": "fs rmdir",
-      "ns": "fs",
-      "name": "rmdir",
       "env": "server",
       "fn": "output = [fs, 'rmdir', input.path]\n"
     },
     {
+      "name": "stat",
+      "ns": "fs",
+      "description": "fs stat",
+      "phrases": {
+        "active": "Reading stats for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -857,19 +866,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Reading stats for {{input.path}}"
-      },
-      "description": "fs stat",
-      "ns": "fs",
-      "name": "stat",
       "env": "server",
       "fn": "output = [fs, 'stat', input.path]\n"
     },
     {
+      "name": "symlink",
+      "ns": "fs",
+      "description": "fs symlink",
+      "phrases": {
+        "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "srcpath": {
@@ -900,19 +909,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
-      },
-      "description": "fs symlink",
-      "ns": "fs",
-      "name": "symlink",
       "env": "server",
       "fn": "output = [fs, 'symlink', input.srcpath, input.dstpath, input.type]\n"
     },
     {
+      "name": "truncate",
+      "ns": "fs",
+      "description": "fs truncate",
+      "phrases": {
+        "active": "Truncating file {{input.path}} to {{input.len}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -933,19 +942,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Truncating file {{input.path}} to {{input.len}}"
-      },
-      "description": "fs truncate",
-      "ns": "fs",
-      "name": "truncate",
       "env": "server",
       "fn": "output = [fs, 'truncate', input.path, input.len]\n"
     },
     {
+      "name": "unlink",
+      "ns": "fs",
+      "description": "fs unlink",
+      "phrases": {
+        "active": "Unlinking file {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -964,19 +973,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Unlinking file {{input.path}}"
-      },
-      "description": "fs unlink",
-      "ns": "fs",
-      "name": "unlink",
       "env": "server",
       "fn": "output = [fs, 'unlink', input.path]\n"
     },
     {
+      "name": "utimes",
+      "ns": "fs",
+      "description": "fs utimes",
+      "phrases": {
+        "active": "Getting utimes for {{input.path}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "path": {
@@ -1000,19 +1009,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Getting utimes for {{input.path}}"
-      },
-      "description": "fs utimes",
-      "ns": "fs",
-      "name": "utimes",
       "env": "server",
       "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n"
     },
     {
+      "name": "write",
+      "ns": "fs",
+      "description": "fs write",
+      "phrases": {
+        "active": "Writing to file descriptor"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "fd": {
@@ -1052,19 +1061,19 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Writing to file descriptor"
-      },
-      "description": "fs write",
-      "ns": "fs",
-      "name": "write",
       "env": "server",
       "fn": "output = [fs, 'write', input.fd, input.buffer, input.offset, input.length, input.position]\n"
     },
     {
+      "name": "writeFile",
+      "ns": "fs",
+      "description": "fs writeFile",
+      "phrases": {
+        "active": "Writing file {{input.filename}}"
+      },
+      "require": {
+        "fs": "latest"
+      },
       "ports": {
         "input": {
           "filename": {
@@ -1106,15 +1115,6 @@
           }
         }
       },
-      "require": {
-        "fs": "latest"
-      },
-      "phrases": {
-        "active": "Writing file {{input.filename}}"
-      },
-      "description": "fs writeFile",
-      "ns": "fs",
-      "name": "writeFile",
       "env": "server",
       "fn": "output = [fs, 'writeFile', input.filename, input.data, input.options]\n"
     }
