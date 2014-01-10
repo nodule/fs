@@ -6,7 +6,7 @@
     "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

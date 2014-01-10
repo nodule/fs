@@ -6,7 +6,7 @@
     "active": "Changing file mode on {{input.path}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

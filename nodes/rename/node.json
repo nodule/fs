@@ -6,7 +6,7 @@
     "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

@@ -7,7 +7,7 @@
     "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

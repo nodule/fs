@@ -6,7 +6,7 @@
     "active": "Checking whether file {{input.path}} exists"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

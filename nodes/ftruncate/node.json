@@ -6,7 +6,7 @@
     "active": "Truncating fd with a length of {{input.len}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

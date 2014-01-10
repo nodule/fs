@@ -6,7 +6,7 @@
     "active": "Listing files from directory {{input.path}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

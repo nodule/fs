@@ -6,7 +6,7 @@
     "active": "Truncating file {{input.path}} to {{input.len}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

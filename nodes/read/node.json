@@ -6,7 +6,7 @@
     "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

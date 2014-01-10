@@ -6,7 +6,7 @@
     "active": "Appending data to {{input.filename}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

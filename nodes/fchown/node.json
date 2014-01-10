@@ -6,7 +6,7 @@
     "active": "Changing file owner/group for fd"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

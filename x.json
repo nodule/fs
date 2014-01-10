@@ -15,7 +15,7 @@
         "active": "Appending data to {{input.filename}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -55,7 +55,7 @@
         "active": "Changing file mode on {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -90,7 +90,7 @@
         "active": "Changing owner/group for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -129,7 +129,7 @@
         "active": "Closing file handle"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -159,7 +159,7 @@
         "active": "Checking whether file {{input.path}} exists"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -185,7 +185,7 @@
         "active": "Changing file mode for fd"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -220,7 +220,7 @@
         "active": "Changing file owner/group for fd"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -252,6 +252,42 @@
       "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n"
     },
     {
+      "name": "file",
+      "ns": "fs",
+      "description": "Create a filename based on dir, name and optional extenstion",
+      "phrases": {
+        "active": "Created filename {{input.dir}}/{{input.name}}{{input.ext}}"
+      },
+      "require": {
+        "path": "builtin"
+      },
+      "ports": {
+        "input": {
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "required": true
+          },
+          "dir": {
+            "title": "Directory",
+            "type": "string"
+          },
+          "ext": {
+            "title": "Extension",
+            "type": "string"
+          }
+        },
+        "output": {
+          "file": {
+            "title": "File",
+            "type": "string"
+          }
+        }
+      },
+      "env": "server",
+      "fn": "var file = input.ext ? input.name + input.ext : input.name;\noutput.file = input.dir ? path.join(input.dir, file) : file;\n"
+    },
+    {
       "name": "fstat",
       "ns": "fs",
       "description": "fs fstat",
@@ -259,7 +295,7 @@
         "active": "Reading file statistics for fd"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -289,7 +325,7 @@
         "active": "Calling sync for fd"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -319,7 +355,7 @@
         "active": "Truncating fd with a length of {{input.len}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -352,7 +388,7 @@
         "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -388,7 +424,7 @@
         "active": "Changing file mode for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -423,7 +459,7 @@
         "active": "Changing file owner/group for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -462,7 +498,7 @@
         "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -495,7 +531,7 @@
         "active": "Getting stats for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -525,7 +561,7 @@
         "active": "Creating directory {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -560,7 +596,7 @@
         "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -603,7 +639,7 @@
         "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -650,7 +686,7 @@
         "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -695,7 +731,7 @@
         "active": "Listing files from directory {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -725,7 +761,7 @@
         "active": "Reading link {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -754,7 +790,7 @@
         "active": "Performing realpath for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -782,7 +818,7 @@
         "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -815,7 +851,7 @@
         "active": "Removing directory {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -846,7 +882,7 @@
         "active": "Reading stats for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -877,7 +913,7 @@
         "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -920,7 +956,7 @@
         "active": "Truncating file {{input.path}} to {{input.len}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -953,7 +989,7 @@
         "active": "Unlinking file {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -984,7 +1020,7 @@
         "active": "Getting utimes for {{input.path}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -1020,7 +1056,7 @@
         "active": "Writing to file descriptor"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {
@@ -1072,7 +1108,7 @@
         "active": "Writing file {{input.filename}}"
       },
       "require": {
-        "fs": "latest"
+        "fs": "builtin"
       },
       "ports": {
         "input": {

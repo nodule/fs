@@ -6,7 +6,7 @@
     "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

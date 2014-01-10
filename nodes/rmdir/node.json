@@ -6,7 +6,7 @@
     "active": "Removing directory {{input.path}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

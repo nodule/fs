@@ -6,7 +6,7 @@
     "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

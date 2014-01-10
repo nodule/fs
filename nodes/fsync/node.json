@@ -6,7 +6,7 @@
     "active": "Calling sync for fd"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

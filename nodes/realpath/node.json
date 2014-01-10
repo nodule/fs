@@ -6,7 +6,7 @@
     "active": "Performing realpath for {{input.path}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

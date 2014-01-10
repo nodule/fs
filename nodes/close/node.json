@@ -6,7 +6,7 @@
     "active": "Closing file handle"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {

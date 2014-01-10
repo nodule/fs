@@ -1,0 +1,34 @@
+{
+  "name": "file",
+  "ns": "fs",
+  "description": "Create a filename based on dir, name and optional extenstion",
+  "phrases": {
+    "active": "Created filename {{input.dir}}/{{input.name}}{{input.ext}}"
+  },
+  "require": {
+    "path": "builtin"
+  },
+  "ports": {
+    "input": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true
+      },
+      "dir": {
+        "title": "Directory",
+        "type": "string"
+      },
+      "ext": {
+        "title": "Extension",
+        "type": "string"
+      }
+    },
+    "output": {
+      "file": {
+        "title": "File",
+        "type": "string"
+      }
+    }
+  }
+}

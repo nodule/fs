@@ -6,7 +6,7 @@
     "active": "Writing file {{input.filename}}"
   },
   "require": {
-    "fs": "latest"
+    "fs": "builtin"
   },
   "ports": {
     "input": {
