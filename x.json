@@ -567,7 +567,8 @@
         "input": {
           "path": {
             "title": "Path",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "mode": {
             "title": "Mode",
