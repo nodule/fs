@@ -175,7 +175,7 @@
         }
       },
       "env": "server",
-      "fn": "output [fs, 'exists', input.path]\n"
+      "fn": "output = [fs, 'exists', input.path]\n"
     },
     {
       "name": "fchmod",
@@ -315,7 +315,7 @@
         }
       },
       "env": "server",
-      "fn": "output [fs, 'fstat', input.fd]\n"
+      "fn": "output = [fs, 'fstat', input.fd]\n"
     },
     {
       "name": "fsync",
@@ -378,7 +378,7 @@
         }
       },
       "env": "server",
-      "fn": "output [fs, 'ftruncate', input.fd, input.len]\n"
+      "fn": "output = [fs, 'ftruncate', input.fd, input.len]\n"
     },
     {
       "name": "futimes",
@@ -521,7 +521,7 @@
         }
       },
       "env": "server",
-      "fn": "output [fs, 'link', input.srcpath, input.dstpath]\n"
+      "fn": "output = [fs, 'link', input.srcpath, input.dstpath]\n"
     },
     {
       "name": "lstat",
@@ -551,7 +551,7 @@
         }
       },
       "env": "server",
-      "fn": "output [fs, 'lstat', input.path]\n"
+      "fn": "output = [fs, 'lstat', input.path]\n"
     },
     {
       "name": "mkdir",
@@ -629,7 +629,7 @@
         }
       },
       "env": "server",
-      "fn": "output= [fs, 'open', input.path, input.flags, input.mode]\n"
+      "fn": "output = [fs, 'open', input.path, input.flags, input.mode]\n"
     },
     {
       "name": "read",

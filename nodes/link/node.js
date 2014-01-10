@@ -1,1 +1,1 @@
-output [fs, 'link', input.srcpath, input.dstpath]
+output = [fs, 'link', input.srcpath, input.dstpath]

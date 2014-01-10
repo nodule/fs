@@ -1,1 +1,1 @@
-output [fs, 'fstat', input.fd]
+output = [fs, 'fstat', input.fd]
