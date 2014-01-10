@@ -571,7 +571,8 @@
           },
           "mode": {
             "title": "Mode",
-            "type": "string"
+            "type": "number",
+            "default": "0777"
           }
         },
         "output": {
