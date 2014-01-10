@@ -285,7 +285,7 @@
         }
       },
       "env": "server",
-      "fn": "var file = input.ext ? input.name + input.ext : input.name;\noutput.file = input.dir ? path.join(input.dir, file) : file;\n"
+      "fn": "var file = input.ext ? input.name + input.ext : input.name;\noutput.file = input.dir ? path.normalize([input.dir, file].join(path.sep)) : file;\n"
     },
     {
       "name": "fstat",
