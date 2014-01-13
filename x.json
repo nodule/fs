@@ -697,20 +697,15 @@
             "type": "string",
             "required": true
           },
-          "options": {
-            "type": "object",
-            "title": "Options",
-            "properties": {
-              "encoding": {
-                "title": "Encoding",
-                "type": "string"
-              },
-              "flag": {
-                "title": "Flag",
-                "type": "string",
-                "default": "r"
-              }
-            }
+          "encoding": {
+            "title": "Encoding",
+            "type": "string",
+            "default": "utf-8"
+          },
+          "flag": {
+            "title": "Flag",
+            "type": "string",
+            "default": "r"
           }
         },
         "output": {
@@ -723,7 +718,7 @@
         }
       },
       "env": "server",
-      "fn": "output = function(cb) {\n\n  fs.readFile(input.filename, input.options, function(err, data) {\n\n    cb({\n      error: err,\n      data: data.toString()\n    }, done);\n\n  });\n\n};\n"
+      "fn": "output = function(cb) {\n\n  fs.readFile(input.filename, {\n      flag: input.flag,\n      encoding: input.encoding\n    }, function(err, data) {\n\n    cb({\n      error: err,\n      data: data.toString()\n    }, done);\n\n  });\n\n};\n"
     },
     {
       "name": "readdir",

@@ -16,20 +16,15 @@
         "type": "string",
         "required": true
       },
-      "options": {
-        "type": "object",
-        "title": "Options",
-        "properties":  {
-          "encoding": {
-            "title": "Encoding",
-            "type": "string"
-          },
-          "flag": {
-            "title": "Flag",
-            "type": "string",
-            "default": "r"
-          }
-        }
+      "encoding": {
+        "title": "Encoding",
+        "type": "string",
+        "default": "utf-8"
+      },
+      "flag": {
+        "title": "Flag",
+        "type": "string",
+        "default": "r"
       }
     },
     "output": {
