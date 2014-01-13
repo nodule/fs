@@ -1051,6 +1051,44 @@
       "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n"
     },
     {
+      "name": "watch",
+      "ns": "fs",
+      "description": "Watches a file",
+      "phrases": {
+        "active": "Watching file {{input.filename}}"
+      },
+      "require": {
+        "fs": "builtin"
+      },
+      "ports": {
+        "input": {
+          "filename": {
+            "type": "string",
+            "title": "Filename",
+            "required": true
+          },
+          "persistent": {
+            "type": "boolean",
+            "title": "Persistent",
+            "description": "Whether it should keep watching",
+            "default": false
+          }
+        },
+        "output": {
+          "event": {
+            "title": "Event",
+            "type": "string"
+          },
+          "filename": {
+            "title": "Filename",
+            "type": "string"
+          }
+        }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'watch', input.filename, { persistent: input.persistent }]\n"
+    },
+    {
       "name": "write",
       "ns": "fs",
       "description": "fs write",
