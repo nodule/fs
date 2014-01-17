@@ -1153,26 +1153,20 @@
           "data": {
             "type": "string"
           },
-          "options": {
-            "title": "Options",
-            "type": "object",
-            "properties": {
-              "encoding": {
-                "title": "Encoding",
-                "type": "string",
-                "default": "utf-8"
-              },
-              "mode": {
-                "title": "Mode",
-                "type": "number",
-                "default": 438
-              },
-              "flag": {
-                "title": "Flag",
-                "type": "string",
-                "default": "w"
-              }
-            }
+          "encoding": {
+            "title": "Encoding",
+            "type": "string",
+            "default": "utf-8"
+          },
+          "mode": {
+            "title": "Mode",
+            "type": "number",
+            "default": 438
+          },
+          "flag": {
+            "title": "Flag",
+            "type": "string",
+            "default": "w"
           }
         },
         "output": {
@@ -1187,7 +1181,7 @@
         }
       },
       "env": "server",
-      "fn": "output = [fs, 'writeFile', input.filename, input.data, input.options]\n"
+      "fn": "output = [fs, 'writeFile', input.filename, input.data, {\n  encoding: input.encoding, \n  mode: input.mode, \n  flag: input.flag\n}];\n"
     }
   ],
   "twigs": [

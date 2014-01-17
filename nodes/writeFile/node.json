@@ -16,26 +16,20 @@
       "data": {
         "type": "string"
       },
-      "options": {
-        "title": "Options",
-        "type": "object",
-        "properties": {
-          "encoding": {
-            "title": "Encoding",
-            "type": "string",
-            "default": "utf-8"
-          },
-          "mode": {
-            "title": "Mode",
-            "type": "number",
-            "default": 438
-          },
-          "flag": {
-            "title": "Flag",
-            "type": "string",
-            "default": "w" 
-          }
-        }
+      "encoding": {
+        "title": "Encoding",
+        "type": "string",
+        "default": "utf-8"
+      },
+      "mode": {
+        "title": "Mode",
+        "type": "number",
+        "default": 438
+      },
+      "flag": {
+        "title": "Flag",
+        "type": "string",
+        "default": "w" 
       }
     },
     "output": {
