@@ -24,13 +24,19 @@ on.input.filename = function() {
   fs.readFile(data, {
     flag: state['flag'],
     encoding: state['encoding']
-  }, output);
-}
+  }, function(err, dat) {
+    output({
+      error: err,
+      data: dat
+    });
+
+  });
+};
 
 on.input.encoding = function() {
   state['encoding'] = data;
-}
+};
 
 on.input.flag = function() {
   state['flag'] = data;
-}
+};

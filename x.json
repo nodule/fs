@@ -719,7 +719,7 @@
       "ns": "fs",
       "name": "readFile",
       "env": "server",
-      "fn": "/*\noutput = function(cb) {\n\n  fs.readFile(input.filename, {\n      flag: input.flag,\n      encoding: input.encoding\n    }, function(err, data) {\n\n    cb({\n      error: err,\n      data: data.toString()\n    }, done);\n\n  });\n\n};\n*/\nvar state = {\n  flag: 'r',\n  encoding: 'utf-8'\n};\n\non.input.filename = function() {\n  fs.readFile(data, {\n    flag: state['flag'],\n    encoding: state['encoding']\n  }, output);\n}\n\non.input.encoding = function() {\n  state['encoding'] = data;\n}\n\non.input.flag = function() {\n  state['flag'] = data;\n}\n"
+      "fn": "/*\noutput = function(cb) {\n\n  fs.readFile(input.filename, {\n      flag: input.flag,\n      encoding: input.encoding\n    }, function(err, data) {\n\n    cb({\n      error: err,\n      data: data.toString()\n    }, done);\n\n  });\n\n};\n*/\nvar state = {\n  flag: 'r',\n  encoding: 'utf-8'\n};\n\non.input.filename = function() {\n  fs.readFile(data, {\n    flag: state['flag'],\n    encoding: state['encoding']\n  }, function(err, dat) {\n    output({\n      error: err,\n      data: dat\n    });\n\n  });\n};\n\non.input.encoding = function() {\n  state['encoding'] = data;\n};\n\non.input.flag = function() {\n  state['flag'] = data;\n};\n"
     },
     {
       "ports": {
