@@ -2,6 +2,7 @@
   "name": "readFile",
   "ns": "fs",
   "title": "fs readFile",
+  "async": true,
   "description": "fs readFile",
   "phrases": {
     "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
