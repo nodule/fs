@@ -1,4 +1,3 @@
-/*
 output = function(cb) {
 
   fs.readFile(input.filename, {
@@ -13,30 +12,4 @@ output = function(cb) {
 
   });
 
-};
-*/
-var state = {
-  flag: 'r',
-  encoding: 'utf-8'
-};
-
-on.input.filename = function() {
-  fs.readFile(data, {
-    flag: state['flag'],
-    encoding: state['encoding']
-  }, function(err, dat) {
-    output({
-      error: err,
-      data: dat
-    });
-
-  });
-};
-
-on.input.encoding = function() {
-  state['encoding'] = data;
-};
-
-on.input.flag = function() {
-  state['flag'] = data;
 };
