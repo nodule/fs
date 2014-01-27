@@ -714,7 +714,6 @@
         "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
       },
       "description": "fs readFile",
-      "async": true,
       "title": "fs readFile",
       "ns": "fs",
       "name": "readFile",
