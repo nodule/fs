@@ -718,7 +718,7 @@
       "ns": "fs",
       "name": "readFile",
       "env": "server",
-      "fn": "output = function(cb) {\n\n  fs.readFile(input.filename, {\n      flag: input.flag,\n      encoding: input.encoding\n    }, function(err, data) {\n\n    cb({\n      error: err,\n      data: data.toString()\n    }, done);\n\n  });\n\n};\n"
+      "fn": "output = [fs, 'readFile', input.filename, { flag: input.flag, encoding: input.encoding }];\n"
     },
     {
       "ports": {
