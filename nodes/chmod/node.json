@@ -1,6 +1,7 @@
 {
   "name": "chmod",
   "ns": "fs",
+  "title": "Chmod",
   "description": "fs chmod",
   "phrases": {
     "active": "Changing file mode on {{input.path}}"

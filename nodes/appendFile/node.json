@@ -1,6 +1,7 @@
 {
   "name": "appendFile",
   "ns": "fs",
+  "title": "Append File",
   "description": "fs appendFile",
   "phrases": {
     "active": "Appending data to {{input.filename}}"
