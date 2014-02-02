@@ -29,16 +29,12 @@
       "flag": {
         "title": "Flag",
         "type": "string",
-        "default": "w" 
+        "default": "w"
       }
     },
     "output": {
       "error": {
         "title": "Error",
-        "type": "object"
-      },
-      "event:complete": {
-        "title": "Complete",
         "type": "object"
       }
     }

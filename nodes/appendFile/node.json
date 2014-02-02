@@ -29,10 +29,6 @@
       "error": {
         "title": "Error",
         "type": "object"
-      },
-      "event:complete": {
-        "Title": "Complete",
-        "type": "object"
       }
     }
   }

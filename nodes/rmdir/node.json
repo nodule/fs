@@ -19,10 +19,6 @@
       "exception": {
         "title": "Exception",
         "type": "object"
-      },
-      "event:complete": {
-        "title": "Complete",
-        "type": "object"
       }
     }
   }

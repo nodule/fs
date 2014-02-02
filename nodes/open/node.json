@@ -31,10 +31,6 @@
       "fd": {
         "title": "Fd",
         "type": "object"
-      },
-      "event:complete": {
-        "title": "Complete",
-        "type": "object"
       }
     }
   }

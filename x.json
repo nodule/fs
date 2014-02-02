@@ -28,10 +28,6 @@
           "error": {
             "title": "Error",
             "type": "object"
-          },
-          "event:complete": {
-            "Title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -63,10 +59,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -104,10 +96,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -133,10 +121,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -195,10 +179,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -233,10 +213,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -330,10 +306,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -362,10 +334,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -399,10 +367,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -433,10 +397,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -473,10 +433,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -505,10 +461,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -573,10 +525,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -615,10 +563,6 @@
           },
           "fd": {
             "title": "Fd",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -823,10 +767,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -853,10 +793,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -928,10 +864,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -961,10 +893,6 @@
           "exception": {
             "title": "Exception",
             "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
-            "type": "object"
           }
         }
       },
@@ -991,10 +919,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -1027,10 +951,6 @@
         "output": {
           "exception": {
             "title": "Exception",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
@@ -1165,10 +1085,6 @@
         "output": {
           "error": {
             "title": "Error",
-            "type": "object"
-          },
-          "event:complete": {
-            "title": "Complete",
             "type": "object"
           }
         }
