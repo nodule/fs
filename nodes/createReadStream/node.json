@@ -1,0 +1,53 @@
+{
+  "name": "createReadStream",
+  "ns": "fs",
+  "title": "Create Read Stream",
+  "description": "Creats a Readable Stream Object",
+  "phrases": {
+    "active": "Reading file {{input.file}} ({{input.encoding}})"
+  },
+  "require": {
+    "fs": "builtin"
+  },
+  "ports": {
+    "input": {
+      "file": {
+        "title": "Filename",
+        "type": "string",
+        "required": true
+      },
+      "start": {
+        "title": "Start",
+        "type": "number",
+        "default": null
+      },
+      "end": {
+        "title": "End",
+        "type": "number",
+        "default": null
+      },
+      "encoding": {
+        "title": "Encoding",
+        "type": "string",
+        "default": "utf-8"
+      },
+      "flag": {
+        "title": "Flag",
+        "type": "string",
+        "default": "r"
+      }
+    },
+    "output": {
+      "error": {
+        "type": "object"
+      },
+      "fd": {
+        "type": "number",
+        "title": "File descriptor"
+      },
+      "stream": {
+        "type": "Stream"
+      }
+    }
+  }
+}

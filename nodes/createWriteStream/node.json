@@ -1,0 +1,43 @@
+{
+  "name": "createWriteStream",
+  "ns": "fs",
+  "title": "Create Write Stream",
+  "description": "Creates a Writeable Stream Object",
+  "phrases": {
+    "active": "Writing file {{input.file}} ({{input.encoding}})"
+  },
+  "require": {
+    "fs": "builtin"
+  },
+  "ports": {
+    "input": {
+      "file": {
+        "title": "Filename",
+        "type": "string",
+        "required": true
+      },
+      "encoding": {
+        "title": "Encoding",
+        "type": "string",
+        "default": "utf-8"
+      },
+      "flag": {
+        "title": "Flag",
+        "type": "string",
+        "default": "w"
+      }
+    },
+    "output": {
+      "error": {
+        "type": "object"
+      },
+      "stream": {
+        "type": "Stream"
+      },
+      "fd": {
+        "type": "number",
+        "title": "File descriptor"
+      }
+    }
+  }
+}
