@@ -15,7 +15,7 @@
             "type": "string",
             "required": true
           },
-          "data": {
+          "in": {
             "title": "Data",
             "type": "string"
           },
@@ -42,7 +42,7 @@
       "ns": "fs",
       "name": "appendFile",
       "env": "server",
-      "fn": "output = [fs, 'appendFile', input.filename, input.data, input.options]\n"
+      "fn": "output = [fs, 'appendFile', input.filename, input.in, input.options]\n"
     },
     {
       "ports": {
@@ -136,6 +136,106 @@
       "name": "close",
       "env": "server",
       "fn": "output = [fs, 'close', input.fd]\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "file": {
+            "title": "Filename",
+            "type": "string",
+            "required": true
+          },
+          "start": {
+            "title": "Start",
+            "type": "number",
+            "default": null
+          },
+          "end": {
+            "title": "End",
+            "type": "number",
+            "default": null
+          },
+          "encoding": {
+            "title": "Encoding",
+            "type": "string",
+            "default": "utf-8"
+          },
+          "flag": {
+            "title": "Flag",
+            "type": "string",
+            "default": "r"
+          }
+        },
+        "output": {
+          "error": {
+            "type": "object"
+          },
+          "fd": {
+            "type": "number",
+            "title": "File descriptor"
+          },
+          "stream": {
+            "type": "Stream"
+          }
+        }
+      },
+      "require": {
+        "fs": "builtin"
+      },
+      "phrases": {
+        "active": "Reading file {{input.file}} ({{input.encoding}})"
+      },
+      "description": "Creats a Readable Stream Object",
+      "title": "Create Read Stream",
+      "ns": "fs",
+      "name": "createReadStream",
+      "env": "server",
+      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: input.flag,\n    encoding: input.encoding\n  };\n\n  if(input.start) opts.start = input.start;\n  if(input.end) opts.end = input.end;\n\n  var stream = fs.createReadStream(input.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: err});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: fd});\n  });\n\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "file": {
+            "title": "Filename",
+            "type": "string",
+            "required": true
+          },
+          "encoding": {
+            "title": "Encoding",
+            "type": "string",
+            "default": "utf-8"
+          },
+          "flag": {
+            "title": "Flag",
+            "type": "string",
+            "default": "w"
+          }
+        },
+        "output": {
+          "error": {
+            "type": "object"
+          },
+          "stream": {
+            "type": "Stream"
+          },
+          "fd": {
+            "type": "number",
+            "title": "File descriptor"
+          }
+        }
+      },
+      "require": {
+        "fs": "builtin"
+      },
+      "phrases": {
+        "active": "Writing file {{input.file}} ({{input.encoding}})"
+      },
+      "description": "Creates a Writeable Stream Object",
+      "title": "Create Write Stream",
+      "ns": "fs",
+      "name": "createWriteStream",
+      "env": "server",
+      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: input.flag,\n    encoding: input.encoding\n  };\n\n  var stream = fs.createWriteStream(input.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: err});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: fd});\n  });\n\n};\n"
     },
     {
       "ports": {
@@ -648,7 +748,7 @@
           "error": {
             "type": "object"
           },
-          "data": {
+          "out": {
             "type": "object"
           }
         }
@@ -1063,7 +1163,7 @@
           "filename": {
             "type": "string"
           },
-          "data": {
+          "in": {
             "type": "string"
           },
           "encoding": {
@@ -1099,91 +1199,9 @@
       "ns": "fs",
       "name": "writeFile",
       "env": "server",
-      "fn": "output = [fs, 'writeFile', input.filename, input.data, {\n  encoding: input.encoding,\n  mode: input.mode,\n  flag: input.flag\n}];\n"
+      "fn": "output = [fs, 'writeFile', input.filename, input.in, {\n  encoding: input.encoding,\n  mode: input.mode,\n  flag: input.flag\n}];\n"
     }
   ],
-  "twigs": [
-    {
-      "name": "readFile",
-      "ns": "fs",
-      "title": "fs readFile",
-      "description": "fs readFile",
-      "nodes": [
-        {
-          "id": "0",
-          "ns": "fs",
-          "name": "readFile",
-          "context": {
-            "filename": "/etc/passwd",
-            "options": {}
-          }
-        },
-        {
-          "id": "1",
-          "ns": "console",
-          "name": "log"
-        }
-      ],
-      "links": [
-        {
-          "source": "0",
-          "target": "1",
-          "out": "results",
-          "in": "msg"
-        }
-      ],
-      "nodeDefinitions": {
-        "console": {
-          "log": {
-            "ports": {
-              "input": {
-                "msg": {
-                  "type": "any",
-                  "title": "Log message",
-                  "description": "Logs a message to the console"
-                }
-              },
-              "output": {}
-            },
-            "description": "Console log",
-            "ns": "console",
-            "name": "log",
-            "fn": "console.log(input.msg)",
-            "_id": "5258bf00d1c59a9537000012"
-          }
-        },
-        "fs": {
-          "readFile": {
-            "ports": {
-              "input": {
-                "filename": {
-                  "type": "string"
-                },
-                "options": {
-                  "type": "object"
-                }
-              },
-              "output": {
-                "error": {
-                  "type": "object"
-                },
-                "results": {
-                  "type": "object"
-                }
-              }
-            },
-            "require": {
-              "fs": "latest"
-            },
-            "description": "fs readFile",
-            "name": "readFile",
-            "ns": "fs",
-            "fn": "output = [fs, 'readFile', input.filename, input.options]\n",
-            "_id": "5258bf00d1c59a953700003a"
-          }
-        }
-      }
-    }
-  ],
+  "twigs": [],
   "env": "server"
 }

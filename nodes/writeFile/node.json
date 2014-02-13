@@ -13,7 +13,7 @@
       "filename": {
         "type": "string"
       },
-      "data": {
+      "in": {
         "type": "string"
       },
       "encoding": {

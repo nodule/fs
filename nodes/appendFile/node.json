@@ -16,7 +16,7 @@
         "type": "string",
         "required": true
       },
-      "data": {
+      "in": {
         "title": "Data",
         "type": "string"
       },
