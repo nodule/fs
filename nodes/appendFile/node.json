@@ -4,14 +4,14 @@
   "title": "Append File",
   "description": "fs appendFile",
   "phrases": {
-    "active": "Appending data to {{input.filename}}"
+    "active": "Appending data to {{input.file}}"
   },
   "require": {
     "fs": "builtin"
   },
   "ports": {
     "input": {
-      "filename": {
+      "file": {
         "title": "Filename",
         "type": "string",
         "required": true

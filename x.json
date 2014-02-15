@@ -10,7 +10,7 @@
     {
       "ports": {
         "input": {
-          "filename": {
+          "file": {
             "title": "Filename",
             "type": "string",
             "required": true
@@ -35,14 +35,14 @@
         "fs": "builtin"
       },
       "phrases": {
-        "active": "Appending data to {{input.filename}}"
+        "active": "Appending data to {{input.file}}"
       },
       "description": "fs appendFile",
       "title": "Append File",
       "ns": "fs",
       "name": "appendFile",
       "env": "server",
-      "fn": "output = [fs, 'appendFile', input.filename, input.in, input.options]\n"
+      "fn": "output = [fs, 'appendFile', input.file, input.in, input.options]\n"
     },
     {
       "ports": {
@@ -728,7 +728,7 @@
     {
       "ports": {
         "input": {
-          "filename": {
+          "file": {
             "title": "Filename",
             "type": "string",
             "required": true
@@ -757,14 +757,14 @@
         "fs": "builtin"
       },
       "phrases": {
-        "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
+        "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
       },
       "description": "fs readFile",
       "title": "fs readFile",
       "ns": "fs",
       "name": "readFile",
       "env": "server",
-      "fn": "output = [fs, 'readFile', input.filename, {\n  flag: input.flag,\n  encoding: input.encoding\n}];\n"
+      "fn": "output = [fs, 'readFile', input.file, {\n  flag: input.flag,\n  encoding: input.encoding\n}];\n"
     },
     {
       "ports": {
@@ -1070,7 +1070,7 @@
     {
       "ports": {
         "input": {
-          "filename": {
+          "file": {
             "type": "string",
             "title": "Filename",
             "required": true
@@ -1087,7 +1087,7 @@
             "title": "Event",
             "type": "string"
           },
-          "filename": {
+          "file": {
             "title": "Filename",
             "type": "string"
           }
@@ -1097,13 +1097,13 @@
         "fs": "builtin"
       },
       "phrases": {
-        "active": "Watching file {{input.filename}}"
+        "active": "Watching file {{input.file}}"
       },
       "description": "Watches a file",
       "ns": "fs",
       "name": "watch",
       "env": "server",
-      "fn": "output = [fs, 'watch', input.filename, {\n  persistent: input.persistent\n}]\n"
+      "fn": "output = [fs, 'watch', input.file, {\n  persistent: input.persistent\n}]\n"
     },
     {
       "ports": {
@@ -1160,7 +1160,7 @@
     {
       "ports": {
         "input": {
-          "filename": {
+          "file": {
             "type": "string"
           },
           "in": {
@@ -1193,13 +1193,13 @@
         "fs": "builtin"
       },
       "phrases": {
-        "active": "Writing file {{input.filename}}"
+        "active": "Writing file {{input.file}}"
       },
       "description": "fs writeFile",
       "ns": "fs",
       "name": "writeFile",
       "env": "server",
-      "fn": "output = [fs, 'writeFile', input.filename, input.in, {\n  encoding: input.encoding,\n  mode: input.mode,\n  flag: input.flag\n}];\n"
+      "fn": "output = [fs, 'writeFile', input.file, input.in, {\n  encoding: input.encoding,\n  mode: input.mode,\n  flag: input.flag\n}];\n"
     }
   ],
   "twigs": [],

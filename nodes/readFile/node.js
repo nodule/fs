@@ -1,4 +1,4 @@
-output = [fs, 'readFile', input.filename, {
+output = [fs, 'readFile', input.file, {
   flag: input.flag,
   encoding: input.encoding
 }];

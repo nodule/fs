@@ -3,14 +3,14 @@
   "ns": "fs",
   "description": "fs writeFile",
   "phrases": {
-    "active": "Writing file {{input.filename}}"
+    "active": "Writing file {{input.file}}"
   },
   "require": {
     "fs": "builtin"
   },
   "ports": {
     "input": {
-      "filename": {
+      "file": {
         "type": "string"
       },
       "in": {

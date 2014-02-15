@@ -1,3 +1,3 @@
-output = [fs, 'watch', input.filename, {
+output = [fs, 'watch', input.file, {
   persistent: input.persistent
 }]

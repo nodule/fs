@@ -4,14 +4,14 @@
   "title": "fs readFile",
   "description": "fs readFile",
   "phrases": {
-    "active": "Reading file {{input.filename}} ({{input.options.encoding}}, {{input.options.flag}})"
+    "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
   },
   "require": {
     "fs": "builtin"
   },
   "ports": {
     "input": {
-      "filename": {
+      "file": {
         "title": "Filename",
         "type": "string",
         "required": true

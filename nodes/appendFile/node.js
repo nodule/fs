@@ -1,1 +1,1 @@
-output = [fs, 'appendFile', input.filename, input.in, input.options]
+output = [fs, 'appendFile', input.file, input.in, input.options]

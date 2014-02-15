@@ -3,14 +3,14 @@
   "ns": "fs",
   "description": "Watches a file",
   "phrases": {
-    "active": "Watching file {{input.filename}}"
+    "active": "Watching file {{input.file}}"
   },
   "require": {
     "fs": "builtin"
   },
   "ports": {
     "input": {
-      "filename": {
+      "file": {
         "type": "string",
         "title": "Filename",
         "required": true
@@ -27,7 +27,7 @@
         "title": "Event",
         "type": "string"
       },
-      "filename": {
+      "file": {
         "title": "Filename",
         "type": "string"
       }
