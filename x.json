@@ -241,13 +241,18 @@
       "ports": {
         "input": {
           "path": {
-            "type": "string"
+            "type": "string",
+            "async": true
           }
         },
         "output": {
-          "exists": {
+          "yes": {
             "title": "Exists",
-            "type": "boolean"
+            "type": "string"
+          },
+          "no": {
+            "title": "Absent",
+            "type": "string"
           }
         }
       },
@@ -258,10 +263,11 @@
         "active": "Checking whether file {{input.path}} exists"
       },
       "description": "fs exists",
+      "async": true,
       "ns": "fs",
       "name": "exists",
       "env": "server",
-      "fn": "output = [fs, 'exists', input.path]\n"
+      "fn": "on.input.path = function() {\n  fs.exists(data, function(yes) {\n    if(yes) {\n      output( { yes: data } );\n    } else {\n      output( { no: data } );\n    }\n    done();\n  });\n};\n"
     },
     {
       "ports": {

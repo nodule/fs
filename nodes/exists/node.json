@@ -1,6 +1,7 @@
 {
   "name": "exists",
   "ns": "fs",
+  "async": true,
   "description": "fs exists",
   "phrases": {
     "active": "Checking whether file {{input.path}} exists"
@@ -11,13 +12,18 @@
   "ports": {
     "input": {
       "path": {
-        "type": "string"
+        "type": "string",
+        "async": true
       }
     },
     "output": {
-      "exists": {
+      "yes": {
         "title": "Exists",
-        "type": "boolean"
+        "type": "string"
+      },
+      "no": {
+        "title": "Absent",
+        "type": "string"
       }
     }
   }
