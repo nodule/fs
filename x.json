@@ -267,7 +267,7 @@
       "ns": "fs",
       "name": "exists",
       "env": "server",
-      "fn": "on.input.path = function() {\n  fs.exists(data, function(yes) {\n    if(yes) {\n      output( { yes: data } );\n    } else {\n      output( { no: data } );\n    }\n    done();\n  });\n};\n"
+      "fn": "on.input.path = function() {\n  fs.exists(data, function(yes) {\n    if(yes) {\n      output( { yes: data } );\n    } else {\n      output( { no: data } );\n    }\n  });\n};\n"
     },
     {
       "ports": {

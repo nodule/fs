@@ -5,6 +5,5 @@ on.input.path = function() {
     } else {
       output( { no: data } );
     }
-    done();
   });
 };
