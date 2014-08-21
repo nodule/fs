@@ -168,6 +168,7 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
           "fd": {
@@ -175,6 +176,7 @@
             "title": "File descriptor"
           },
           "stream": {
+            "title": "Stream",
             "type": "Stream"
           }
         }
@@ -213,9 +215,11 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
           "stream": {
+            "title": "Stream",
             "type": "Stream"
           },
           "fd": {
@@ -752,9 +756,11 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
           "out": {
+            "title": "Out",
             "type": "object"
           }
         }
@@ -840,9 +846,11 @@
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
           "resolvedPath": {
+            "title": "Resolved Path",
             "type": "object"
           }
         }

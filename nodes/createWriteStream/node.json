@@ -29,9 +29,11 @@
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
       "stream": {
+        "title": "Stream",
         "type": "Stream"
       },
       "fd": {

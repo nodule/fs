@@ -16,9 +16,11 @@
     },
     "output": {
       "error": {
+        "title": "Error",
         "type": "object"
       },
       "resolvedPath": {
+        "title": "Resolved Path",
         "type": "object"
       }
     }
