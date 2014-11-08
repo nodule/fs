@@ -623,7 +623,7 @@
           "path": {
             "title": "Path",
             "type": "string",
-            "required": true
+            "async": true
           },
           "mode": {
             "title": "Mode",
@@ -632,9 +632,13 @@
           }
         },
         "output": {
-          "exception": {
-            "title": "Exception",
-            "type": "object"
+          "path": {
+            "title": "Path",
+            "type": "string"
+          },
+          "error": {
+            "title": "Error",
+            "type": "Error"
           }
         }
       },
@@ -644,11 +648,12 @@
       "phrases": {
         "active": "Creating directory {{input.path}}"
       },
+      "async": true,
       "description": "fs mkdir",
       "ns": "fs",
       "name": "mkdir",
       "env": "server",
-      "fn": "output = [fs, 'mkdir', input.path, input.mode]\n"
+      "fn": "on.input.path = function() {\n\n  fs.mkdir(data, input.mode, function(err) {\n    if(err) {\n      output({error: err});\n    } else {\n      output({path: data});\n    }\n  });\n\n};\n"
     },
     {
       "ports": {

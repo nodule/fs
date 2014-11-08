@@ -2,6 +2,7 @@
   "name": "mkdir",
   "ns": "fs",
   "description": "fs mkdir",
+  "async": true,
   "phrases": {
     "active": "Creating directory {{input.path}}"
   },
@@ -13,7 +14,7 @@
       "path": {
         "title": "Path",
         "type": "string",
-        "required": true
+        "async": true
       },
       "mode": {
         "title": "Mode",
@@ -22,9 +23,13 @@
       }
     },
     "output": {
-      "exception": {
-        "title": "Exception",
-        "type": "object"
+      "path": {
+        "title": "Path",
+        "type": "string"
+      },
+      "error": {
+        "title": "Error",
+        "type": "Error"
       }
     }
   }
