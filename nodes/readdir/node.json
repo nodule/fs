@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Listing files from directory {{input.path}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "path": {
@@ -23,6 +20,11 @@
         "title": "Files",
         "type": "array"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

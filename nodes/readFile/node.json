@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "file": {
@@ -36,6 +33,11 @@
         "title": "Out",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

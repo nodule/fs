@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Appending data to {{input.file}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "file": {
@@ -30,6 +27,11 @@
         "title": "Error",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

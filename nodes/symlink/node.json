@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "srcpath": {
@@ -19,7 +16,11 @@
         "type": "string"
       },
       "type": {
-        "enum": ["file","dir","junction"],
+        "enum": [
+          "file",
+          "dir",
+          "junction"
+        ],
         "default": "file"
       }
     },
@@ -28,6 +29,11 @@
         "title": "Exception",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

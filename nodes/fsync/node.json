@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Calling sync for fd"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "fd": {
@@ -19,6 +16,11 @@
         "title": "Exception",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

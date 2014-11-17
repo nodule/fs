@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Changing file mode on {{input.path}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "path": {
@@ -25,6 +22,11 @@
         "title": "Exception",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

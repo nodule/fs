@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Creating directory {{input.path}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "path": {
@@ -31,6 +28,11 @@
         "title": "Error",
         "type": "Error"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

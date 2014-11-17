@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Getting stats for {{input.path}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "path": {
@@ -23,6 +20,11 @@
         "title": "Stats",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Closing file handle"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "fd": {
@@ -19,6 +16,11 @@
         "title": "Exception",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

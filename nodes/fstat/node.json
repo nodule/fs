@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Reading file statistics for fd"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "fd": {
@@ -23,6 +20,11 @@
         "title": "stats",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Writing file {{input.file}} ({{input.encoding}})"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "file": {
@@ -40,6 +37,11 @@
         "type": "number",
         "title": "File descriptor"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "fd": {
@@ -39,6 +36,11 @@
         "title": "Buffer",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

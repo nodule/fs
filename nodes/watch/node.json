@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Watching file {{input.file}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "file": {
@@ -31,6 +28,11 @@
         "title": "Filename",
         "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

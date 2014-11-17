@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Checking whether file {{input.path}} exists"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "path": {
@@ -25,6 +22,11 @@
         "title": "Absent",
         "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

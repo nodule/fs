@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Created filename {{input.dir}}/{{input.name}}{{input.ext}}"
   },
-  "require": {
-    "path": "builtin"
-  },
   "ports": {
     "input": {
       "name": {
@@ -29,6 +26,11 @@
         "title": "File",
         "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "path": "builtin"
     }
   }
 }

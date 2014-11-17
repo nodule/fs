@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Writing file {{input.file}}"
   },
-  "require": {
-    "fs": "builtin"
-  },
   "ports": {
     "input": {
       "file": {
@@ -37,6 +34,11 @@
         "title": "Error",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs": "builtin"
     }
   }
 }

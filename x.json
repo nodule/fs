@@ -8,6 +8,11 @@
   },
   "nodes": [
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "file": {
@@ -31,9 +36,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Appending data to {{input.file}}"
       },
@@ -45,6 +47,11 @@
       "fn": "output = [fs, 'appendFile', input.file, input.in, input.options]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -63,9 +70,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Changing file mode on {{input.path}}"
       },
@@ -77,6 +81,11 @@
       "fn": "output = [fs, 'chmod', input.path, input.mode]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -99,9 +108,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Changing owner/group for {{input.path}}"
       },
@@ -112,6 +118,11 @@
       "fn": "output = [fs, 'chown', input.path, input.uid, input.gid]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -125,9 +136,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Closing file handle"
       },
@@ -138,6 +146,11 @@
       "fn": "output = [fs, 'close', input.fd]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "file": {
@@ -181,9 +194,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Reading file {{input.file}} ({{input.encoding}})"
       },
@@ -195,6 +205,11 @@
       "fn": "output = function(cb) {\n\n  var opts = {\n    flag: input.flag,\n    encoding: input.encoding\n  };\n\n  if(input.start) opts.start = input.start;\n  if(input.end) opts.end = input.end;\n\n  var stream = fs.createReadStream(input.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: err});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: fd});\n  });\n\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "file": {
@@ -228,9 +243,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Writing file {{input.file}} ({{input.encoding}})"
       },
@@ -242,6 +254,11 @@
       "fn": "output = function(cb) {\n\n  var opts = {\n    flag: input.flag,\n    encoding: input.encoding\n  };\n\n  var stream = fs.createWriteStream(input.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: err});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: fd});\n  });\n\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -260,9 +277,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Checking whether file {{input.path}} exists"
       },
@@ -274,6 +288,11 @@
       "fn": "on.input.path = function() {\n  fs.exists(data, function(yes) {\n    if(yes) {\n      output( { yes: data } );\n    } else {\n      output( { no: data } );\n    }\n  });\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -292,9 +311,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Changing file mode for fd"
       },
@@ -305,6 +321,11 @@
       "fn": "output = [fs, 'fchmod', input.fd, input.mode]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -327,9 +348,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Changing file owner/group for fd"
       },
@@ -340,6 +358,11 @@
       "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "path": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "name": {
@@ -363,9 +386,6 @@
           }
         }
       },
-      "require": {
-        "path": "builtin"
-      },
       "phrases": {
         "active": "Created filename {{input.dir}}/{{input.name}}{{input.ext}}"
       },
@@ -376,6 +396,11 @@
       "fn": "var file = input.ext ? input.name + input.ext : input.name;\noutput.file = input.dir ? path.normalize([input.dir, file].join(path.sep)) : file;\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -393,9 +418,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Reading file statistics for fd"
       },
@@ -406,6 +428,11 @@
       "fn": "output = [fs, 'fstat', input.fd]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -419,9 +446,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Calling sync for fd"
       },
@@ -432,6 +456,11 @@
       "fn": "output = [fs, 'fsync', input.fd]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -448,9 +477,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Truncating fd with a length of {{input.len}}"
       },
@@ -461,6 +487,11 @@
       "fn": "output = [fs, 'ftruncate', input.fd, input.len]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -480,9 +511,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
       },
@@ -493,6 +521,11 @@
       "fn": "output = [fs, 'futimes', input.fd, input.atime, input.mtime]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -511,9 +544,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Changing file mode for {{input.path}}"
       },
@@ -524,6 +554,11 @@
       "fn": "output = [fs, 'lchmod', input.path, input.mode]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -546,9 +581,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Changing file owner/group for {{input.path}}"
       },
@@ -559,6 +591,11 @@
       "fn": "output = [fs, 'lchown', input.path, input.uid, input.gid]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "srcpath": {
@@ -575,9 +612,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
       },
@@ -588,6 +622,11 @@
       "fn": "output = [fs, 'link', input.srcpath, input.dstpath]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -605,9 +644,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Getting stats for {{input.path}}"
       },
@@ -618,6 +654,11 @@
       "fn": "output = [fs, 'lstat', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -642,9 +683,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Creating directory {{input.path}}"
       },
@@ -656,6 +694,11 @@
       "fn": "on.input.path = function() {\n\n  fs.mkdir(data, input.mode, function(err) {\n    if(err) {\n      output({error: err});\n    } else {\n      output({path: data});\n    }\n  });\n\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -682,9 +725,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
       },
@@ -695,6 +735,11 @@
       "fn": "output = [fs, 'open', input.path, input.flags, input.mode]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -728,9 +773,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
       },
@@ -741,6 +783,11 @@
       "fn": "output = [fs, 'read', input.fd, input.buffer, input.offset, input.length, input.position]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "file": {
@@ -770,9 +817,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
       },
@@ -784,6 +828,11 @@
       "fn": "output = [fs, 'readFile', input.file, {\n  flag: input.flag,\n  encoding: input.encoding\n}];\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -801,9 +850,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Listing files from directory {{input.path}}"
       },
@@ -814,6 +860,11 @@
       "fn": "output = [fs, 'readdir', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -830,9 +881,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Reading link {{input.path}}"
       },
@@ -843,6 +891,11 @@
       "fn": "output = [fs, 'readlink', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -860,9 +913,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Performing realpath for {{input.path}}"
       },
@@ -873,6 +923,11 @@
       "fn": "output = [fs, 'realpath', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "oldPath": {
@@ -889,9 +944,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
       },
@@ -902,6 +954,11 @@
       "fn": "output = [fs, 'rename', input.oldPath, input.newPath]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -916,9 +973,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Removing directory {{input.path}}"
       },
@@ -929,6 +983,11 @@
       "fn": "output = [fs, 'rmdir', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -947,9 +1006,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Reading stats for {{input.path}}"
       },
@@ -960,6 +1016,11 @@
       "fn": "output = [fs, 'stat', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "srcpath": {
@@ -986,9 +1047,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
       },
@@ -999,6 +1057,11 @@
       "fn": "output = [fs, 'symlink', input.srcpath, input.dstpath, input.type]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -1015,9 +1078,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Truncating file {{input.path}} to {{input.len}}"
       },
@@ -1028,6 +1088,11 @@
       "fn": "output = [fs, 'truncate', input.path, input.len]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -1042,9 +1107,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Unlinking file {{input.path}}"
       },
@@ -1055,6 +1117,11 @@
       "fn": "output = [fs, 'unlink', input.path]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "path": {
@@ -1074,9 +1141,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Getting utimes for {{input.path}}"
       },
@@ -1087,6 +1151,11 @@
       "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "file": {
@@ -1112,9 +1181,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Watching file {{input.file}}"
       },
@@ -1125,6 +1191,11 @@
       "fn": "output = [fs, 'watch', input.file, {\n  persistent: input.persistent\n}]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "fd": {
@@ -1164,9 +1235,6 @@
           }
         }
       },
-      "require": {
-        "fs": "builtin"
-      },
       "phrases": {
         "active": "Writing to file descriptor"
       },
@@ -1177,6 +1245,11 @@
       "fn": "output = [fs, 'write', input.fd, input.buffer, input.offset, input.length, input.position]\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
       "ports": {
         "input": {
           "file": {
@@ -1207,9 +1280,6 @@
             "type": "object"
           }
         }
-      },
-      "require": {
-        "fs": "builtin"
       },
       "phrases": {
         "active": "Writing file {{input.file}}"
