@@ -5,13 +5,38 @@ module.exports = {
   phrases: {
     active: "Writing file {{input.file}}"
   },
+  async: true,
   ports: {
     input: {
       file: {
         type: "string"
       },
       "in": {
-        type: "string"
+        type: "string",
+        async: true,
+        fn: function __IN__(data, x, source, state, input, output, fs) {
+          var r = function() {
+            fs.writeFile(input.file, data, {
+              encoding: input.encoding,
+              mode: input.mode,
+              flag: input.flag
+            }, function(err) {
+              if (err) {
+                output({
+                  error: err
+                })
+              } else {
+                output({
+                  out: data
+                })
+              }
+            })
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
       },
       encoding: {
         title: "Encoding",
@@ -33,6 +58,10 @@ module.exports = {
       error: {
         title: "Error",
         type: "object"
+      },
+      out: {
+        title: "Output",
+        type: "string"
       }
     }
   },
@@ -41,23 +70,5 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function writeFile(input, output, state, done, cb, on, fs) {
-    var r = function() {
-      fs.writeFile(input.file, input.in, {
-        encoding: input.encoding,
-        mode: input.mode,
-        flag: input.flag
-      }, function writeFileCallback(error) {
-        cb({
-          error: error
-        });
-      });
-    }.call(this);
-    return {
-      output: output,
-      state: state,
-      on: on,
-      return: r
-    };
-  }
+  state: {}
 }

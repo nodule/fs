@@ -1258,7 +1258,8 @@
             "type": "string"
           },
           "in": {
-            "type": "string"
+            "type": "string",
+            "async": true
           },
           "encoding": {
             "title": "Encoding",
@@ -1280,9 +1281,14 @@
           "error": {
             "title": "Error",
             "type": "object"
+          },
+          "out": {
+            "title": "Output",
+            "type": "string"
           }
         }
       },
+      "async": true,
       "phrases": {
         "active": "Writing file {{input.file}}"
       },
@@ -1290,7 +1296,7 @@
       "ns": "fs",
       "name": "writeFile",
       "env": "server",
-      "fn": "output = [fs, 'writeFile', input.file, input.in, {\n  encoding: input.encoding,\n  mode: input.mode,\n  flag: input.flag\n}];\n"
+      "fn": "on.input.in = function() {\n  fs.writeFile(input.file, data, {\n    encoding: input.encoding,\n    mode: input.mode,\n    flag: input.flag\n  }, function(err) {\n    if (err) {\n      output({error: err})\n    } else {\n      output({out: data})\n    }\n  })\n}\n"
     }
   ],
   "twigs": [],

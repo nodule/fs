@@ -5,13 +5,15 @@
   "phrases": {
     "active": "Writing file {{input.file}}"
   },
+  "async": true,
   "ports": {
     "input": {
       "file": {
         "type": "string"
       },
       "in": {
-        "type": "string"
+        "type": "string",
+        "async": true
       },
       "encoding": {
         "title": "Encoding",
@@ -33,6 +35,10 @@
       "error": {
         "title": "Error",
         "type": "object"
+      },
+      "out": {
+        "title": "Output",
+        "type": "string"
       }
     }
   },
