@@ -7,7 +7,7 @@ output = function() {
     if (err) {
       cb({error: err})
     } else {
-      cb({out: data})
+      cb({out: this.data})
     }
-  })
+  }.bind({data: input.in}))
 }

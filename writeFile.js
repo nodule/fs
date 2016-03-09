@@ -58,10 +58,12 @@ module.exports = {
           })
         } else {
           output({
-            out: data
+            out: this.data
           })
         }
-      })
+      }.bind({
+        data: input.in
+      }))
     }.call(this);
     return {
       output: output,

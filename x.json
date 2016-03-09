@@ -1294,7 +1294,7 @@
       "ns": "fs",
       "name": "writeFile",
       "env": "server",
-      "fn": "output = function() {\n  fs.writeFile(input.file, input.in, {\n    encoding: input.encoding,\n    mode: input.mode,\n    flag: input.flag\n  }, function(err) {\n    if (err) {\n      cb({error: err})\n    } else {\n      cb({out: data})\n    }\n  })\n}\n"
+      "fn": "output = function() {\n  fs.writeFile(input.file, input.in, {\n    encoding: input.encoding,\n    mode: input.mode,\n    flag: input.flag\n  }, function(err) {\n    if (err) {\n      cb({error: err})\n    } else {\n      cb({out: this.data})\n    }\n  }.bind({data: input.in}))\n}\n"
     }
   ],
   "twigs": [],
