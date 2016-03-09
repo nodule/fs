@@ -1,13 +1,13 @@
-on.input.in = function() {
-  fs.writeFile(input.file, data, {
+output = function() {
+  fs.writeFile(input.file, input.in, {
     encoding: input.encoding,
     mode: input.mode,
     flag: input.flag
   }, function(err) {
     if (err) {
-      output({error: err})
+      cb({error: err})
     } else {
-      output({out: data})
+      cb({out: data})
     }
   })
 }
