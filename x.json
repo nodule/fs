@@ -793,7 +793,8 @@
           "file": {
             "title": "Filename",
             "type": "string",
-            "required": true
+            "required": true,
+            "async": true
           },
           "encoding": {
             "title": "Encoding",
@@ -813,10 +814,11 @@
           },
           "out": {
             "title": "Out",
-            "type": "object"
+            "type": "string"
           }
         }
       },
+      "async": true,
       "phrases": {
         "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
       },
@@ -825,7 +827,7 @@
       "ns": "fs",
       "name": "readFile",
       "env": "server",
-      "fn": "output = [fs, 'readFile', input.file, {\n  flag: input.flag,\n  encoding: input.encoding\n}];\n"
+      "fn": "on.input.file = function() {\n  fs.readFile(data, {\n    flag: input.flag,\n    encoding: input.encoding\n  }, function(err, data) {\n    if (err) {\n      output({error: err})\n    } else {\n      output({out: data})\n    }\n  })\n}\n"
     },
     {
       "dependencies": {

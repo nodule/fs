@@ -6,12 +6,14 @@
   "phrases": {
     "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
   },
+  "async": true,
   "ports": {
     "input": {
       "file": {
         "title": "Filename",
         "type": "string",
-        "required": true
+        "required": true,
+        "async": true
       },
       "encoding": {
         "title": "Encoding",
@@ -31,7 +33,7 @@
       },
       "out": {
         "title": "Out",
-        "type": "object"
+        "type": "string"
       }
     }
   },

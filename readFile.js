@@ -6,12 +6,36 @@ module.exports = {
   phrases: {
     active: "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
   },
+  async: true,
   ports: {
     input: {
       file: {
         title: "Filename",
         type: "string",
-        required: true
+        required: true,
+        async: true,
+        fn: function __FILE__(data, x, source, state, input, output, fs) {
+          var r = function() {
+            fs.readFile(data, {
+              flag: input.flag,
+              encoding: input.encoding
+            }, function(err, data) {
+              if (err) {
+                output({
+                  error: err
+                })
+              } else {
+                output({
+                  out: data
+                })
+              }
+            })
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
       },
       encoding: {
         title: "Encoding",
@@ -31,7 +55,7 @@ module.exports = {
       },
       out: {
         title: "Out",
-        type: "object"
+        type: "string"
       }
     }
   },
@@ -40,23 +64,5 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function readFile(input, output, state, done, cb, on, fs) {
-    var r = function() {
-      fs.readFile(input.file, {
-        flag: input.flag,
-        encoding: input.encoding
-      }, function readFileCallback(error, out) {
-        cb({
-          error: error,
-          out: out
-        });
-      });
-    }.call(this);
-    return {
-      output: output,
-      state: state,
-      on: on,
-      return: r
-    };
-  }
+  state: {}
 }
