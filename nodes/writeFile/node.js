@@ -9,5 +9,6 @@ output = function() {
     } else {
       cb({out: this.data})
     }
+    done()
   }.bind({data: input.in}))
 }

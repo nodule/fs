@@ -61,6 +61,7 @@ module.exports = {
             out: this.data
           })
         }
+        done()
       }.bind({
         data: input.in
       }))
