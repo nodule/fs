@@ -12,11 +12,11 @@ output = function(cb) {
   cb({ stream: stream});
 
   stream.on('error', function(err) {
-    cb({ error: err});
+    cb({ error: $.create(err)});
   });
 
   stream.on('open', function(fd) {
-    cb({ fd: fd});
+    cb({ fd: $.create(fd)});
   });
 
 };

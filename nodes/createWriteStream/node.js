@@ -6,14 +6,14 @@ output = function(cb) {
   };
 
   var stream = fs.createWriteStream($.file, opts);
-  cb({ stream: stream});
+  cb({ stream: $.create(stream)});
 
   stream.on('error', function(err) {
-    cb({ error: err});
+    cb({ error: $.create(err)});
   });
 
   stream.on('open', function(fd) {
-    cb({ fd: fd});
+    cb({ fd: $.create(fd)});
   });
 
 };

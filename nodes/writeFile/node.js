@@ -5,9 +5,9 @@ output = function() {
     flag: $.flag
   }, function(err) {
     if (err) {
-      cb({error: err})
+      cb({error: $.create(err)})
     } else {
-      cb({out: this.data})
+      cb({out: $.write('in', this.data)})
     }
     done()
   }.bind({data: $.in}))
