@@ -1,9 +1,9 @@
 on.input.path = function() {
-  fs.exists(data, function(yes) {
+  fs.exists(input.path, function(yes) {
     if(yes) {
-      output( { yes: data } );
+      output( { yes: input.path } );
     } else {
-      output( { no: data } );
+      output( { no: input.path } );
     }
   });
 };
