@@ -1,1 +1,1 @@
-output = [fs, 'close', input.fd]
+output = [fs, 'close', $.fd]

@@ -1,1 +1,1 @@
-output = [fs, 'fchown', input.fd, input.uid, input.gid]
+output = [fs, 'fchown', $.fd, $.uid, $.gid]

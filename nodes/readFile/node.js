@@ -1,12 +1,12 @@
 on.input.file = function() {
-  fs.readFile(input.file, {
-    flag: input.flag,
-    encoding: input.encoding
-  }, function(err, input.file) {
+  fs.readFile($.file, {
+    flag: $.flag,
+    encoding: $.encoding
+  }, function(err, $.file) {
     if (err) {
       output({error: err})
     } else {
-      output({out: input.file})
+      output({out: $.file})
     }
   })
 }

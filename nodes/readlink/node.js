@@ -1,1 +1,1 @@
-output = [fs, 'readlink', input.path]
+output = [fs, 'readlink', $.path]

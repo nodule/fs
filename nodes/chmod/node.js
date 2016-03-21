@@ -1,1 +1,1 @@
-output = [fs, 'chmod', input.path, input.mode]
+output = [fs, 'chmod', $.path, $.mode]

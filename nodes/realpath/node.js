@@ -1,1 +1,1 @@
-output = [fs, 'realpath', input.path]
+output = [fs, 'realpath', $.path]

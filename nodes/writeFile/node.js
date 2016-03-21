@@ -1,8 +1,8 @@
 output = function() {
-  fs.writeFile(input.file, input.in, {
-    encoding: input.encoding,
-    mode: input.mode,
-    flag: input.flag
+  fs.writeFile($.file, $.in, {
+    encoding: $.encoding,
+    mode: $.mode,
+    flag: $.flag
   }, function(err) {
     if (err) {
       cb({error: err})
@@ -10,5 +10,5 @@ output = function() {
       cb({out: this.data})
     }
     done()
-  }.bind({data: input.in}))
+  }.bind({data: $.in}))
 }

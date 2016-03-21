@@ -1,14 +1,14 @@
 output = function(cb) {
 
   var opts = {
-    flag: input.flag,
-    encoding: input.encoding
+    flag: $.flag,
+    encoding: $.encoding
   };
 
-  if(input.start) opts.start = input.start;
-  if(input.end) opts.end = input.end;
+  if($.start) opts.start = $.start;
+  if($.end) opts.end = $.end;
 
-  var stream = fs.createReadStream(input.file, opts);
+  var stream = fs.createReadStream($.file, opts);
   cb({ stream: stream});
 
   stream.on('error', function(err) {

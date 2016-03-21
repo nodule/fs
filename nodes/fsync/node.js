@@ -1,1 +1,1 @@
-output = [fs, 'fsync', input.fd]
+output = [fs, 'fsync', $.fd]

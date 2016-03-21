@@ -1,11 +1,11 @@
 output = function(cb) {
 
   var opts = {
-    flag: input.flag,
-    encoding: input.encoding
+    flag: $.flag,
+    encoding: $.encoding
   };
 
-  var stream = fs.createWriteStream(input.file, opts);
+  var stream = fs.createWriteStream($.file, opts);
   cb({ stream: stream});
 
   stream.on('error', function(err) {

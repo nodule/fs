@@ -1,1 +1,1 @@
-output = [fs, 'utimes', input.path, input.atime, input.mtime]
+output = [fs, 'utimes', $.path, $.atime, $.mtime]

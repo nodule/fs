@@ -1,1 +1,1 @@
-output = [fs, 'futimes', input.fd, input.atime, input.mtime]
+output = [fs, 'futimes', $.fd, $.atime, $.mtime]
