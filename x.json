@@ -44,7 +44,7 @@
       "ns": "fs",
       "name": "appendFile",
       "env": "server",
-      "fn": "output = [fs, 'appendFile', input.file, input.in, input.options]\n"
+      "fn": "output = [fs, 'appendFile', $.file, $.in, $.options]\n"
     },
     {
       "dependencies": {
@@ -78,7 +78,7 @@
       "ns": "fs",
       "name": "chmod",
       "env": "server",
-      "fn": "output = [fs, 'chmod', input.path, input.mode]\n"
+      "fn": "output = [fs, 'chmod', $.path, $.mode]\n"
     },
     {
       "dependencies": {
@@ -115,7 +115,7 @@
       "ns": "fs",
       "name": "chown",
       "env": "server",
-      "fn": "output = [fs, 'chown', input.path, input.uid, input.gid]\n"
+      "fn": "output = [fs, 'chown', $.path, $.uid, $.gid]\n"
     },
     {
       "dependencies": {
@@ -143,7 +143,7 @@
       "ns": "fs",
       "name": "close",
       "env": "server",
-      "fn": "output = [fs, 'close', input.fd]\n"
+      "fn": "output = [fs, 'close', $.fd]\n"
     },
     {
       "dependencies": {
@@ -202,7 +202,7 @@
       "ns": "fs",
       "name": "createReadStream",
       "env": "server",
-      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: input.flag,\n    encoding: input.encoding\n  };\n\n  if(input.start) opts.start = input.start;\n  if(input.end) opts.end = input.end;\n\n  var stream = fs.createReadStream(input.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: err});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: fd});\n  });\n\n};\n"
+      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: $.flag,\n    encoding: $.encoding\n  };\n\n  if($.start) opts.start = $.start;\n  if($.end) opts.end = $.end;\n\n  var stream = fs.createReadStream($.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: $.create(err)});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: $.create(fd)});\n  });\n\n};\n"
     },
     {
       "dependencies": {
@@ -251,7 +251,7 @@
       "ns": "fs",
       "name": "createWriteStream",
       "env": "server",
-      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: input.flag,\n    encoding: input.encoding\n  };\n\n  var stream = fs.createWriteStream(input.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: err});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: fd});\n  });\n\n};\n"
+      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: $.flag,\n    encoding: $.encoding\n  };\n\n  var stream = fs.createWriteStream($.file, opts);\n  cb({ stream: $.create(stream)});\n\n  stream.on('error', function(err) {\n    cb({ error: $.create(err)});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: $.create(fd)});\n  });\n\n};\n"
     },
     {
       "dependencies": {
@@ -285,7 +285,7 @@
       "ns": "fs",
       "name": "exists",
       "env": "server",
-      "fn": "on.input.path = function() {\n  fs.exists(data, function(yes) {\n    if(yes) {\n      output( { yes: data } );\n    } else {\n      output( { no: data } );\n    }\n  });\n};\n"
+      "fn": "on.input.path = function() {\n  fs.exists($.path, function(yes) {\n    if(yes) {\n      output( { yes: $.get('path') } );\n    } else {\n      output( { no: $.get('path') } );\n    }\n  });\n};\n"
     },
     {
       "dependencies": {
@@ -318,7 +318,7 @@
       "ns": "fs",
       "name": "fchmod",
       "env": "server",
-      "fn": "output = [fs, 'fchmod', input.fd, input.mode]\n"
+      "fn": "output = [fs, 'fchmod', $.fd, $.mode]\n"
     },
     {
       "dependencies": {
@@ -355,7 +355,7 @@
       "ns": "fs",
       "name": "fchown",
       "env": "server",
-      "fn": "output = [fs, 'fchown', input.fd, input.uid, input.gid]\n"
+      "fn": "output = [fs, 'fchown', $.fd, $.uid, $.gid]\n"
     },
     {
       "dependencies": {
@@ -393,7 +393,7 @@
       "ns": "fs",
       "name": "file",
       "env": "server",
-      "fn": "var file = input.ext ? input.name + input.ext : input.name;\noutput.file = input.dir ? path.normalize([input.dir, file].join(path.sep)) : file;\n"
+      "fn": "var file = $.ext ? $.name + $.ext : $.name;\noutput.file = $.create($.dir ? path.normalize([$.dir, file].join(path.sep)) : file);\n"
     },
     {
       "dependencies": {
@@ -425,7 +425,7 @@
       "ns": "fs",
       "name": "fstat",
       "env": "server",
-      "fn": "output = [fs, 'fstat', input.fd]\n"
+      "fn": "output = [fs, 'fstat', $.fd]\n"
     },
     {
       "dependencies": {
@@ -453,7 +453,7 @@
       "ns": "fs",
       "name": "fsync",
       "env": "server",
-      "fn": "output = [fs, 'fsync', input.fd]\n"
+      "fn": "output = [fs, 'fsync', $.fd]\n"
     },
     {
       "dependencies": {
@@ -484,7 +484,7 @@
       "ns": "fs",
       "name": "ftruncate",
       "env": "server",
-      "fn": "output = [fs, 'ftruncate', input.fd, input.len]\n"
+      "fn": "output = [fs, 'ftruncate', $.fd, $.len]\n"
     },
     {
       "dependencies": {
@@ -518,7 +518,7 @@
       "ns": "fs",
       "name": "futimes",
       "env": "server",
-      "fn": "output = [fs, 'futimes', input.fd, input.atime, input.mtime]\n"
+      "fn": "output = [fs, 'futimes', $.fd, $.atime, $.mtime]\n"
     },
     {
       "dependencies": {
@@ -551,7 +551,7 @@
       "ns": "fs",
       "name": "lchmod",
       "env": "server",
-      "fn": "output = [fs, 'lchmod', input.path, input.mode]\n"
+      "fn": "output = [fs, 'lchmod', $.path, $.mode]\n"
     },
     {
       "dependencies": {
@@ -588,7 +588,7 @@
       "ns": "fs",
       "name": "lchown",
       "env": "server",
-      "fn": "output = [fs, 'lchown', input.path, input.uid, input.gid]\n"
+      "fn": "output = [fs, 'lchown', $.path, $.uid, $.gid]\n"
     },
     {
       "dependencies": {
@@ -619,7 +619,7 @@
       "ns": "fs",
       "name": "link",
       "env": "server",
-      "fn": "output = [fs, 'link', input.srcpath, input.dstpath]\n"
+      "fn": "output = [fs, 'link', $.srcpath, $.dstpath]\n"
     },
     {
       "dependencies": {
@@ -651,7 +651,7 @@
       "ns": "fs",
       "name": "lstat",
       "env": "server",
-      "fn": "output = [fs, 'lstat', input.path]\n"
+      "fn": "output = [fs, 'lstat', $.path]\n"
     },
     {
       "dependencies": {
@@ -691,7 +691,7 @@
       "ns": "fs",
       "name": "mkdir",
       "env": "server",
-      "fn": "on.input.path = function() {\n\n  fs.mkdir(data, input.mode, function(err) {\n    if(err) {\n      output({error: err});\n    } else {\n      output({path: data});\n    }\n  });\n\n};\n"
+      "fn": "on.input.path = function() {\n  fs.mkdir($.path, $.mode, function(err) {\n    if(err) {\n      output({error: $.create(err)});\n    } else {\n      output({path: $.get('path')});\n    }\n  });\n};\n"
     },
     {
       "dependencies": {
@@ -732,7 +732,7 @@
       "ns": "fs",
       "name": "open",
       "env": "server",
-      "fn": "output = [fs, 'open', input.path, input.flags, input.mode]\n"
+      "fn": "output = [fs, 'open', $.path, $.flags, $.mode]\n"
     },
     {
       "dependencies": {
@@ -780,7 +780,7 @@
       "ns": "fs",
       "name": "read",
       "env": "server",
-      "fn": "output = [fs, 'read', input.fd, input.buffer, input.offset, input.length, input.position]\n"
+      "fn": "output = [fs, 'read', $.fd, $.buffer, $.offset, $.length, $.position]\n"
     },
     {
       "dependencies": {
@@ -827,7 +827,7 @@
       "ns": "fs",
       "name": "readFile",
       "env": "server",
-      "fn": "on.input.file = function() {\n  fs.readFile(data, {\n    flag: input.flag,\n    encoding: input.encoding\n  }, function(err, data) {\n    if (err) {\n      output({error: err})\n    } else {\n      output({out: data})\n    }\n  })\n}\n"
+      "fn": "on.input.file = function() {\n  fs.readFile($.file, {\n    flag: $.flag,\n    encoding: $.encoding\n  }, function(err, contents) {\n    if (err) {\n      output({error: $.create(err)})\n    } else {\n      output({out: $.create(contents)})\n    }\n  })\n}\n"
     },
     {
       "dependencies": {
@@ -859,7 +859,7 @@
       "ns": "fs",
       "name": "readdir",
       "env": "server",
-      "fn": "output = [fs, 'readdir', input.path]\n"
+      "fn": "output = [fs, 'readdir', $.path]\n"
     },
     {
       "dependencies": {
@@ -890,7 +890,7 @@
       "ns": "fs",
       "name": "readlink",
       "env": "server",
-      "fn": "output = [fs, 'readlink', input.path]\n"
+      "fn": "output = [fs, 'readlink', $.path]\n"
     },
     {
       "dependencies": {
@@ -922,7 +922,7 @@
       "ns": "fs",
       "name": "realpath",
       "env": "server",
-      "fn": "output = [fs, 'realpath', input.path]\n"
+      "fn": "output = [fs, 'realpath', $.path]\n"
     },
     {
       "dependencies": {
@@ -953,7 +953,7 @@
       "ns": "fs",
       "name": "rename",
       "env": "server",
-      "fn": "output = [fs, 'rename', input.oldPath, input.newPath]\n"
+      "fn": "output = [fs, 'rename', $.oldPath, $.newPath]\n"
     },
     {
       "dependencies": {
@@ -982,7 +982,7 @@
       "ns": "fs",
       "name": "rmdir",
       "env": "server",
-      "fn": "output = [fs, 'rmdir', input.path]\n"
+      "fn": "output = [fs, 'rmdir', $.path]\n"
     },
     {
       "dependencies": {
@@ -1015,7 +1015,7 @@
       "ns": "fs",
       "name": "stat",
       "env": "server",
-      "fn": "output = [fs, 'stat', input.path]\n"
+      "fn": "output = [fs, 'stat', $.path]\n"
     },
     {
       "dependencies": {
@@ -1056,7 +1056,7 @@
       "ns": "fs",
       "name": "symlink",
       "env": "server",
-      "fn": "output = [fs, 'symlink', input.srcpath, input.dstpath, input.type]\n"
+      "fn": "output = [fs, 'symlink', $.srcpath, $.dstpath, $.type]\n"
     },
     {
       "dependencies": {
@@ -1087,7 +1087,7 @@
       "ns": "fs",
       "name": "truncate",
       "env": "server",
-      "fn": "output = [fs, 'truncate', input.path, input.len]\n"
+      "fn": "output = [fs, 'truncate', $.path, $.len]\n"
     },
     {
       "dependencies": {
@@ -1116,7 +1116,7 @@
       "ns": "fs",
       "name": "unlink",
       "env": "server",
-      "fn": "output = [fs, 'unlink', input.path]\n"
+      "fn": "output = [fs, 'unlink', $.path]\n"
     },
     {
       "dependencies": {
@@ -1150,7 +1150,7 @@
       "ns": "fs",
       "name": "utimes",
       "env": "server",
-      "fn": "output = [fs, 'utimes', input.path, input.atime, input.mtime]\n"
+      "fn": "output = [fs, 'utimes', $.path, $.atime, $.mtime]\n"
     },
     {
       "dependencies": {
@@ -1190,7 +1190,7 @@
       "ns": "fs",
       "name": "watch",
       "env": "server",
-      "fn": "output = [fs, 'watch', input.file, {\n  persistent: input.persistent\n}]\n"
+      "fn": "output = [fs, 'watch', $.file, {\n  persistent: $.persistent\n}]\n"
     },
     {
       "dependencies": {
@@ -1244,7 +1244,7 @@
       "ns": "fs",
       "name": "write",
       "env": "server",
-      "fn": "output = [fs, 'write', input.fd, input.buffer, input.offset, input.length, input.position]\n"
+      "fn": "output = [fs, 'write', $.fd, $.buffer, $.offset, $.length, $.position]\n"
     },
     {
       "dependencies": {
@@ -1294,7 +1294,7 @@
       "ns": "fs",
       "name": "writeFile",
       "env": "server",
-      "fn": "output = function() {\n  fs.writeFile(input.file, input.in, {\n    encoding: input.encoding,\n    mode: input.mode,\n    flag: input.flag\n  }, function(err) {\n    if (err) {\n      cb({error: err})\n    } else {\n      cb({out: this.data})\n    }\n    done()\n  }.bind({data: input.in}))\n}\n"
+      "fn": "output = function() {\n  fs.writeFile($.file, $.in, {\n    encoding: $.encoding,\n    mode: $.mode,\n    flag: $.flag\n  }, function(err) {\n    if (err) {\n      cb({error: $.create(err)})\n    } else {\n      cb({out: $.write('in', this.data)})\n    }\n    done()\n  }.bind({data: $.in}))\n}\n"
     }
   ],
   "twigs": [],

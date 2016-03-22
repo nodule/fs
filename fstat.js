@@ -27,9 +27,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function fstat(input, output, state, done, cb, on, fs) {
+  fn: function fstat(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.fstat(input.fd, function fstatCallback(error, stats) {
+      fs.fstat($.fd, function fstatCallback(error, stats) {
         cb({
           error: error,
           stats: stats

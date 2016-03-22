@@ -54,30 +54,30 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function createReadStream(input, output, state, done, cb, on, fs) {
+  fn: function createReadStream(input, $, output, state, done, cb, on, fs) {
     var r = function() {
       var opts = {
-        flag: input.flag,
-        encoding: input.encoding
+        flag: $.flag,
+        encoding: $.encoding
       };
 
-      if (input.start) opts.start = input.start;
-      if (input.end) opts.end = input.end;
+      if ($.start) opts.start = $.start;
+      if ($.end) opts.end = $.end;
 
-      var stream = fs.createReadStream(input.file, opts);
+      var stream = fs.createReadStream($.file, opts);
       output({
         stream: stream
       });
 
       stream.on('error', function(err) {
         output({
-          error: err
+          error: $.create(err)
         });
       });
 
       stream.on('open', function(fd) {
         output({
-          fd: fd
+          fd: $.create(fd)
         });
       });
     }.call(this);

@@ -29,9 +29,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function utimes(input, output, state, done, cb, on, fs) {
+  fn: function utimes(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.utimes(input.path, input.atime, input.mtime, function utimesCallback(exception) {
+      fs.utimes($.path, $.atime, $.mtime, function utimesCallback(exception) {
         cb({
           exception: exception
         });

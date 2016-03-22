@@ -35,9 +35,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function symlink(input, output, state, done, cb, on, fs) {
+  fn: function symlink(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.symlink(input.srcpath, input.dstpath, input.type, function symlinkCallback(exception) {
+      fs.symlink($.srcpath, $.dstpath, $.type, function symlinkCallback(exception) {
         cb({
           exception: exception
         });

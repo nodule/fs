@@ -33,10 +33,10 @@ module.exports = {
       path: require('path')
     }
   },
-  fn: function file(input, output, state, done, cb, on, path) {
+  fn: function file(input, $, output, state, done, cb, on, path) {
     var r = function() {
-      var file = input.ext ? input.name + input.ext : input.name;
-      output.file = input.dir ? path.normalize([input.dir, file].join(path.sep)) : file;
+      var file = $.ext ? $.name + $.ext : $.name;
+      output.file = $.create($.dir ? path.normalize([$.dir, file].join(path.sep)) : file);
     }.call(this);
     return {
       output: output,

@@ -26,9 +26,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function readlink(input, output, state, done, cb, on, fs) {
+  fn: function readlink(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.readlink(input.path, function readlinkCallback(error, linkString) {
+      fs.readlink($.path, function readlinkCallback(error, linkString) {
         cb({
           error: error,
           linkString: linkString

@@ -14,14 +14,14 @@ module.exports = {
         async: true,
         fn: function __PATH__(data, x, source, state, input, output, fs) {
           var r = function() {
-            fs.mkdir(data, input.mode, function(err) {
+            fs.mkdir($.path, $.mode, function(err) {
               if (err) {
                 output({
-                  error: err
+                  error: $.create(err)
                 });
               } else {
                 output({
-                  path: data
+                  path: $.get('path')
                 });
               }
             });

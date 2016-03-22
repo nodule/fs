@@ -23,9 +23,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function fsync(input, output, state, done, cb, on, fs) {
+  fn: function fsync(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.fsync(input.fd, function fsyncCallback(exception) {
+      fs.fsync($.fd, function fsyncCallback(exception) {
         cb({
           exception: exception
         });

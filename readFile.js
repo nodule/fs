@@ -16,17 +16,17 @@ module.exports = {
         async: true,
         fn: function __FILE__(data, x, source, state, input, output, fs) {
           var r = function() {
-            fs.readFile(data, {
-              flag: input.flag,
-              encoding: input.encoding
-            }, function(err, data) {
+            fs.readFile($.file, {
+              flag: $.flag,
+              encoding: $.encoding
+            }, function(err, contents) {
               if (err) {
                 output({
-                  error: err
+                  error: $.create(err)
                 })
               } else {
                 output({
-                  out: data
+                  out: $.create(contents)
                 })
               }
             })

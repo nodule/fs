@@ -27,9 +27,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function realpath(input, output, state, done, cb, on, fs) {
+  fn: function realpath(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.realpath(input.path, function realpathCallback(error, resolvedPath) {
+      fs.realpath($.path, function realpathCallback(error, resolvedPath) {
         cb({
           error: error,
           resolvedPath: resolvedPath

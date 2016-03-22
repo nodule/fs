@@ -49,9 +49,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function write(input, output, state, done, cb, on, fs) {
+  fn: function write(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.write(input.fd, input.buffer, input.offset, input.length, input.position, function writeCallback(error, written, buffer) {
+      fs.write($.fd, $.buffer, $.offset, $.length, $.position, function writeCallback(error, written, buffer) {
         cb({
           error: error,
           written: written,

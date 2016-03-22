@@ -27,9 +27,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function readdir(input, output, state, done, cb, on, fs) {
+  fn: function readdir(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.readdir(input.path, function readdirCallback(error, files) {
+      fs.readdir($.path, function readdirCallback(error, files) {
         cb({
           error: error,
           files: files

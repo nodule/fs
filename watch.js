@@ -35,10 +35,10 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function watch(input, output, state, done, cb, on, fs) {
+  fn: function watch(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.watch(input.file, {
-        persistent: input.persistent
+      fs.watch($.file, {
+        persistent: $.persistent
       }, function watchCallback(event, file) {
         cb({
           event: event,

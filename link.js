@@ -26,9 +26,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function link(input, output, state, done, cb, on, fs) {
+  fn: function link(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.link(input.srcpath, input.dstpath, function linkCallback(exception) {
+      fs.link($.srcpath, $.dstpath, function linkCallback(exception) {
         cb({
           exception: exception
         });

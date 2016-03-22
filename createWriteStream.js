@@ -44,27 +44,27 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function createWriteStream(input, output, state, done, cb, on, fs) {
+  fn: function createWriteStream(input, $, output, state, done, cb, on, fs) {
     var r = function() {
       var opts = {
-        flag: input.flag,
-        encoding: input.encoding
+        flag: $.flag,
+        encoding: $.encoding
       };
 
-      var stream = fs.createWriteStream(input.file, opts);
+      var stream = fs.createWriteStream($.file, opts);
       output({
-        stream: stream
+        stream: $.create(stream)
       });
 
       stream.on('error', function(err) {
         output({
-          error: err
+          error: $.create(err)
         });
       });
 
       stream.on('open', function(fd) {
         output({
-          fd: fd
+          fd: $.create(fd)
         });
       });
     }.call(this);

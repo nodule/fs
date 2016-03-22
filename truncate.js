@@ -26,9 +26,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function truncate(input, output, state, done, cb, on, fs) {
+  fn: function truncate(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.truncate(input.path, input.len, function truncateCallback(exception) {
+      fs.truncate($.path, $.len, function truncateCallback(exception) {
         cb({
           exception: exception
         });

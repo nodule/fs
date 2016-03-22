@@ -29,9 +29,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function chmod(input, output, state, done, cb, on, fs) {
+  fn: function chmod(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.chmod(input.path, input.mode, function chmodCallback(exception) {
+      fs.chmod($.path, $.mode, function chmodCallback(exception) {
         cb({
           exception: exception
         });

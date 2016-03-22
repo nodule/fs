@@ -24,9 +24,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function unlink(input, output, state, done, cb, on, fs) {
+  fn: function unlink(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.unlink(input.path, function unlinkCallback(exception) {
+      fs.unlink($.path, function unlinkCallback(exception) {
         cb({
           exception: exception
         });

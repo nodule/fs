@@ -34,9 +34,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function appendFile(input, output, state, done, cb, on, fs) {
+  fn: function appendFile(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.appendFile(input.file, input.in, input.options, function appendFileCallback(error) {
+      fs.appendFile($.file, $.in, $.options, function appendFileCallback(error) {
         cb({
           error: error
         });

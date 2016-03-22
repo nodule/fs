@@ -36,9 +36,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function open(input, output, state, done, cb, on, fs) {
+  fn: function open(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.open(input.path, input.flags, input.mode, function openCallback(error, fd) {
+      fs.open($.path, $.flags, $.mode, function openCallback(error, fd) {
         cb({
           error: error,
           fd: fd

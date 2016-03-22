@@ -13,14 +13,14 @@ module.exports = {
         async: true,
         fn: function __PATH__(data, x, source, state, input, output, fs) {
           var r = function() {
-            fs.exists(data, function(yes) {
+            fs.exists($.path, function(yes) {
               if (yes) {
                 output({
-                  yes: data
+                  yes: $.get('path')
                 });
               } else {
                 output({
-                  no: data
+                  no: $.get('path')
                 });
               }
             });

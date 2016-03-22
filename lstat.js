@@ -27,9 +27,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function lstat(input, output, state, done, cb, on, fs) {
+  fn: function lstat(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.lstat(input.path, function lstatCallback(error, stats) {
+      fs.lstat($.path, function lstatCallback(error, stats) {
         cb({
           error: error,
           stats: stats

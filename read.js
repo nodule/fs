@@ -43,9 +43,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function read(input, output, state, done, cb, on, fs) {
+  fn: function read(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.read(input.fd, input.buffer, input.offset, input.length, input.position, function readCallback(error, bytesRead, buffer) {
+      fs.read($.fd, $.buffer, $.offset, $.length, $.position, function readCallback(error, bytesRead, buffer) {
         cb({
           error: error,
           bytesRead: bytesRead,

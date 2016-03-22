@@ -28,9 +28,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function lchmod(input, output, state, done, cb, on, fs) {
+  fn: function lchmod(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.lchmod(input.path, input.mode, function lchmodCallback(exception) {
+      fs.lchmod($.path, $.mode, function lchmodCallback(exception) {
         cb({
           exception: exception
         });

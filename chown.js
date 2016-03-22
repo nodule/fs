@@ -32,9 +32,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function chown(input, output, state, done, cb, on, fs) {
+  fn: function chown(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.chown(input.path, input.uid, input.gid, function chownCallback(exception) {
+      fs.chown($.path, $.uid, $.gid, function chownCallback(exception) {
         cb({
           exception: exception
         });

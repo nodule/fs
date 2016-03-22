@@ -45,25 +45,25 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function writeFile(input, output, state, done, cb, on, fs) {
+  fn: function writeFile(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.writeFile(input.file, input.in, {
-        encoding: input.encoding,
-        mode: input.mode,
-        flag: input.flag
+      fs.writeFile($.file, $.in, {
+        encoding: $.encoding,
+        mode: $.mode,
+        flag: $.flag
       }, function(err) {
         if (err) {
           output({
-            error: err
+            error: $.create(err)
           })
         } else {
           output({
-            out: this.data
+            out: $.write('in', this.data)
           })
         }
         done()
       }.bind({
-        data: input.in
+        data: $.in
       }))
     }.call(this);
     return {

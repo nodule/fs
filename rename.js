@@ -26,9 +26,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function rename(input, output, state, done, cb, on, fs) {
+  fn: function rename(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.rename(input.oldPath, input.newPath, function renameCallback(exception) {
+      fs.rename($.oldPath, $.newPath, function renameCallback(exception) {
         cb({
           exception: exception
         });

@@ -23,9 +23,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function close(input, output, state, done, cb, on, fs) {
+  fn: function close(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.close(input.fd, function closeCallback(exception) {
+      fs.close($.fd, function closeCallback(exception) {
         cb({
           exception: exception
         });

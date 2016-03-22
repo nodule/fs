@@ -24,9 +24,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function rmdir(input, output, state, done, cb, on, fs) {
+  fn: function rmdir(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.rmdir(input.path, function rmdirCallback(exception) {
+      fs.rmdir($.path, function rmdirCallback(exception) {
         cb({
           exception: exception
         });

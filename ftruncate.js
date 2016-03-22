@@ -26,9 +26,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function ftruncate(input, output, state, done, cb, on, fs) {
+  fn: function ftruncate(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.ftruncate(input.fd, input.len, function ftruncateCallback(exception) {
+      fs.ftruncate($.fd, $.len, function ftruncateCallback(exception) {
         cb({
           exception: exception
         });

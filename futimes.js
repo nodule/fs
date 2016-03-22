@@ -29,9 +29,9 @@ module.exports = {
       fs: require('fs')
     }
   },
-  fn: function futimes(input, output, state, done, cb, on, fs) {
+  fn: function futimes(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      fs.futimes(input.fd, input.atime, input.mtime, function futimesCallback(exception) {
+      fs.futimes($.fd, $.atime, $.mtime, function futimesCallback(exception) {
         cb({
           exception: exception
         });
