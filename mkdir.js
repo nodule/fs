@@ -12,7 +12,7 @@ module.exports = {
         title: "Path",
         type: "string",
         async: true,
-        fn: function __PATH__(data, x, source, state, input, output, fs) {
+        fn: function __PATH__(data, source, state, input, $, output, fs) {
           var r = function() {
             fs.mkdir($.path, $.mode, function(err) {
               if (err) {

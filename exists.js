@@ -11,7 +11,7 @@ module.exports = {
       path: {
         type: "string",
         async: true,
-        fn: function __PATH__(data, x, source, state, input, output, fs) {
+        fn: function __PATH__(data, source, state, input, $, output, fs) {
           var r = function() {
             fs.exists($.path, function(yes) {
               if (yes) {

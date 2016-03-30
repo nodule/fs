@@ -14,7 +14,7 @@ module.exports = {
         type: "string",
         required: true,
         async: true,
-        fn: function __FILE__(data, x, source, state, input, output, fs) {
+        fn: function __FILE__(data, source, state, input, $, output, fs) {
           var r = function() {
             fs.readFile($.file, {
               flag: $.flag,
