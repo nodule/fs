@@ -35,7 +35,7 @@ module.exports = {
       mode: {
         title: "Mode",
         type: "number",
-        "default": "0777"
+        "default": 511
       }
     },
     output: {
