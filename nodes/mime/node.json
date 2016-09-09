@@ -1,0 +1,29 @@
+{
+  "name": "mime",
+  "ns": "fs",
+  "description": "Lookup mime type",
+  "async": true,
+  "phrases": {
+    "active": "Looking up mimetype for {{input.in}}"
+  },
+  "ports": {
+    "input": {
+      "in": {
+        "title": "Filename",
+        "type": "string",
+        "async": true
+      }
+    },
+    "output": {
+      "out": {
+        "title": "MimeType",
+        "type": "string"
+      }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "mime-types": "latest"
+    }
+  }
+}

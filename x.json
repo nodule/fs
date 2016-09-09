@@ -8,10 +8,12 @@
   },
   "nodes": [
     {
-      "dependencies": {
-        "npm": {
-          "fs": "builtin"
-        }
+      "name": "appendFile",
+      "ns": "fs",
+      "title": "Append File",
+      "description": "fs appendFile",
+      "phrases": {
+        "active": "Appending data to {{input.file}}"
       },
       "ports": {
         "input": {
@@ -36,21 +38,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Appending data to {{input.file}}"
-      },
-      "description": "fs appendFile",
-      "title": "Append File",
-      "ns": "fs",
-      "name": "appendFile",
-      "env": "server",
-      "fn": "output = [fs, 'appendFile', $.file, $.in, $.options]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'appendFile', $.file, $.in, $.options]\n"
+    },
+    {
+      "name": "chmod",
+      "ns": "fs",
+      "title": "Chmod",
+      "description": "fs chmod",
+      "phrases": {
+        "active": "Changing file mode on {{input.path}}"
       },
       "ports": {
         "input": {
@@ -70,21 +72,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Changing file mode on {{input.path}}"
-      },
-      "description": "fs chmod",
-      "title": "Chmod",
-      "ns": "fs",
-      "name": "chmod",
-      "env": "server",
-      "fn": "output = [fs, 'chmod', $.path, $.mode]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'chmod', $.path, $.mode]\n"
+    },
+    {
+      "name": "chown",
+      "ns": "fs",
+      "description": "fs chown",
+      "phrases": {
+        "active": "Changing owner/group for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -108,20 +109,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Changing owner/group for {{input.path}}"
-      },
-      "description": "fs chown",
-      "ns": "fs",
-      "name": "chown",
-      "env": "server",
-      "fn": "output = [fs, 'chown', $.path, $.uid, $.gid]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'chown', $.path, $.uid, $.gid]\n"
+    },
+    {
+      "name": "close",
+      "ns": "fs",
+      "description": "fs close",
+      "phrases": {
+        "active": "Closing file handle"
       },
       "ports": {
         "input": {
@@ -136,20 +137,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Closing file handle"
-      },
-      "description": "fs close",
-      "ns": "fs",
-      "name": "close",
-      "env": "server",
-      "fn": "output = [fs, 'close', $.fd]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'close', $.fd]\n"
+    },
+    {
+      "name": "createReadStream",
+      "ns": "fs",
+      "title": "Create Read Stream",
+      "description": "Creats a Readable Stream Object",
+      "phrases": {
+        "active": "Reading file {{input.file}} ({{input.encoding}})"
       },
       "ports": {
         "input": {
@@ -194,21 +196,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Reading file {{input.file}} ({{input.encoding}})"
-      },
-      "description": "Creats a Readable Stream Object",
-      "title": "Create Read Stream",
-      "ns": "fs",
-      "name": "createReadStream",
-      "env": "server",
-      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: $.flag,\n    encoding: $.encoding\n  };\n\n  if($.start) opts.start = $.start;\n  if($.end) opts.end = $.end;\n\n  var stream = fs.createReadStream($.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: $.create(err)});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: $.create(fd)});\n  });\n\n};\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: $.flag,\n    encoding: $.encoding\n  };\n\n  if($.start) opts.start = $.start;\n  if($.end) opts.end = $.end;\n\n  var stream = fs.createReadStream($.file, opts);\n  cb({ stream: stream});\n\n  stream.on('error', function(err) {\n    cb({ error: $.create(err)});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: $.create(fd)});\n  });\n\n};\n"
+    },
+    {
+      "name": "createWriteStream",
+      "ns": "fs",
+      "title": "Create Write Stream",
+      "description": "Creates a Writeable Stream Object",
+      "phrases": {
+        "active": "Writing file {{input.file}} ({{input.encoding}})"
       },
       "ports": {
         "input": {
@@ -243,21 +245,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Writing file {{input.file}} ({{input.encoding}})"
-      },
-      "description": "Creates a Writeable Stream Object",
-      "title": "Create Write Stream",
-      "ns": "fs",
-      "name": "createWriteStream",
-      "env": "server",
-      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: $.flag,\n    encoding: $.encoding\n  };\n\n  var stream = fs.createWriteStream($.file, opts);\n  cb({ stream: $.create(stream)});\n\n  stream.on('error', function(err) {\n    cb({ error: $.create(err)});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: $.create(fd)});\n  });\n\n};\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = function(cb) {\n\n  var opts = {\n    flag: $.flag,\n    encoding: $.encoding\n  };\n\n  var stream = fs.createWriteStream($.file, opts);\n  cb({ stream: $.create(stream)});\n\n  stream.on('error', function(err) {\n    cb({ error: $.create(err)});\n  });\n\n  stream.on('open', function(fd) {\n    cb({ fd: $.create(fd)});\n  });\n\n};\n"
+    },
+    {
+      "name": "exists",
+      "ns": "fs",
+      "async": true,
+      "description": "fs exists",
+      "phrases": {
+        "active": "Checking whether file {{input.path}} exists"
       },
       "ports": {
         "input": {
@@ -277,21 +279,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Checking whether file {{input.path}} exists"
-      },
-      "description": "fs exists",
-      "async": true,
-      "ns": "fs",
-      "name": "exists",
-      "env": "server",
-      "fn": "on.input.path = function() {\n  fs.exists($.path, function(yes) {\n    if(yes) {\n      output( { yes: $.get('path') } );\n    } else {\n      output( { no: $.get('path') } );\n    }\n  });\n};\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "on.input.path = function() {\n  fs.exists($.path, function(yes) {\n    if(yes) {\n      output( { yes: $.get('path') } );\n    } else {\n      output( { no: $.get('path') } );\n    }\n  });\n};\n"
+    },
+    {
+      "name": "fchmod",
+      "ns": "fs",
+      "description": "fs fchmod",
+      "phrases": {
+        "active": "Changing file mode for fd"
       },
       "ports": {
         "input": {
@@ -311,20 +312,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Changing file mode for fd"
-      },
-      "description": "fs fchmod",
-      "ns": "fs",
-      "name": "fchmod",
-      "env": "server",
-      "fn": "output = [fs, 'fchmod', $.fd, $.mode]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'fchmod', $.fd, $.mode]\n"
+    },
+    {
+      "name": "fchown",
+      "ns": "fs",
+      "description": "fs fchown",
+      "phrases": {
+        "active": "Changing file owner/group for fd"
       },
       "ports": {
         "input": {
@@ -348,20 +349,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Changing file owner/group for fd"
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
       },
-      "description": "fs fchown",
-      "ns": "fs",
-      "name": "fchown",
       "env": "server",
       "fn": "output = [fs, 'fchown', $.fd, $.uid, $.gid]\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "path": "builtin"
-        }
+      "name": "file",
+      "ns": "fs",
+      "description": "Create a filename based on dir, name and optional extenstion",
+      "phrases": {
+        "active": "Created filename {{input.dir}}/{{input.name}}{{input.ext}}"
       },
       "ports": {
         "input": {
@@ -386,20 +387,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Created filename {{input.dir}}/{{input.name}}{{input.ext}}"
+      "dependencies": {
+        "npm": {
+          "path": "builtin"
+        }
       },
-      "description": "Create a filename based on dir, name and optional extenstion",
-      "ns": "fs",
-      "name": "file",
       "env": "server",
       "fn": "var file = $.ext ? $.name + $.ext : $.name;\noutput.file = $.create($.dir ? path.normalize([$.dir, file].join(path.sep)) : file);\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "fs": "builtin"
-        }
+      "name": "fstat",
+      "ns": "fs",
+      "description": "fs fstat",
+      "phrases": {
+        "active": "Reading file statistics for fd"
       },
       "ports": {
         "input": {
@@ -418,20 +419,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Reading file statistics for fd"
-      },
-      "description": "fs fstat",
-      "ns": "fs",
-      "name": "fstat",
-      "env": "server",
-      "fn": "output = [fs, 'fstat', $.fd]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'fstat', $.fd]\n"
+    },
+    {
+      "name": "fsync",
+      "ns": "fs",
+      "description": "fs fsync",
+      "phrases": {
+        "active": "Calling sync for fd"
       },
       "ports": {
         "input": {
@@ -446,20 +447,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Calling sync for fd"
-      },
-      "description": "fs fsync",
-      "ns": "fs",
-      "name": "fsync",
-      "env": "server",
-      "fn": "output = [fs, 'fsync', $.fd]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'fsync', $.fd]\n"
+    },
+    {
+      "name": "ftruncate",
+      "ns": "fs",
+      "description": "fs ftruncate",
+      "phrases": {
+        "active": "Truncating fd with a length of {{input.len}}"
       },
       "ports": {
         "input": {
@@ -477,20 +478,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Truncating fd with a length of {{input.len}}"
-      },
-      "description": "fs ftruncate",
-      "ns": "fs",
-      "name": "ftruncate",
-      "env": "server",
-      "fn": "output = [fs, 'ftruncate', $.fd, $.len]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'ftruncate', $.fd, $.len]\n"
+    },
+    {
+      "name": "futimes",
+      "ns": "fs",
+      "description": "fs futimes",
+      "phrases": {
+        "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
       },
       "ports": {
         "input": {
@@ -511,20 +512,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Set access & modification times for fd to {{input.atime}} and {{input.mtime}}"
-      },
-      "description": "fs futimes",
-      "ns": "fs",
-      "name": "futimes",
-      "env": "server",
-      "fn": "output = [fs, 'futimes', $.fd, $.atime, $.mtime]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'futimes', $.fd, $.atime, $.mtime]\n"
+    },
+    {
+      "name": "lchmod",
+      "ns": "fs",
+      "description": "fs lchmod",
+      "phrases": {
+        "active": "Changing file mode for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -544,20 +545,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Changing file mode for {{input.path}}"
-      },
-      "description": "fs lchmod",
-      "ns": "fs",
-      "name": "lchmod",
-      "env": "server",
-      "fn": "output = [fs, 'lchmod', $.path, $.mode]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'lchmod', $.path, $.mode]\n"
+    },
+    {
+      "name": "lchown",
+      "ns": "fs",
+      "description": "fs lchown",
+      "phrases": {
+        "active": "Changing file owner/group for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -581,20 +582,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Changing file owner/group for {{input.path}}"
-      },
-      "description": "fs lchown",
-      "ns": "fs",
-      "name": "lchown",
-      "env": "server",
-      "fn": "output = [fs, 'lchown', $.path, $.uid, $.gid]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'lchown', $.path, $.uid, $.gid]\n"
+    },
+    {
+      "name": "link",
+      "ns": "fs",
+      "description": "fs link",
+      "phrases": {
+        "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
       },
       "ports": {
         "input": {
@@ -612,20 +613,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Linking {{input.srcpath}} to {{input.dstpath}}"
-      },
-      "description": "fs link",
-      "ns": "fs",
-      "name": "link",
-      "env": "server",
-      "fn": "output = [fs, 'link', $.srcpath, $.dstpath]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'link', $.srcpath, $.dstpath]\n"
+    },
+    {
+      "name": "lstat",
+      "ns": "fs",
+      "description": "fs lstat",
+      "phrases": {
+        "active": "Getting stats for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -644,20 +645,52 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting stats for {{input.path}}"
-      },
-      "description": "fs lstat",
-      "ns": "fs",
-      "name": "lstat",
-      "env": "server",
-      "fn": "output = [fs, 'lstat', $.path]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'lstat', $.path]\n"
+    },
+    {
+      "name": "mime",
+      "ns": "fs",
+      "description": "Lookup mime type",
+      "async": true,
+      "phrases": {
+        "active": "Looking up mimetype for {{input.in}}"
+      },
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Filename",
+            "type": "string",
+            "async": true
+          }
+        },
+        "output": {
+          "out": {
+            "title": "MimeType",
+            "type": "string"
+          }
+        }
+      },
+      "dependencies": {
+        "npm": {
+          "mime-types": "latest"
+        }
+      },
+      "env": "server",
+      "fn": "on.input.in = function() {\n  mime_types.lookup($.in, function(err) {\n    if(err) {\n      output({error: $.create(err)});\n    } else {\n      output({path: $.get('path')});\n    }\n  });\n};\n"
+    },
+    {
+      "name": "mkdir",
+      "ns": "fs",
+      "description": "fs mkdir",
+      "async": true,
+      "phrases": {
+        "active": "Creating directory {{input.path}}"
       },
       "ports": {
         "input": {
@@ -683,21 +716,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating directory {{input.path}}"
-      },
-      "async": true,
-      "description": "fs mkdir",
-      "ns": "fs",
-      "name": "mkdir",
-      "env": "server",
-      "fn": "on.input.path = function() {\n  fs.mkdir($.path, $.mode, function(err) {\n    if(err) {\n      output({error: $.create(err)});\n    } else {\n      output({path: $.get('path')});\n    }\n  });\n};\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "on.input.path = function() {\n  fs.mkdir($.path, $.mode, function(err) {\n    if(err) {\n      output({error: $.create(err)});\n    } else {\n      output({path: $.get('path')});\n    }\n  });\n};\n"
+    },
+    {
+      "name": "open",
+      "ns": "fs",
+      "description": "fs open",
+      "phrases": {
+        "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
       },
       "ports": {
         "input": {
@@ -725,20 +757,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Opening file {{input.path}} ({{input.flags}}, {{input.mode}})"
-      },
-      "description": "fs open",
-      "ns": "fs",
-      "name": "open",
-      "env": "server",
-      "fn": "output = [fs, 'open', $.path, $.flags, $.mode]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'open', $.path, $.flags, $.mode]\n"
+    },
+    {
+      "name": "read",
+      "ns": "fs",
+      "description": "fs read",
+      "phrases": {
+        "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
       },
       "ports": {
         "input": {
@@ -773,21 +805,55 @@
           }
         }
       },
-      "phrases": {
-        "active": "Reading fd {{input.offset}}:{{input.length}}:{{input.position}} "
-      },
-      "description": "fs read",
-      "ns": "fs",
-      "name": "read",
-      "env": "server",
-      "fn": "output = [fs, 'read', $.fd, $.buffer, $.offset, $.length, $.position]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
       },
+      "env": "server",
+      "fn": "output = [fs, 'read', $.fd, $.buffer, $.offset, $.length, $.position]\n"
+    },
+    {
+      "name": "readdir",
+      "ns": "fs",
+      "description": "fs readdir",
+      "phrases": {
+        "active": "Listing files from directory {{input.path}}"
+      },
+      "ports": {
+        "input": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "output": {
+          "error": {
+            "title": "Error",
+            "type": "object"
+          },
+          "files": {
+            "title": "Files",
+            "type": "array"
+          }
+        }
+      },
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'readdir', $.path]\n"
+    },
+    {
+      "name": "readFile",
+      "ns": "fs",
+      "title": "fs readFile",
+      "description": "fs readFile",
+      "phrases": {
+        "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
+      },
+      "async": true,
       "ports": {
         "input": {
           "file": {
@@ -818,54 +884,20 @@
           }
         }
       },
-      "async": true,
-      "phrases": {
-        "active": "Reading file {{input.file}} ({{input.options.encoding}}, {{input.options.flag}})"
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
       },
-      "description": "fs readFile",
-      "title": "fs readFile",
-      "ns": "fs",
-      "name": "readFile",
       "env": "server",
       "fn": "on.input.file = function() {\n  fs.readFile($.file, {\n    flag: $.flag,\n    encoding: $.encoding\n  }, function(err, contents) {\n    if (err) {\n      output({error: $.create(err)})\n    } else {\n      output({out: $.create(contents)})\n    }\n  })\n}\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "fs": "builtin"
-        }
-      },
-      "ports": {
-        "input": {
-          "path": {
-            "type": "string"
-          }
-        },
-        "output": {
-          "error": {
-            "title": "Error",
-            "type": "object"
-          },
-          "files": {
-            "title": "Files",
-            "type": "array"
-          }
-        }
-      },
-      "phrases": {
-        "active": "Listing files from directory {{input.path}}"
-      },
-      "description": "fs readdir",
+      "name": "readlink",
       "ns": "fs",
-      "name": "readdir",
-      "env": "server",
-      "fn": "output = [fs, 'readdir', $.path]\n"
-    },
-    {
-      "dependencies": {
-        "npm": {
-          "fs": "builtin"
-        }
+      "description": "fs readlink",
+      "phrases": {
+        "active": "Reading link {{input.path}}"
       },
       "ports": {
         "input": {
@@ -883,20 +915,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Reading link {{input.path}}"
-      },
-      "description": "fs readlink",
-      "ns": "fs",
-      "name": "readlink",
-      "env": "server",
-      "fn": "output = [fs, 'readlink', $.path]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'readlink', $.path]\n"
+    },
+    {
+      "name": "realpath",
+      "ns": "fs",
+      "description": "fs realpath",
+      "phrases": {
+        "active": "Performing realpath for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -915,20 +947,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Performing realpath for {{input.path}}"
-      },
-      "description": "fs realpath",
-      "ns": "fs",
-      "name": "realpath",
-      "env": "server",
-      "fn": "output = [fs, 'realpath', $.path]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'realpath', $.path]\n"
+    },
+    {
+      "name": "rename",
+      "ns": "fs",
+      "description": "fs rename",
+      "phrases": {
+        "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
       },
       "ports": {
         "input": {
@@ -946,20 +978,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Renaming {{input.oldPath}} to {{input.newPath}}"
-      },
-      "description": "fs rename",
-      "ns": "fs",
-      "name": "rename",
-      "env": "server",
-      "fn": "output = [fs, 'rename', $.oldPath, $.newPath]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'rename', $.oldPath, $.newPath]\n"
+    },
+    {
+      "name": "rmdir",
+      "ns": "fs",
+      "description": "fs rmdir",
+      "phrases": {
+        "active": "Removing directory {{input.path}}"
       },
       "ports": {
         "input": {
@@ -975,20 +1007,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Removing directory {{input.path}}"
-      },
-      "description": "fs rmdir",
-      "ns": "fs",
-      "name": "rmdir",
-      "env": "server",
-      "fn": "output = [fs, 'rmdir', $.path]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'rmdir', $.path]\n"
+    },
+    {
+      "name": "stat",
+      "ns": "fs",
+      "description": "fs stat",
+      "phrases": {
+        "active": "Reading stats for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -1008,20 +1040,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Reading stats for {{input.path}}"
-      },
-      "description": "fs stat",
-      "ns": "fs",
-      "name": "stat",
-      "env": "server",
-      "fn": "output = [fs, 'stat', $.path]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'stat', $.path]\n"
+    },
+    {
+      "name": "symlink",
+      "ns": "fs",
+      "description": "fs symlink",
+      "phrases": {
+        "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
       },
       "ports": {
         "input": {
@@ -1049,20 +1081,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating symbolic link from {{input.srcpath}} to {{input.dstpath}}"
-      },
-      "description": "fs symlink",
-      "ns": "fs",
-      "name": "symlink",
-      "env": "server",
-      "fn": "output = [fs, 'symlink', $.srcpath, $.dstpath, $.type]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'symlink', $.srcpath, $.dstpath, $.type]\n"
+    },
+    {
+      "name": "truncate",
+      "ns": "fs",
+      "description": "fs truncate",
+      "phrases": {
+        "active": "Truncating file {{input.path}} to {{input.len}}"
       },
       "ports": {
         "input": {
@@ -1080,20 +1112,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Truncating file {{input.path}} to {{input.len}}"
-      },
-      "description": "fs truncate",
-      "ns": "fs",
-      "name": "truncate",
-      "env": "server",
-      "fn": "output = [fs, 'truncate', $.path, $.len]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'truncate', $.path, $.len]\n"
+    },
+    {
+      "name": "unlink",
+      "ns": "fs",
+      "description": "fs unlink",
+      "phrases": {
+        "active": "Unlinking file {{input.path}}"
       },
       "ports": {
         "input": {
@@ -1109,20 +1141,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Unlinking file {{input.path}}"
-      },
-      "description": "fs unlink",
-      "ns": "fs",
-      "name": "unlink",
-      "env": "server",
-      "fn": "output = [fs, 'unlink', $.path]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'unlink', $.path]\n"
+    },
+    {
+      "name": "utimes",
+      "ns": "fs",
+      "description": "fs utimes",
+      "phrases": {
+        "active": "Getting utimes for {{input.path}}"
       },
       "ports": {
         "input": {
@@ -1143,20 +1175,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting utimes for {{input.path}}"
-      },
-      "description": "fs utimes",
-      "ns": "fs",
-      "name": "utimes",
-      "env": "server",
-      "fn": "output = [fs, 'utimes', $.path, $.atime, $.mtime]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'utimes', $.path, $.atime, $.mtime]\n"
+    },
+    {
+      "name": "watch",
+      "ns": "fs",
+      "description": "Watches a file",
+      "phrases": {
+        "active": "Watching file {{input.file}}"
       },
       "ports": {
         "input": {
@@ -1183,20 +1215,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Watching file {{input.file}}"
-      },
-      "description": "Watches a file",
-      "ns": "fs",
-      "name": "watch",
-      "env": "server",
-      "fn": "output = [fs, 'watch', $.file, {\n  persistent: $.persistent\n}]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'watch', $.file, {\n  persistent: $.persistent\n}]\n"
+    },
+    {
+      "name": "write",
+      "ns": "fs",
+      "description": "fs write",
+      "phrases": {
+        "active": "Writing to file descriptor"
       },
       "ports": {
         "input": {
@@ -1237,20 +1269,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Writing to file descriptor"
-      },
-      "description": "fs write",
-      "ns": "fs",
-      "name": "write",
-      "env": "server",
-      "fn": "output = [fs, 'write', $.fd, $.buffer, $.offset, $.length, $.position]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs": "builtin"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs, 'write', $.fd, $.buffer, $.offset, $.length, $.position]\n"
+    },
+    {
+      "name": "writeFile",
+      "ns": "fs",
+      "description": "fs writeFile",
+      "phrases": {
+        "active": "Writing file {{input.file}}"
       },
       "ports": {
         "input": {
@@ -1287,12 +1319,11 @@
           }
         }
       },
-      "phrases": {
-        "active": "Writing file {{input.file}}"
+      "dependencies": {
+        "npm": {
+          "fs": "builtin"
+        }
       },
-      "description": "fs writeFile",
-      "ns": "fs",
-      "name": "writeFile",
       "env": "server",
       "fn": "output = function() {\n  fs.writeFile($.file, $.in, {\n    encoding: $.encoding,\n    mode: $.mode,\n    flag: $.flag\n  }, function(err) {\n    if (err) {\n      cb({error: $.create(err)})\n    } else {\n      cb({out: $.write('in', this.data)})\n    }\n    done()\n  }.bind({data: $.in}))\n}\n"
     }
